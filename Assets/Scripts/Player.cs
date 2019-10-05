@@ -74,6 +74,7 @@ public class Player : Singleton<Player>
         HandleMovement();
         UpdateDirectionDumb();
         HandleTileSwitching();
+        CheckStuck();
     }
 
     private void HandleTileSwitching()
@@ -86,8 +87,6 @@ public class Player : Singleton<Player>
             {
                 Score.Instance.DecrementScore(15);   
                 tiles.ForEach(tile => tile.ToggleState());
-
-                CheckStuck();
             }
         }
     }
