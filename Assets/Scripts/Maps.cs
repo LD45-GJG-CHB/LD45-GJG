@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using UnityEngine;
 
 public class Maps
 {
-    public static List<string> mapNames = new List<string>
-    {
-        "map_0",
-        "map_1"
-    };
+    public static List<string> mapNames;
 
     public static Dictionary<string, string> maps;
 
@@ -20,6 +17,7 @@ public class Maps
 
     static Maps()
     {
+        mapNames = createOrderedMapNames();
         maps = new Dictionary<string, string>();
         foreach (string mapName in mapNames)
         {
@@ -27,9 +25,33 @@ public class Maps
         }
     }
 
+    private static List<string> createOrderedMapNames()
+    {
+        List<string> _mapNames = new List<string>();
+        FileInfo[] files = new DirectoryInfo(path).GetFiles("map_*.txt");
+        foreach (FileInfo file in files)
+        {
+            _mapNames.Add(file.Name);
+        }
+        _mapNames = _mapNames.OrderBy(o => MapNumber(o.Substring(4))).ToList();
+        return _mapNames;
+    }
+
+    private static int MapNumber(string mapNumber)
+    {
+        try
+        {
+            return Int32.Parse(mapNumber.Replace(".txt", ""));
+        }
+        catch (FormatException e)
+        {
+            return int.MaxValue;
+        }
+    }
+
     private static string ReadMap(string mapName)
     {
-        StreamReader reader = new StreamReader(path + mapName + ".txt");
+        StreamReader reader = new StreamReader(path + mapName);
         string map = reader.ReadToEnd().Replace(Environment.NewLine, "");
         reader.Close();
         return map;

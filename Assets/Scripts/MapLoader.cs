@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MapLoader : Singleton<MapLoader>
 {
-    public string currentMap = "map_0"; // Somehow edit this variable between levels
+    public string currentMap = "map_0.txt"; // Somehow edit this variable between levels
     public string currentFont = "font_0"; // Somehow edit this variable between levels
 
     public GameObject tilePrefab;
@@ -25,6 +25,8 @@ public class MapLoader : Singleton<MapLoader>
     
     public void LoadNextLevel()
     {
+        Debug.Log("Maps.maps[currentMap]");
+        Debug.Log(currentMap);
         map = Maps.StringTo2DArray(Maps.maps[currentMap]);
 
         for (var y = 0; y < Maps.mapSizeY; y++)
