@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class MapLoader : Singleton<MapLoader>
 {
-    public string currentMap { get; set; } = "map_0"; // Somehow edit this variable between levels
-    public string currentFont { get; set; } = "font_0"; // Somehow edit this variable between levels
+    public string currentMap = "map_0"; // Somehow edit this variable between levels
+    public string currentFont = "font_0"; // Somehow edit this variable between levels
 
     public GameObject tilePrefab;
     public GameObject exitPrefab;
+    public GameObject edgeTilePrefab;
     public float tileSize = 2;
 
     private string[,] map;
@@ -36,6 +37,10 @@ public class MapLoader : Singleton<MapLoader>
                 else if (letter == "2")
                 {
                     var tile = Instantiate(exitPrefab, new Vector3(x,y), Quaternion.identity,transform);
+                }
+                else if (letter == "3")
+                {
+                    var tile = Instantiate(edgeTilePrefab, new Vector3(x, y), Quaternion.identity, transform);
                 }
                 else if (letter == "-")
                 {
