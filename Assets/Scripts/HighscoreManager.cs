@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Diagnostics;
-using UnityEngine;
-using UnityEngine.Networking;
-using Debug = UnityEngine.Debug;
+﻿using UnityEngine;
 
 public class HighscoreManager : MonoBehaviour
 {
-    private readonly String HIGHSCORES_API_URI = "http://167.99.142.75/game/scores"; 
-    
     public GameObject highscoreEntry;
     private Highscore[] _highscores;
-    private bool _highscores_loading = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GetHighscores());
+        StartCoroutine(HighScoreAPI.GetList((responseText) =>
+        {
+            var response = JsonUtility.FromJson<HighscoreManager.Response>(responseText);
+            _highscores = response.data;
+        }));
     }
 
     // Update is called once per frame
@@ -26,7 +22,7 @@ public class HighscoreManager : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
-        if (!_highscores_loading && _highscores.Length > 0)
+        if (_highscores != null && _highscores.Length > 0)
         {
             foreach (var highscore in _highscores)
             {
@@ -40,38 +36,12 @@ public class HighscoreManager : MonoBehaviour
         GameObject entry = Instantiate(highscoreEntry, transform);
         var component = entry.GetComponent<HighscoreEntry>();
         component.nameText.text = highscore.name;
-        component.scoreText.text = highscore.score;
-    }
-
-    private IEnumerator GetHighscores()
-    {
-        
-        Debug.Log($"[HighscoreManager] GET {HIGHSCORES_API_URI}");
-        using (var request = UnityWebRequest.Get(HIGHSCORES_API_URI))
-        {
-            _highscores_loading = true;
-            yield return request.SendWebRequest();
-
-            Debug.Log(request.isNetworkError
-                ? $"[HighscoreManager] Error: {request.error}"
-                : $"[HighscoreManager] Received: {request.downloadHandler.text}");
-
-            var response = JsonUtility.FromJson<Response>(request.downloadHandler.text);
-            _highscores = response.data;
-            _highscores_loading = false;
-        }
+        component.scoreText.text = highscore.score.ToString();
     }
 
     [System.Serializable]
     public class Response
     {
         public Highscore[] data;
-    }
-
-    [System.Serializable]
-    public class Highscore
-    {
-        public String name;
-        public String score;
     }
 }

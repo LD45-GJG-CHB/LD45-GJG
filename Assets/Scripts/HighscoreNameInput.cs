@@ -7,6 +7,7 @@ public class HighscoreNameInput : MonoBehaviour
 {
 
     public TextMeshProUGUI nameInput;
+    public Score score;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,10 @@ public class HighscoreNameInput : MonoBehaviour
     {
         var name = nameInput.text;
         Debug.Log($"[HighscoreNameInput] received name: {name.ToString()}");
-        
-    }
+
+        StartCoroutine(HighScoreAPI.Save(name, score.GetScore(), (s =>
+        {
+            
+        })));
+        }
 }
