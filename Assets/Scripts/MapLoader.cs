@@ -91,4 +91,16 @@ public class MapLoader : Singleton<MapLoader>
 
         return tile.GetComponent<Tile>();
     }
+
+    public void DestroyTileMap()
+    {
+        foreach(List<Tile> tileList in tileMap.Values)
+        {
+            foreach(Tile t in tileList)
+            {
+                Destroy(t.gameObject);
+            }
+        }
+    }
+
 }

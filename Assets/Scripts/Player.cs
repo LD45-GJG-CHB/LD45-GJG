@@ -89,11 +89,9 @@ public class Player : Singleton<Player>
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.GetComponent<Tile>()?.tileype == TileType.DOOR)
+        if (col.gameObject.GetComponent<Tile>().tileype == TileType.DOOR)
         {
-           // Destroy(mapLoader);
-          //  mapLoader.currentMap = "map_1";
-          //  mapLoader.LoadNextLevel();
+            GameRunner.LoadNextLevel();
             Debug.Log("exit: @");
         }
     }
