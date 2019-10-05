@@ -51,7 +51,6 @@ public class GameRunner : Singleton<GameRunner>
             .AppendInterval(0.2f)
             .AppendCallback((() => Time.timeScale = 1.0f))
             .Play();
-
     }
 
     void Start()

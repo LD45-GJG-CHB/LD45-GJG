@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using DG.Tweening;
 using Extensions;
 using RaycastEngine2D;
 using UnityEngine;
@@ -73,9 +74,10 @@ public class Player : Singleton<Player>
         HandleMovement();
         UpdateDirectionDumb();
         HandleTileSwitching();
+        CheckStuck();
     }
 
-    private static void HandleTileSwitching()
+    private void HandleTileSwitching()
     {
         foreach (var letter in Letters)
         {
@@ -86,6 +88,23 @@ public class Player : Singleton<Player>
                 Score.Instance.DecrementScore(15);   
                 tiles.ForEach(tile => tile.ToggleState());
             }
+        }
+    }
+
+    private void CheckStuck()
+    {
+        if (_controller.Collisions.CollisionSum() >= 2)
+        {
+            Debug.Log("WARNING. MAYBE DESTROY TOO SOON");
+
+            GameState.IsPlayerDead = true;
+            
+            DOTween.Sequence()
+                .SetUpdate(true)
+                .AppendCallback(() => Time.timeScale = 0f)
+                .Append(_darkness.DOFade(1.0f, 0.3f))
+                .AppendCallback(() => Time.timeScale = 1.0f)
+                .Play();
         }
     }
 

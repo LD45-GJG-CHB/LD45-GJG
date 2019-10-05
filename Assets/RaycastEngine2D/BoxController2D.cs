@@ -93,6 +93,7 @@ namespace RaycastEngine2D
         {
             public bool Above, Below, Left, Right;
 
+            public int CollisionSum() => (Above ? 1 : 0) + (Below ? 1 : 0) + (Left ? 1 : 0) + (Right ? 1 : 0);
             public void Reset()
             {
                 Above = Below = Left = Right = default;
