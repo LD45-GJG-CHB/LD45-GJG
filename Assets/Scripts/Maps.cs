@@ -5,6 +5,12 @@ using System.Linq;
 
 public class Maps
 {
+    public static List<string> mapNames = new List<string>
+    {
+        "map_0",
+        "map_1"
+    };
+
     public static Dictionary<string, string> maps;
 
     public static int mapSizeX = 40;
@@ -15,8 +21,10 @@ public class Maps
     static Maps()
     {
         maps = new Dictionary<string, string>();
-        maps.Add("map_0", ReadMap("map_0"));
-        maps.Add("map_1", ReadMap("map_1"));
+        foreach (string mapName in mapNames)
+        {
+            maps.Add(mapName, ReadMap(mapName));
+        }
     }
 
     private static string ReadMap(string mapName)

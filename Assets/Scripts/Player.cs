@@ -1,11 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Extensions;
 using RaycastEngine2D;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : Singleton<Player>
@@ -33,6 +29,8 @@ public class Player : Singleton<Player>
 
     private SpriteRenderer _renderer;
     private bool _justTurnedAround;
+
+    private const string Letters = "abcdefghijklmnopqrstuvwxyz";
 
     // Use this for initialization
     private void Start()
@@ -65,8 +63,39 @@ public class Player : Singleton<Player>
 
     private void HandleActions()
     {
+        HandleOnTriggerEnter();
         HandleMovement();
         UpdateDirectionDumb();
+        HandleTileSwitching();
+    }
+
+    private static void HandleTileSwitching()
+    {
+        foreach (var letter in Letters)
+        {
+            if (!Input.GetKeyDown(letter.ToString())) continue;
+            
+            if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString(), out var tiles))
+            {
+                tiles.ForEach(tile => tile.ToggleState());
+            }
+        }
+    }
+
+    private void HandleOnTriggerEnter()
+    {
+
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.GetComponent<Tile>()?.tileype == TileType.DOOR)
+        {
+           // Destroy(mapLoader);
+          //  mapLoader.currentMap = "map_1";
+          //  mapLoader.LoadNextLevel();
+            Debug.Log("exit: @");
+        }
     }
 
     private void UpdateDirectionDumb()

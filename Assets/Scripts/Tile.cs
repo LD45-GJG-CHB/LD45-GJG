@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class Tile : MonoBehaviour
 {
     public TextMeshProUGUI letter;
     public Color activatedColor = Color.white;
-    public Color deactivatedColor = new Color(1,1,1, 0.6f);
+    public Color deactivatedColor = new Color(1,1,1, 0.5f);
 
     public bool IsActivated => letter.color == activatedColor;
 
@@ -20,15 +21,28 @@ public class Tile : MonoBehaviour
     void Start()
     {
         _collider = GetComponent<BoxCollider2D>();
-        letter.color = deactivatedColor;
-//        _collider.enabled = false;
+
+        Activate();
         
     }
-
     public void SetLetter(string textLetter)
     {
         letter.text = textLetter;
     }
+
+    public void ToggleState()
+    {
+        if (IsActivated)
+        {
+            Deactivate();
+        }
+        else
+        {
+            Activate();
+        }
+    }
+    
+    
     public void Activate()
     {
         letter.color = activatedColor;
