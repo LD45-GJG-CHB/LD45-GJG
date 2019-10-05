@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ScoreText : MonoBehaviour
 {
-    public Score score;
     private TextMeshProUGUI _textField;
     
     // Start is called before the first frame update
@@ -17,6 +16,6 @@ public class ScoreText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _textField.text = $"Score: {score.GetScore().ToString()}";
+        _textField.text = $"Score: {Score.Instance.GetScore().ToString()}";
     }
 }

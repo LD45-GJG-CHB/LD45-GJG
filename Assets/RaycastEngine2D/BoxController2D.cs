@@ -61,7 +61,6 @@ namespace RaycastEngine2D
             var directionY = Mathf.Sign(velocity.y);
 
             var hit = Physics2D.BoxCast(rayOrigin, _collider.bounds.size, 0, Vector2.up * directionY, rayLength, CollisionMask);
-
             if (hit)
             {
                 velocity.y = (hit.distance - SKINWIDTH) * directionY;
