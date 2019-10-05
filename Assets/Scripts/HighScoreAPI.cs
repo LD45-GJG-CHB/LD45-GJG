@@ -23,6 +23,23 @@ public static class HighScoreAPI
             callback(request.downloadHandler.text);
         }
     }
+    
+    public static IEnumerator GetTopList(Action<string> callback)
+    {
+        var URI = $"{HIGHSCORES_API_URI}/top";
+        var uuid = Guid.NewGuid();
+        Debug.Log($"[HighscoreManager-{uuid.ToString()}] GET {URI}");
+        using (var request = UnityWebRequest.Get(URI))
+        {
+            yield return request.SendWebRequest();
+
+            Debug.Log(request.isNetworkError
+                ? $"[HighscoreManager-{uuid.ToString()}] Error: {request.error}"
+                : $"[HighscoreManager-{uuid.ToString()}] Received: {request.downloadHandler.text}");
+
+            callback(request.downloadHandler.text);
+        }
+    }
 
     public static IEnumerator Save(string name, int score, Action<string> callback)
     {

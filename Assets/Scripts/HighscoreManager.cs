@@ -8,7 +8,7 @@ public class HighscoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(HighScoreAPI.GetList((responseText) =>
+        StartCoroutine(HighScoreAPI.GetTopList((responseText) =>
         {
             var response = JsonUtility.FromJson<HighscoreManager.Response>(responseText);
             _highscores = response.data;
@@ -24,18 +24,19 @@ public class HighscoreManager : MonoBehaviour
         }
         if (_highscores != null && _highscores.Length > 0)
         {
+            int index = 1;
             foreach (var highscore in _highscores)
             {
-                InstantiateEntry(highscore);
+                InstantiateEntry(highscore, index++);
             }
         }
     }
 
-    private void InstantiateEntry(Highscore highscore)
+    private void InstantiateEntry(Highscore highscore, int index)
     {
         GameObject entry = Instantiate(highscoreEntry, transform);
         var component = entry.GetComponent<HighscoreEntry>();
-        component.nameText.text = highscore.name;
+        component.nameText.text = $"{index.ToString()}. {highscore.name}";
         component.scoreText.text = highscore.score.ToString();
     }
 
