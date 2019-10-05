@@ -52,6 +52,7 @@ public class MapLoader : Singleton<MapLoader>
 
                         tile.GetComponent<BoxCollider2D>().isTrigger = true;
 
+                        tile.gameObject.layer = 11;
                         Rigidbody2D rb = tile.gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
                         rb.gravityScale = 0.0f;
                         rb.isKinematic = true; 

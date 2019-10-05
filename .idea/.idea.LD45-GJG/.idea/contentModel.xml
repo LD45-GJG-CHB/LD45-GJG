@@ -43,6 +43,7 @@
           </e>
           <e p="FontGenerator.cs" t="Include" />
           <e p="Fonts.cs" t="Include" />
+          <e p="GameRunner.cs" t="Include" />
           <e p="HighScore.cs" t="Include" />
           <e p="HighScoreAPI.cs" t="Include" />
           <e p="HighscoreEntry.cs" t="Include" />
@@ -51,6 +52,13 @@
           <e p="LetterTile.cs" t="Include" />
           <e p="MapLoader.cs" t="Include" />
           <e p="Maps.cs" t="Include" />
+          <e p="Menus" t="Include">
+            <e p="MenuAction.cs" t="Include" />
+            <e p="MenuEntry.cs" t="Include" />
+            <e p="MenuManager.cs" t="Include" />
+            <e p="MenuPage.cs" t="Include" />
+            <e p="StartEntry.cs" t="Include" />
+          </e>
           <e p="Player.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="ScoreText.cs" t="Include" />

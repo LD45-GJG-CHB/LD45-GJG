@@ -2,6 +2,7 @@
 using Extensions;
 using RaycastEngine2D;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : Singleton<Player>
@@ -21,7 +22,7 @@ public class Player : Singleton<Player>
     private float _maxJumpVelocity;
     private float _minJumpVelocity;
 
-    [SerializeField] private float _moveSpeed = 10;
+    public float _moveSpeed = 10;
     private float _velocityXSmoothing;
 
     public Vector3 Velocity;
@@ -32,9 +33,14 @@ public class Player : Singleton<Player>
 
     private const string Letters = "abcdefghijklmnopqrstuvwxyz";
 
+    public Image _darkness;
     // Use this for initialization
     private void Start()
     {
+        var c = _darkness.color;
+        c.a = 0;
+        _darkness.color = c;
+        
         _renderer = GetComponent<SpriteRenderer>();
         
         _lastFacingDirection = Vector2.right;
