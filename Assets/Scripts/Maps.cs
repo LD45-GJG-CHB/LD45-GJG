@@ -6,8 +6,8 @@ public class Maps
 {
     public static Dictionary<string, string> maps;
 
-    public static int mapSizeX = 5;
-    public static int mapSizeY = 3;
+    public static int mapSizeX = 40;
+    public static int mapSizeY = 20;
 
     static Maps()
     {

@@ -7,6 +7,8 @@ public class MapLoader : MonoBehaviour
 
     public string currentMap { get; set; } = "map_0"; // Somehow edit this variable between levels
     public string currentFont { get; set; } = "font_0"; // Somehow edit this variable between levels
+
+    public GameObject tilePrefab;
     public float tileSize = 1;
 
     private List<List<string>> map;
@@ -14,13 +16,12 @@ public class MapLoader : MonoBehaviour
 
     public void Awake()
     {
-        this.map = Maps.convertStringMapToNestedList(Maps.maps[currentMap]);
+        map = Maps.convertStringMapToNestedList(Maps.maps[currentMap]);
         letterTiles = new Dictionary<string, GameObject>();
-        foreach (string letter in alphabet())
+        foreach (var letter in alphabet())
         {
             // Peab gameobjectina laadima gameobjektid, mitte png-sid bljat
-            Debug.Log(Fonts.fonts[currentFont] + "/" + letter + ".png");
-            GameObject letterTile = (GameObject)Instantiate(Resources.Load(Fonts.fonts[currentFont] + "/" + letter + ".png"));
+            var letterTile = (GameObject)Instantiate(tilePrefab);
             letterTiles.Add(letter, letterTile);
         }
 
@@ -30,11 +31,11 @@ public class MapLoader : MonoBehaviour
         {
             for (var x = 0; x < Maps.mapSizeX - 1; x++)
             {
-                string letter = map[x][y];
-                GameObject tile = (GameObject)Instantiate(letterTiles[letter], transform);
+                var letter = map[x][y];
+                var tile = Instantiate(letterTiles[letter], transform);
 
-                float posX = x * tileSize;
-                float posY = y * -tileSize;
+                var posX = x * tileSize;
+                var posY = y * -tileSize;
 
                 tile.transform.position = new Vector2(posX, posY);
             }
