@@ -1,0 +1,2071 @@
+fileFormatVersion: 2
+guid: 57f45390f33c3b24a96d17455dc75c1c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2854160400901266480
+    second: minecraft-font-map_0
+  - first:
+      213: 891670104549762568
+    second: minecraft-font-map_1
+  - first:
+      213: 4360114319877832156
+    second: minecraft-font-map_2
+  - first:
+      213: 2253564610471561306
+    second: minecraft-font-map_3
+  - first:
+      213: 3718743508676429857
+    second: minecraft-font-map_4
+  - first:
+      213: -4640968861204130250
+    second: minecraft-font-map_5
+  - first:
+      213: 9115384713457656697
+    second: minecraft-font-map_6
+  - first:
+      213: -5435436293915956939
+    second: minecraft-font-map_7
+  - first:
+      213: 5479170004907267747
+    second: minecraft-font-map_8
+  - first:
+      213: -2829824209044032812
+    second: minecraft-font-map_9
+  - first:
+      213: -4991532921358371454
+    second: minecraft-font-map_10
+  - first:
+      213: 8118101057863126101
+    second: minecraft-font-map_11
+  - first:
+      213: 4563721476013417182
+    second: minecraft-font-map_12
+  - first:
+      213: -6047326059993285846
+    second: minecraft-font-map_13
+  - first:
+      213: 6782608718936576888
+    second: minecraft-font-map_14
+  - first:
+      213: -3944741601301541658
+    second: minecraft-font-map_15
+  - first:
+      213: -5321882653700141692
+    second: minecraft-font-map_16
+  - first:
+      213: -4453462537079028147
+    second: minecraft-font-map_17
+  - first:
+      213: -7499743334816062899
+    second: minecraft-font-map_18
+  - first:
+      213: 2153130529064635500
+    second: minecraft-font-map_19
+  - first:
+      213: 6556234421996135939
+    second: minecraft-font-map_20
+  - first:
+      213: 1874151083047794331
+    second: minecraft-font-map_21
+  - first:
+      213: 6688971496833461298
+    second: minecraft-font-map_22
+  - first:
+      213: 411797485846997
+    second: minecraft-font-map_23
+  - first:
+      213: -2895547035929114035
+    second: minecraft-font-map_24
+  - first:
+      213: -7969903279665693419
+    second: minecraft-font-map_25
+  - first:
+      213: 5523145448202510660
+    second: minecraft-font-map_26
+  - first:
+      213: -8647942059673120826
+    second: minecraft-font-map_27
+  - first:
+      213: -5185848006213968783
+    second: minecraft-font-map_28
+  - first:
+      213: 6060085684964410817
+    second: minecraft-font-map_29
+  - first:
+      213: -4985614195889049120
+    second: minecraft-font-map_30
+  - first:
+      213: -1500499383369508979
+    second: minecraft-font-map_31
+  - first:
+      213: -8196437348976457199
+    second: minecraft-font-map_32
+  - first:
+      213: 991711592743522660
+    second: minecraft-font-map_33
+  - first:
+      213: -4140979079097374524
+    second: minecraft-font-map_34
+  - first:
+      213: -3540842725710412200
+    second: minecraft-font-map_35
+  - first:
+      213: 5496104007421424659
+    second: minecraft-font-map_36
+  - first:
+      213: -5214145704305338784
+    second: minecraft-font-map_37
+  - first:
+      213: 6861927568122058220
+    second: minecraft-font-map_38
+  - first:
+      213: 2464872714158221117
+    second: minecraft-font-map_39
+  - first:
+      213: 8869649837830636735
+    second: minecraft-font-map_40
+  - first:
+      213: -16319853565329761
+    second: minecraft-font-map_41
+  - first:
+      213: -6514194216070593243
+    second: minecraft-font-map_42
+  - first:
+      213: -4278868702001318643
+    second: minecraft-font-map_43
+  - first:
+      213: -1748093958024493206
+    second: minecraft-font-map_44
+  - first:
+      213: -4215183770229558041
+    second: minecraft-font-map_45
+  - first:
+      213: 2834362390313785569
+    second: minecraft-font-map_46
+  - first:
+      213: 865413251369901983
+    second: minecraft-font-map_47
+  - first:
+      213: 8016841679174441170
+    second: minecraft-font-map_48
+  - first:
+      213: 931517778443373411
+    second: minecraft-font-map_49
+  - first:
+      213: -7006593729485560570
+    second: minecraft-font-map_50
+  - first:
+      213: 5447104546272955224
+    second: minecraft-font-map_51
+  - first:
+      213: -3350988460805980675
+    second: minecraft-font-map_52
+  - first:
+      213: -8374160433191794803
+    second: minecraft-font-map_53
+  - first:
+      213: 4785191710154655990
+    second: minecraft-font-map_54
+  - first:
+      213: 8581430976743351525
+    second: minecraft-font-map_55
+  - first:
+      213: 8276142278052692621
+    second: minecraft-font-map_56
+  - first:
+      213: -4185093512315311822
+    second: minecraft-font-map_57
+  - first:
+      213: -4954178329336243244
+    second: minecraft-font-map_58
+  - first:
+      213: -4012901748193213364
+    second: minecraft-font-map_59
+  - first:
+      213: -5324059406244195986
+    second: minecraft-font-map_60
+  - first:
+      213: -1049439395148304796
+    second: minecraft-font-map_61
+  - first:
+      213: 5356556540494999869
+    second: minecraft-font-map_62
+  - first:
+      213: -5475412918857658270
+    second: minecraft-font-map_63
+  - first:
+      213: -8655905814487531151
+    second: minecraft-font-map_64
+  - first:
+      213: 3606397573774784681
+    second: minecraft-font-map_65
+  - first:
+      213: -1395418754059678677
+    second: minecraft-font-map_66
+  - first:
+      213: 38551257205502697
+    second: minecraft-font-map_67
+  - first:
+      213: 7336589171902292106
+    second: minecraft-font-map_68
+  - first:
+      213: -122646929265754169
+    second: minecraft-font-map_69
+  - first:
+      213: 5820907130129072068
+    second: minecraft-font-map_70
+  - first:
+      213: 4423615122378770359
+    second: minecraft-font-map_71
+  - first:
+      213: 759543561999245875
+    second: minecraft-font-map_72
+  - first:
+      213: -445068381875814167
+    second: minecraft-font-map_73
+  - first:
+      213: 793156684728830758
+    second: minecraft-font-map_74
+  - first:
+      213: 6022484998793824593
+    second: minecraft-font-map_75
+  - first:
+      213: -6119927103727147069
+    second: minecraft-font-map_76
+  - first:
+      213: 7748874916993537296
+    second: minecraft-font-map_77
+  - first:
+      213: 1909583045681333049
+    second: minecraft-font-map_78
+  - first:
+      213: -4593468806275488341
+    second: minecraft-font-map_79
+  - first:
+      213: -4907919367483052967
+    second: minecraft-font-map_80
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: minecraft-font-map_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d51eb85520845439a9c632c425f008
+      internalID: 2854160400901266480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b275de33bdb9e1448f640e305b79fe1
+      internalID: 891670104549762568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2383f865ed53684dbef061ced2067ee
+      internalID: 4360114319877832156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f2865dab7b3d94ba24c01584349c1f
+      internalID: 2253564610471561306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f597706312a784dbf833fee78717cb
+      internalID: 3718743508676429857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad8299bcd502db4ca8ba78e2fbe41e6
+      internalID: -4640968861204130250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_6
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3b1e54606e24c44acafde32cbe0438
+      internalID: 9115384713457656697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0faaefd4555b7d94bbee7d152d6d603e
+      internalID: -5435436293915956939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_8
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1030
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106b3c6e98566c249b6e1353da1695bb
+      internalID: 5479170004907267747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db503ac2e324ae4aa679dd376a4005f
+      internalID: -2829824209044032812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_10
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53509571d1c756648960d98040e16511
+      internalID: -4991532921358371454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a38024f944234a498717e9b7b5ab490
+      internalID: 8118101057863126101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_12
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bc3ddef4e37904b95b5a862f5c526c
+      internalID: 4563721476013417182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_13
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f1a6a64d08c9945b69bb8dfaf165f1
+      internalID: -6047326059993285846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_14
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd44279b0e38c77428661714fc091a28
+      internalID: 6782608718936576888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_15
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d21a9ab45d2bc44acc945771f41e83
+      internalID: -3944741601301541658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_16
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cd52226e78e804fa848a96a2152a47
+      internalID: -5321882653700141692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_17
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 910
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20030b4f3c517644c9f8d09781e96a4e
+      internalID: -4453462537079028147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f892fe30b7f526848b5e4be13f434230
+      internalID: -7499743334816062899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_19
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff87e889fb190147907c35b69c1931e
+      internalID: 2153130529064635500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_20
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959a8940021c95343a046cb96b0bcb8e
+      internalID: 6556234421996135939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_21
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4494e505695b154da80b3192168d9e0
+      internalID: 1874151083047794331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_22
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4afe0e045c513345b296c9825865b78
+      internalID: 6688971496833461298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_23
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fb34610b550604cb897836de3e2e53
+      internalID: 411797485846997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_24
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d729ea72f05637a46b3bc1880729d636
+      internalID: -2895547035929114035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_25
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f239cbe1cc5de8846825866321f030c4
+      internalID: -7969903279665693419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_26
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 790
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef5f2efb53209a4881c6a4167c20abe
+      internalID: 5523145448202510660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a8b29a0d51ad74da32760bb942a0ab
+      internalID: -8647942059673120826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_28
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72a55f288908c34e80d2b62acc00053
+      internalID: -5185848006213968783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_29
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60de7d16b1e194743ac2744eb54fc47f
+      internalID: 6060085684964410817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_30
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b86d62a092ba954c9b65fa3eff1ab8a
+      internalID: -4985614195889049120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_31
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395ee262468a2be44bb9e46beee204e3
+      internalID: -1500499383369508979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_32
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d150415edbe1a5e4681b2e86d663e637
+      internalID: -8196437348976457199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_33
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ae82c8da373f74799482146a166d0e
+      internalID: 991711592743522660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_34
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafcad48d8cba3f4ba5f09676bbb93d4
+      internalID: -4140979079097374524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_35
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 670
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e75c24d3dff32342892e1f6dc6f6dba
+      internalID: -3540842725710412200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8765d35a662f11944b4f8061faf3ea44
+      internalID: 5496104007421424659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_37
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9ef69633e650b45a3d9137d7c5cf29
+      internalID: -5214145704305338784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_38
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb89e20ea73a1584e9707ffaf9ae4858
+      internalID: 6861927568122058220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_39
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ef4be7c43054c40ba6d6f39de4d63b
+      internalID: 2464872714158221117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_40
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6c7800b67a76644ba5920ecc672aa6
+      internalID: 8869649837830636735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_41
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c278fab726af4428a1ffb48dcf750c
+      internalID: -16319853565329761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_42
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865465316b803704999af569bd2f0f7d
+      internalID: -6514194216070593243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_43
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104aaf5e92fde8c45a91c9d85e4cb5ff
+      internalID: -4278868702001318643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_44
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 550
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8f8230ba07f7a48a61d205630718eb
+      internalID: -1748093958024493206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729756290b233fa4eaeaa60e50858a13
+      internalID: -4215183770229558041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_46
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90258a03ebc91424ba7a71ea1a3c32b2
+      internalID: 2834362390313785569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59197a6d49658048ab7253daaa7f054
+      internalID: 865413251369901983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_48
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea9646c3863f104fb709e622a7e79d1
+      internalID: 8016841679174441170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_49
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebb2c1f69e04084584ae670543d1118
+      internalID: 931517778443373411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_50
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2fea62bf98fbd4ea8e083648f964f8
+      internalID: -7006593729485560570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_51
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edd42c292b6f5f4cb0c0074a8c768f4
+      internalID: 5447104546272955224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_52
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d650ac2b8e39648b89215a7600ad0a
+      internalID: -3350988460805980675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_53
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 430
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4ebfe1c1eabdf47a2ebb73e5971fab
+      internalID: -8374160433191794803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba870ba123678ec458cec39418c326e0
+      internalID: 4785191710154655990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_55
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a92f74410878041b1a9b7509921134
+      internalID: 8581430976743351525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_56
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3457dd6f7e018241b4bf93052c15037
+      internalID: 8276142278052692621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_57
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585dcc703fe0fe24aba824534a5c07fc
+      internalID: -4185093512315311822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_58
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d548dd8ee3544444b843ce02dd94243
+      internalID: -4954178329336243244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_59
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97db2336bf53d8d40baadd06d9e56fd0
+      internalID: -4012901748193213364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_60
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa234624d0db1a747b20a12d2eb6f7d1
+      internalID: -5324059406244195986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_61
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f332fa232ca4c4796b91559aa795b9
+      internalID: -1049439395148304796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_62
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 310
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b3c410d88b34a44a56f44a63c498bc
+      internalID: 5356556540494999869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49ae1f5ca114464a83ec901fc5c897f
+      internalID: -5475412918857658270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_64
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951260df8c239fa45ad72fa823186f16
+      internalID: -8655905814487531151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_65
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54324973fd438e444979947ab90037a4
+      internalID: 3606397573774784681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_66
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f55b2c3e17fb0d4ca5f157adef0b115
+      internalID: -1395418754059678677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_67
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb92cacf77666540a8647c5caa2a81b
+      internalID: 38551257205502697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_68
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa9b4988f6bfe1428b6b7afd5591c14
+      internalID: 7336589171902292106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_69
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d958d79712eae0d43a19e4940a8986c9
+      internalID: -122646929265754169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_70
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333e98ff70a7ee949a18c93e0fe8fc18
+      internalID: 5820907130129072068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_71
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 190
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a420d9a56d6d45049aced788bb6a50f0
+      internalID: 4423615122378770359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd875ce36f61d8843a26fc835fea8986
+      internalID: 759543561999245875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_73
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e649bf329cfdff945ba4ae98c2377440
+      internalID: -445068381875814167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_74
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21402fdfa609e4146b57db653d62f359
+      internalID: 793156684728830758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_75
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efcd1d510805324e870aefb17be8d43
+      internalID: 6022484998793824593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_76
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ebb11d1b41afb4b80b30af19b7c0ad
+      internalID: -6119927103727147069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_77
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ce9dc9e3c757942908b2ba7a48c645
+      internalID: 7748874916993537296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_78
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d13020612dc62458f8e09c5e7e9200
+      internalID: 1909583045681333049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_79
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a111ab036d463b4bba4224fa028e3e8
+      internalID: -4593468806275488341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minecraft-font-map_80
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 70
+        width: 110
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404aff095d7ca07468512bc63248d55e
+      internalID: -4907919367483052967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
