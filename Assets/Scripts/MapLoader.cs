@@ -33,9 +33,13 @@ public class MapLoader : Singleton<MapLoader>
                 {
                     Player._instance.transform.position = new Vector3(x,y,0);
                 }
-                if (letter == "2")
+                else if (letter == "2")
                 {
                     var tile = Instantiate(exitPrefab, new Vector3(x,y), Quaternion.identity,transform);
+                }
+                else if (letter == "-")
+                {
+                    continue;
                 }
                 else
                 {
