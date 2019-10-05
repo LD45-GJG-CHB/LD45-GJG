@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Networking;
+using Debug = UnityEngine.Debug;
 
 public class HighscoreManager : MonoBehaviour
 {
-    // TODO: add real highscore server URI
-    private readonly String HIGHSCORES_API_URI = "https://www.google.com"; 
+    private readonly String HIGHSCORES_API_URI = "http://167.99.142.75/game/scores"; 
     
     public GameObject highscoreEntry;
     private Highscore[] _highscores;
@@ -31,18 +30,23 @@ public class HighscoreManager : MonoBehaviour
         {
             foreach (var highscore in _highscores)
             {
-                GameObject entry = Instantiate(highscoreEntry, transform);
-                var component = entry.GetComponent<HighscoreEntry>();
-                component._nameText.text = highscore.name;
-                component._scoreText.text = highscore.score;
+                InstantiateEntry(highscore);
             }
         }
     }
 
-    // TODO: add request to real highscore server
+    private void InstantiateEntry(Highscore highscore)
+    {
+        GameObject entry = Instantiate(highscoreEntry, transform);
+        var component = entry.GetComponent<HighscoreEntry>();
+        component._nameText.text = highscore.name;
+        component._scoreText.text = highscore.score;
+    }
+
     private IEnumerator GetHighscores()
     {
         
+        Debug.Log($"[HighscoreManager] GET {HIGHSCORES_API_URI}");
         using (var request = UnityWebRequest.Get(HIGHSCORES_API_URI))
         {
             _highscores_loading = true;
@@ -52,17 +56,7 @@ public class HighscoreManager : MonoBehaviour
                 ? $"[HighscoreManager] Error: {request.error}"
                 : $"[HighscoreManager] Received: {request.downloadHandler.text}");
 
-//            _highscores = JsonUtility.FromJson<Highscore[]>(request.downloadHandler.text);
-            var response = JsonUtility.FromJson<Response>(@"
-{
-    ""data"": [
-        {
-            ""name"": ""Markus"",
-            ""score"": ""20""
-        }    
-    ]
-}
-            ");
+            var response = JsonUtility.FromJson<Response>(request.downloadHandler.text);
             _highscores = response.data;
             _highscores_loading = false;
         }
