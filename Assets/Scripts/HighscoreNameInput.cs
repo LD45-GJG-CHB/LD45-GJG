@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HighscoreNameInput : MonoBehaviour
 {
 
     public TextMeshProUGUI nameInput;
+    public String nextScene;
     public Score score;
     
     // Start is called before the first frame update
@@ -27,8 +30,8 @@ public class HighscoreNameInput : MonoBehaviour
         Debug.Log($"[HighscoreNameInput] received name: {name.ToString()}");
 
         StartCoroutine(HighScoreAPI.Save(name, score.GetScore(), (s =>
-        {
-            
-        })));
+            {
+                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+            })));
         }
 }
