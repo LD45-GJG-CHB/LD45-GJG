@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KristjanTestMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KristjanTestMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LD45-GJG.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LD45-GJG.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
               <folding>
                 <marker date="1570276394205" expanded="false" signature="6:78" ph="..." />
                 <marker date="1570276394205" expanded="true" signature="118:1663" ph="{...}" />
@@ -110,14 +106,15 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Maps.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding>
-                <marker date="1570276197124" expanded="true" signature="6:111" ph="..." />
-                <marker date="1570276197124" expanded="true" signature="130:1105" ph="{...}" />
-                <marker date="1570276197124" expanded="true" signature="275:370" ph="{...}" />
-                <marker date="1570276197124" expanded="true" signature="488:1103" ph="{...}" />
-                <marker date="1570276197124" expanded="true" signature="840:1025" ph="{...}" />
-                <marker date="1570276197124" expanded="true" signature="912:1015" ph="{...}" />
+                <marker date="1570276573734" expanded="true" signature="6:128" ph="..." />
+                <marker date="1570276573734" expanded="true" signature="147:1327" ph="{...}" />
+                <marker date="1570276573734" expanded="true" signature="354:451" ph="{...}" />
+                <marker date="1570276573734" expanded="true" signature="486:691" ph="{...}" />
+                <marker date="1570276573734" expanded="true" signature="750:1325" ph="{...}" />
+                <marker date="1570276573734" expanded="true" signature="1102:1287" ph="{...}" />
+                <marker date="1570276573734" expanded="true" signature="1174:1277" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -217,8 +214,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FontGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KristjanTestMap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Maps.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Maps.cs" />
       </list>
     </option>
   </component>
@@ -351,7 +348,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17192000" />
+    <option name="totallyTimeSpent" value="17331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,7 +369,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49973363" visible="true" weight="0.39915523" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973363" weight="0.39915523" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -383,8 +380,8 @@
       <window_info anchor="bottom" id="Unity" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49920085" weight="0.38965154" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5002664" side_tool="true" visible="true" weight="0.39915523" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="14" sideWeight="0.49866807" visible="true" weight="0.38965154" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5013319" side_tool="true" visible="true" weight="0.38965154" />
       <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -444,19 +441,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Maps.cs</url>
-          <line>41</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Maps.cs" initialLine="33">
-            <startOffsets>
-              <option value="1043" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1057" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -715,7 +699,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
           <folding>
             <marker date="1570276394205" expanded="false" signature="6:78" ph="..." />
             <marker date="1570276394205" expanded="true" signature="118:1663" ph="{...}" />
@@ -734,14 +718,15 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Maps.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
-            <marker date="1570276197124" expanded="true" signature="6:111" ph="..." />
-            <marker date="1570276197124" expanded="true" signature="130:1105" ph="{...}" />
-            <marker date="1570276197124" expanded="true" signature="275:370" ph="{...}" />
-            <marker date="1570276197124" expanded="true" signature="488:1103" ph="{...}" />
-            <marker date="1570276197124" expanded="true" signature="840:1025" ph="{...}" />
-            <marker date="1570276197124" expanded="true" signature="912:1015" ph="{...}" />
+            <marker date="1570276573734" expanded="true" signature="6:128" ph="..." />
+            <marker date="1570276573734" expanded="true" signature="147:1327" ph="{...}" />
+            <marker date="1570276573734" expanded="true" signature="354:451" ph="{...}" />
+            <marker date="1570276573734" expanded="true" signature="486:691" ph="{...}" />
+            <marker date="1570276573734" expanded="true" signature="750:1325" ph="{...}" />
+            <marker date="1570276573734" expanded="true" signature="1102:1287" ph="{...}" />
+            <marker date="1570276573734" expanded="true" signature="1174:1277" ph="{...}" />
           </folding>
         </state>
       </provider>
