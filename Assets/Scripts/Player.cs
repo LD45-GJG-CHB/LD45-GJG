@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Linq;
+using DG.Tweening;
 using Extensions;
 using RaycastEngine2D;
 using UnityEngine;
@@ -7,15 +10,14 @@ using UnityEngine.UI;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Player : Singleton<Player>
 {
-    
     [SerializeField] private float _accelerationTimeAirborne = .2f;
     [SerializeField] private float _accelerationTimeGrounded = .1f;
 
     private BoxController2D _controller;
-    
+
     private Vector2 _lastFacingDirection;
     private Vector3 _lastInput;
-    
+
     [SerializeField] private float _maxJumpHeight = 4f;
     [SerializeField] private float _minJumpHeight = 1f;
     [SerializeField] private float _timeToJumpApex = .4f;
@@ -34,15 +36,16 @@ public class Player : Singleton<Player>
     private const string Letters = "abcdefghijklmnopqrstuvwxyz";
 
     public Image _darkness;
+
     // Use this for initialization
     private void Start()
     {
         var c = _darkness.color;
         c.a = 0;
         _darkness.color = c;
-        
+
         _renderer = GetComponent<SpriteRenderer>();
-        
+
         _lastFacingDirection = Vector2.right;
 
         _controller = GetComponent<BoxController2D>();
@@ -63,7 +66,7 @@ public class Player : Singleton<Player>
     {
         if (!ApplicationSettings.IsPaused())
         {
-            HandleActions();   
+            HandleActions();
         }
     }
 
@@ -75,22 +78,45 @@ public class Player : Singleton<Player>
         HandleTileSwitching();
     }
 
-    private static void HandleTileSwitching()
+    private void HandleTileSwitching()
     {
         foreach (var letter in Letters)
         {
             if (!Input.GetKeyDown(letter.ToString())) continue;
-            
+
             if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString(), out var tiles))
             {
+                Score.Instance.DecrementScore(15);
                 tiles.ForEach(tile => tile.ToggleState());
+
+                var bxCollider = GetComponent<BoxCollider2D>();
+                
+                
+                if (tiles.Where(tile => tile.IsActivated)
+                    .Any(tile => Vector3.Distance(transform.position, tile.transform.position) < 1.0f))
+                {
+                    Stuck();
+                }
             }
         }
     }
 
+    private void Stuck()
+    {
+        Debug.Log("WARNING. MAYBE DESTROY TOO SOON");
+
+        GameState.IsPlayerDead = true;
+
+        DOTween.Sequence()
+            .SetUpdate(true)
+            .AppendCallback(() => Time.timeScale = 0f)
+            .Append(_darkness.DOFade(1.0f, 0.3f))
+            .AppendCallback(() => Time.timeScale = 1.0f)
+            .Play();
+    }
+
     private void HandleOnTriggerEnter()
     {
-
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -120,12 +146,12 @@ public class Player : Singleton<Player>
     private void HandleMovement()
     {
         _renderer.flipX = Mathf.Sign(Velocity.x) < float.Epsilon; // moving right
-        
+
         if (_controller.Collisions.Above || _controller.Collisions.Below)
         {
             Velocity.y = 0;
         }
-        
+
         if (Input.GetButtonDown("Jump") && _controller.Collisions.Below)
         {
             Velocity.y = _maxJumpVelocity;
@@ -147,8 +173,8 @@ public class Player : Singleton<Player>
         if (IsMoving())
             _lastFacingDirection = Velocity.normalized.ToVector2();
     }
-    
-    
+
+
     private void CheckCollision()
     {
         if (_controller.Collisions.Left ||
@@ -159,7 +185,7 @@ public class Player : Singleton<Player>
             UpdateDirection();
         }
     }
-    
+
     private void CheckDirection()
     {
         if (!_justTurnedAround)
@@ -172,7 +198,7 @@ public class Player : Singleton<Player>
     {
         StartCoroutine(TurnAround());
     }
-    
+
     private IEnumerator TurnAround()
     {
         Velocity.x = -Velocity.x;

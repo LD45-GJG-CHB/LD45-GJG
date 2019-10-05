@@ -44,6 +44,7 @@
           <e p="FontGenerator.cs" t="Include" />
           <e p="Fonts.cs" t="Include" />
           <e p="GameRunner.cs" t="Include" />
+          <e p="GameState.cs" t="Include" />
           <e p="HighScore.cs" t="Include" />
           <e p="HighScoreAPI.cs" t="Include" />
           <e p="HighscoreEntry.cs" t="Include" />
