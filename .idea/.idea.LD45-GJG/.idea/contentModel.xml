@@ -28,6 +28,12 @@
           <e p="PlatformController2D.cs" t="Include" />
           <e p="RayCastController.cs" t="Include" />
         </e>
+        <e p="Resources" t="Include">
+          <e p="Maps" t="Include">
+            <e p="map_0.txt" t="Include" />
+            <e p="map_1.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="ApplicationSettings.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />

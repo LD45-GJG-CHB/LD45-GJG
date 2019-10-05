@@ -7,7 +7,7 @@ public class Tile : MonoBehaviour
 {
     public TextMeshProUGUI letter;
     public Color activatedColor = Color.white;
-    public Color deactivatedColor = new Color(1,1,1, 0.7f);
+    public Color deactivatedColor = new Color(1,1,1, 0.6f);
 
     public bool IsActivated => letter.color == activatedColor;
     
@@ -17,9 +17,14 @@ public class Tile : MonoBehaviour
     {
         _collider = GetComponent<BoxCollider2D>();
         letter.color = deactivatedColor;
-        _collider.enabled = false;
+//        _collider.enabled = false;
+        
     }
 
+    public void SetLetter(string textLetter)
+    {
+        letter.text = textLetter;
+    }
     public void Activate()
     {
         letter.color = activatedColor;

@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
     
     [SerializeField] private float _accelerationTimeAirborne = .2f;

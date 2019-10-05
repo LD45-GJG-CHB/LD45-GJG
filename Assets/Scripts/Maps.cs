@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.IO;
+using System.Linq;
 
 public class Maps
 {
@@ -9,39 +10,41 @@ public class Maps
     public static int mapSizeX = 40;
     public static int mapSizeY = 20;
 
+    private static string path = "Assets/Resources/Maps/";
+
     static Maps()
     {
         maps = new Dictionary<string, string>();
-        maps.Add("map_0", Map_0());
+        maps.Add("map_0", ReadMap("map_0"));
+        maps.Add("map_1", ReadMap("map_1"));
     }
 
-    private static string Map_0()
+    private static string ReadMap(string mapName)
     {
-        return 
-                
-            "aaaaa" +
-            "aaabb" +
-            "aabba"
-
-        ;
+        StreamReader reader = new StreamReader(path + mapName + ".txt");
+        string map = reader.ReadToEnd().Replace(Environment.NewLine, "");
+        reader.Close();
+        return map;
     }
 
-    public static List<List<string>> convertStringMapToNestedList(string map)
-    {
-        List<List<string>> result = new List<List<string>>();
-        for (int i = 0; i < mapSizeY; i+=mapSizeY)
+    public static string[,] StringTo2DArray(string input)
+    { 
+        var n = mapSizeX;
+        var split = input
+            .Select((c, i) => new { letter = c, group = i / n })
+            .GroupBy(l => l.group, l => l.letter)
+            .Select(g => string.Join("", g))
+            .ToArray();
+
+        var result = new string[mapSizeX,mapSizeY];
+        for (var yIndex = 0; yIndex < mapSizeY; yIndex++)
         {
-            List<string> row = new List<string>();
-            for (int j = 0; j < mapSizeX; j++)
+            for (var xIndex = 0; xIndex < mapSizeX; xIndex++)
             {
-                row.Add(map[j].ToString());
+                result[xIndex, yIndex] = split[yIndex][xIndex].ToString();
             }
-            Debug.Log("row:");
-            Debug.Log(row);
-            result.Add(row);
         }
-        Debug.Log("result");
-        Debug.Log(result);
+        
         return result;
     }
 }
