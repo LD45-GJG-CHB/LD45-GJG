@@ -22,7 +22,7 @@ public class GameRunner : Singleton<GameRunner>
                 .Append(Player.Instance._darkness.DOFade(1.0f, 0.6f))
                 .AppendInterval(1.0f)
                 .AppendCallback((() => Time.timeScale = 1.0f))
-                .AppendCallback(() => SceneManager.LoadScene("Markus"));
+                .AppendCallback(() => SceneManager.LoadScene("HighscoreInputScene"));
             return;
         }
 

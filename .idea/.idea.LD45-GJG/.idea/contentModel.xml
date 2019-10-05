@@ -57,7 +57,8 @@
             <e p="MenuEntry.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
-            <e p="StartEntry.cs" t="Include" />
+            <e p="SwitchPageAction.cs" t="Include" />
+            <e p="SwitchSceneAction.cs" t="Include" />
           </e>
           <e p="Player.cs" t="Include" />
           <e p="Score.cs" t="Include" />
