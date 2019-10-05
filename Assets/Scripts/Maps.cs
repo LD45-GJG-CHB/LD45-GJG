@@ -18,7 +18,7 @@ public class Maps
     private static string Map_0()
     {
         return 
-        
+                
             "aaaaa" +
             "aaabb" +
             "aabba"
