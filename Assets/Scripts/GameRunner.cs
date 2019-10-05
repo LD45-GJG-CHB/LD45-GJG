@@ -31,13 +31,6 @@ public class GameRunner : Singleton<GameRunner>
             return;
         }
 
-        MapLoader.Instance.DestroyTileMap();
-        MapLoader.Instance.currentMap = mapNames[iterator++];
-        MapLoader.Instance.LoadNextLevel();
-        Debug.Log("GameRunner: LoadNextLevel - Loaded!");
-        Score.Instance.IncrementScore(Score.Instance.GetScore() + initialScore);
-        isCountingScore = true;
-
         DOTween.Sequence()
             .SetUpdate(true)
             .AppendCallback((() => Time.timeScale = 0.0f))
@@ -48,6 +41,9 @@ public class GameRunner : Singleton<GameRunner>
                 MapLoader.Instance.DestroyTileMap();
                 MapLoader.Instance.currentMap = mapNames[iterator++];
                 MapLoader.Instance.LoadNextLevel();
+                Debug.Log("GameRunner: LoadNextLevel - Loaded!");
+                Score.Instance.IncrementScore(initialScore);
+                isCountingScore = true;
                 Player.Instance.Velocity = Vector3.zero;
                 Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             })
