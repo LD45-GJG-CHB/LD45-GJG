@@ -26,33 +26,45 @@ public class MapLoader : Singleton<MapLoader>
         for (var y = 0; y < Maps.mapSizeY; y++)
         {
             for (var x = 0; x < Maps.mapSizeX; x++)
-            {    
+            {
                 var letter = map[x,y];
 
-                if (letter == "1")
+                print(letter);
+                switch (letter)
                 {
-                    Player._instance.transform.position = new Vector3(x,y,0);
-                }
-                else if (letter == "2")
-                {
-                    var tile = Instantiate(exitPrefab, new Vector3(x,y), Quaternion.identity,transform);
-                }
-                else if (letter == "-")
-                {
-                    continue;
-                }
-                else
-                {
-                    var tile = Instantiate(tilePrefab, transform);
+                    case "1":
+                    {
+                        var posX = x * tileSize;
+                        var posY = y * -tileSize;
 
-                    var posX = x * tileSize;
-                    var posY = y * -tileSize;
+                        Player.Instance.transform.parent.position = new Vector3(posX,posY,0);
+                        break;
+                    }
+                    case "2":
+                    {
+                        var tile = Instantiate(exitPrefab, transform);
+                        var posX = x * tileSize;
+                        var posY = y * -tileSize;
 
-                    tile.transform.position = new Vector2(posX, posY);
+                        tile.transform.position = new Vector2(posX, posY);
+                        
+                        break;
+                    }
+                    case "-":
+                        break;
+                    default:
+                    {
+                        var tile = Instantiate(tilePrefab, transform);
+
+                        var posX = x * tileSize;
+                        var posY = y * -tileSize;
+
+                        tile.transform.position = new Vector2(posX, posY);
                 
-                    tile.GetComponent<Tile>().SetLetter(letter);
+                        tile.GetComponent<Tile>().SetLetter(letter);
+                        break;
+                    }
                 }
-
             }
         }
 
