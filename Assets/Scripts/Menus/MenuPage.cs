@@ -57,4 +57,14 @@ public class MenuPage : MonoBehaviour
         _activeIndex -= 1;
         Active.SetActive();
     }
+
+    public void Enable()
+    {
+        gameObject.SetActive(true);
+    }
+    
+    public void Disable()
+    {
+        gameObject.SetActive(false);
+    }
 }

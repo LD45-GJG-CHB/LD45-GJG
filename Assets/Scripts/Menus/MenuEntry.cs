@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MenuEntry : MonoBehaviour
 {
-    public String title;
     private TextMeshProUGUI _textField;
     private bool _active;
     private MenuAction _menuAction;
@@ -19,7 +18,6 @@ public class MenuEntry : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _textField.text = title;
         _textField.fontStyle = _active ? FontStyles.Bold : FontStyles.Normal;
     }
 
