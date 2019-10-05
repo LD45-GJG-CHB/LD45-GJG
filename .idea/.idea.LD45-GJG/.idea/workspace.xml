@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RaycastEngine2D/BoxController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RaycastEngine2D/BoxController2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RaycastEngine2D/CircleController2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RaycastEngine2D/CircleController2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LD45-GJG.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LD45-GJG.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +17,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="67">
-                  <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+                <state relative-caret-position="111">
+                  <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
                   <folding>
                     <marker date="1570301319273" expanded="true" signature="6:159" ph="..." />
                     <marker date="1570301319273" expanded="true" signature="242:5455" ph="{...}" />
@@ -88,7 +81,7 @@
             <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/b6/0bf6d933/BoxCollider2D.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-12">
-                  <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+                  <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -97,7 +90,7 @@
             <entry file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/BoxController2D.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="44">
-                  <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+                  <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
                   <folding>
                     <marker date="1570301187675" expanded="true" signature="45:4992" ph="{...}" />
                     <marker date="1570301187675" expanded="true" signature="146:4990" ph="{...}" />
@@ -172,7 +165,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
+                <state relative-caret-position="142">
                   <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
                   <folding>
                     <marker date="1570300427070" expanded="true" signature="45:1108" ph="{...}" />
@@ -229,8 +222,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                <state relative-caret-position="220">
+                  <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -342,6 +335,36 @@
     <panes>
       <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="Resources" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="Resources" type="1045f7f1:UnityExplorerNode" />
+              <item name="Maps" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="Shaders" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="Sprites" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
@@ -403,7 +426,7 @@
       <workItem from="1570215503845" duration="366000" />
       <workItem from="1570251824798" duration="1621000" />
       <workItem from="1570253612696" duration="5998000" />
-      <workItem from="1570297846714" duration="3570000" />
+      <workItem from="1570297846714" duration="4400000" />
     </task>
     <task id="LOCAL-00001" summary="Vana scene Siimer">
       <created>1570253768155</created>
@@ -475,11 +498,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570298778385</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Death works">
+      <created>1570301449293</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570301449293</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39325000" />
+    <option name="totallyTimeSpent" value="40155000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,7 +524,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12892914" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12892914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -511,7 +541,7 @@
       <window_info anchor="bottom" id="Unity" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="14" sideWeight="0.49866807" visible="true" weight="0.38965154" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49866807" visible="true" weight="0.38965154" />
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5013319" side_tool="true" weight="0.40865892" />
       <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -570,7 +600,8 @@
     <MESSAGE value="Trippy effecx" />
     <MESSAGE value="Level changing" />
     <MESSAGE value="box kast" />
-    <option name="LAST_COMMIT_MESSAGE" value="box kast" />
+    <MESSAGE value="Death works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Death works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -800,19 +831,19 @@
         <state relative-caret-position="1672">
           <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
-            <marker date="1570295329083" expanded="true" signature="6:92" ph="..." />
-            <marker date="1570295329083" expanded="true" signature="139:3003" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="561:654" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="691:2481" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="805:2475" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="867:2465" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="981:2194" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="2259:2332" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="2353:2450" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="2535:2772" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="2806:3000" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="2867:2994" ph="{...}" />
-            <marker date="1570295329083" expanded="true" signature="2917:2984" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="6:92" ph="..." />
+            <marker date="1570301977677" expanded="true" signature="139:3082" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="561:654" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="776:2560" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="884:2554" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="946:2544" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="1060:2273" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="2338:2411" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="2432:2529" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="2614:2851" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="2885:3079" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="2946:3073" ph="{...}" />
+            <marker date="1570301977677" expanded="true" signature="2996:3063" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -877,13 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/a5/74116aa5/PhysicsScene2D.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -921,13 +945,13 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/b6/0bf6d933/BoxCollider2D.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
+        <state relative-caret-position="142">
           <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding>
             <marker date="1570300427070" expanded="true" signature="45:1108" ph="{...}" />
@@ -986,7 +1010,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/BoxController2D.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding>
             <marker date="1570301187675" expanded="true" signature="45:4992" ph="{...}" />
             <marker date="1570301187675" expanded="true" signature="146:4990" ph="{...}" />
@@ -1030,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="111">
+          <caret line="94" column="35" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding>
             <marker date="1570301319273" expanded="true" signature="6:159" ph="..." />
             <marker date="1570301319273" expanded="true" signature="242:5455" ph="{...}" />
@@ -1062,6 +1086,13 @@
             <marker date="1570301319273" expanded="true" signature="5191:5453" ph="{...}" />
             <marker date="1570301319273" expanded="true" signature="5285:5411" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
