@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
 using System.IO;
+using System.Linq;
 
 public class Maps
 {
@@ -23,14 +21,14 @@ public class Maps
     private static string Map_0()
     {
         StreamReader reader = new StreamReader(path + "map_0.txt");
-        string map = reader.ReadToEnd().Replace(System.Environment.NewLine, "");
+        string map = reader.ReadToEnd().Replace(Environment.NewLine, "");
         reader.Close();
         return map;
     }
 
     public static string[,] StringTo2DArray(string input)
-    {
-        const int n = 3;
+    { 
+        var n = mapSizeX;
         var split = input
             .Select((c, i) => new { letter = c, group = i / n })
             .GroupBy(l => l.group, l => l.letter)
@@ -38,9 +36,9 @@ public class Maps
             .ToArray();
 
         var result = new string[mapSizeX,mapSizeY];
-        for (int yIndex = 0; yIndex < mapSizeY; yIndex++)
+        for (var yIndex = 0; yIndex < mapSizeY; yIndex++)
         {
-            for (int xIndex = 0; xIndex < mapSizeX; xIndex++)
+            for (var xIndex = 0; xIndex < mapSizeX; xIndex++)
             {
                 result[xIndex, yIndex] = split[yIndex][xIndex].ToString();
             }
