@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapLoader : Singleton<MapLoader>
+public class MapLoader : MonoBehaviour
 {
     public string currentMap = "map_0"; // Somehow edit this variable between levels
     public string currentFont = "font_0"; // Somehow edit this variable between levels
@@ -63,6 +63,11 @@ public class MapLoader : Singleton<MapLoader>
                         tile.transform.position = new Vector2(posX, posY);
                         
                         tile.GetComponent<Tile>().tileype = TileType.DOOR;
+                        tile.GetComponent<BoxCollider2D>().isTrigger = true;
+
+                        Rigidbody2D rb = tile.AddComponent<Rigidbody2D>() as Rigidbody2D;
+                        rb.gravityScale = 0.0f;
+                        rb.isKinematic = true; 
 
                         break;
                     }
@@ -76,10 +81,12 @@ public class MapLoader : Singleton<MapLoader>
                         tile.transform.position = new Vector2(posX, posY);
 
                         tile.GetComponent<Tile>().SetLetter(letter);
+
                         break;
                     }
                 }
             }
         }
     }
+
 }
