@@ -175,6 +175,11 @@ namespace RaycastEngine2D
                 Collisions.Above || Collisions.Below ? Color.blue : Color.red);
         }
 
+        internal override void CheckDiagonalCollisions(ref Vector3 velocity)
+        {
+            throw new System.NotImplementedException();
+        }
+
         /// <summary>
         ///     Calculate the new velocity taking into account the slope angle.
         /// </summary>

@@ -25,6 +25,7 @@ namespace RaycastEngine2D
 
         internal abstract void CheckHorizontalCollisions(ref Vector3 velocity);
         internal abstract void CheckVerticalCollisions(ref Vector3 velocity);
+        internal abstract void CheckDiagonalCollisions(ref Vector3 velocity);
         internal abstract void UpdateRaycastOrigins();
     }
 }

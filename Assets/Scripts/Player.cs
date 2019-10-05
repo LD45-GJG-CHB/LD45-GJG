@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Linq;
 using DG.Tweening;
 using Extensions;
 using RaycastEngine2D;
@@ -88,13 +90,13 @@ public class Player : Singleton<Player>
                 tiles.ForEach(tile => tile.ToggleState());
 
                 var bxCollider = GetComponent<BoxCollider2D>();
-
-//                print(transform.TransformPoint(bxCollider.offset));
-//                var coll = Physics2D.OverlapBox(transform.TransformPoint(bxCollider.offset), bxCollider.size, 0f, 8);
-//                if (coll)
-//                {
-//                    Stuck();
-//                }
+                
+                
+                if (tiles.Where(tile => tile.IsActivated)
+                    .Any(tile => Vector3.Distance(transform.position, tile.transform.position) < 1.0f))
+                {
+                    Stuck();
+                }
             }
         }
     }
@@ -139,7 +141,7 @@ public class Player : Singleton<Player>
     {
         return Mathf.Abs(Velocity.x) > float.Epsilon;
     }
-
+    
 
     private void HandleMovement()
     {
