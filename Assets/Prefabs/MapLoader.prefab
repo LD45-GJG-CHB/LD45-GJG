@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12088e75ecbb45b4fb439a43d823f3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMap: map_0
+  currentMap: map_0.txt
   currentFont: font_0
   tilePrefab: {fileID: 6306340014426782323, guid: a4bbc9d8512f2ec48b457a2469132868,
     type: 3}
