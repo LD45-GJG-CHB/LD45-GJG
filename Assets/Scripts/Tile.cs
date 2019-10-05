@@ -20,9 +20,9 @@ public class Tile : MonoBehaviour
         _collider.enabled = false;
     }
 
-    public void SetLetter(char textLetter)
+    public void SetLetter(string textLetter)
     {
-        letter.text = textLetter.ToString();
+        letter.text = textLetter;
     }
     public void Activate()
     {

@@ -1,43 +1,54 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapLoader : MonoBehaviour
+public class MapLoader : Singleton<MapLoader>
 {
-
     public string currentMap { get; set; } = "map_0"; // Somehow edit this variable between levels
     public string currentFont { get; set; } = "font_0"; // Somehow edit this variable between levels
 
     public GameObject tilePrefab;
-    public float tileSize = 1;
+    public GameObject exitPrefab;
+    public float tileSize = 2;
 
     private string[,] map;
-    private Dictionary<string, GameObject> letterTiles;
 
-    public void Awake()
+    private void Awake()
+    {
+        LoadNextLevel();
+    }
+
+    public void LoadNextLevel()
     {
         map = Maps.StringTo2DArray(Maps.maps[currentMap]);
-        letterTiles = new Dictionary<string, GameObject>();
-        foreach (var letter in alphabet())
-        {
-            // Peab gameobjectina laadima gameobjektid, mitte png-sid bljat
-//            var letterTile = Instantiate(tilePrefab);
-//            letterTiles.Add(letter, letterTile);
-        }
-
-        Debug.Log(map[0,0]);
-
+        
         for (var y = 0; y < Maps.mapSizeY; y++)
         {
             for (var x = 0; x < Maps.mapSizeX; x++)
             {    
                 var letter = map[x,y];
-                var tile = Instantiate(tilePrefab, transform);
 
-                var posX = x * tileSize;
-                var posY = y * -tileSize;
+                if (letter == "1")
+                {
+                    Player._instance.transform.position = new Vector3(x,y,0);
+                }
+                if (letter == "2")
+                {
+                    var tile = Instantiate(exitPrefab, new Vector3(x,y), Quaternion.identity,transform);
+                }
+                else
+                {
+                    var tile = Instantiate(tilePrefab, transform);
 
-                tile.transform.position = new Vector2(posX, posY);
+                    var posX = x * tileSize;
+                    var posY = y * -tileSize;
+
+                    tile.transform.position = new Vector2(posX, posY);
+                
+                    tile.GetComponent<Tile>().SetLetter(letter);
+                }
+
             }
         }
 
