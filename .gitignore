@@ -528,3 +528,5 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/unity,macos,rider,windows,visualstudio,visualstudiocode
 
 Assembly-CSharp.csproj
+
+/Assets/TextMesh\ Pro/
