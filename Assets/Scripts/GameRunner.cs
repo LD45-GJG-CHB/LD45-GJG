@@ -38,8 +38,8 @@ public class GameRunner : Singleton<GameRunner>
             .AppendInterval(0.1f)
             .AppendCallback(() =>
             {
-                MapLoader.Instance.DestroyTileMap();
                 MapLoader.Instance.currentMap = mapNames[iterator++];
+                MapLoader.Instance.DestroyTileMap();
                 MapLoader.Instance.LoadNextLevel();
                 Debug.Log("GameRunner: LoadNextLevel - Loaded!");
                 Score.Instance.IncrementScore(initialScore);

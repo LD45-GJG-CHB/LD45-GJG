@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MapLoader : Singleton<MapLoader>
@@ -53,7 +54,7 @@ public class MapLoader : Singleton<MapLoader>
                         tile.GetComponent<BoxCollider2D>().isTrigger = true;
 
                         tile.gameObject.layer = 11;
-                        Rigidbody2D rb = tile.gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
+                        var rb = tile.gameObject.AddComponent<Rigidbody2D>();
                         rb.gravityScale = 0.0f;
                         rb.isKinematic = true; 
                         tile.GetComponent<Tile>().SetLetter(letter);
@@ -95,13 +96,16 @@ public class MapLoader : Singleton<MapLoader>
 
     public void DestroyTileMap()
     {
-        foreach(List<Tile> tileList in tileMap.Values)
-        {
-            foreach(Tile t in tileList)
+        tileMap.Values
+            .SelectMany(tm => tm).ToList()
+            .ForEach(tile =>
             {
-                Destroy(t.gameObject);
-            }
-        }
+                if (!tile)
+                    return;
+                
+                DestroyImmediate(tile.gameObject);
+            });
+
     }
 
 }
