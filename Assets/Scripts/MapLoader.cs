@@ -11,28 +11,28 @@ public class MapLoader : MonoBehaviour
     public GameObject tilePrefab;
     public float tileSize = 1;
 
-    private List<List<string>> map;
+    private string[,] map;
     private Dictionary<string, GameObject> letterTiles;
 
     public void Awake()
     {
-        map = Maps.convertStringMapToNestedList(Maps.maps[currentMap]);
+        map = Maps.StringTo2DArray(Maps.maps[currentMap]);
         letterTiles = new Dictionary<string, GameObject>();
         foreach (var letter in alphabet())
         {
             // Peab gameobjectina laadima gameobjektid, mitte png-sid bljat
-            var letterTile = (GameObject)Instantiate(tilePrefab);
-            letterTiles.Add(letter, letterTile);
+//            var letterTile = Instantiate(tilePrefab);
+//            letterTiles.Add(letter, letterTile);
         }
 
-        Debug.Log(map[0][0]);
+        Debug.Log(map[0,0]);
 
-        for (var y = 0; y < Maps.mapSizeY - 1; y++)
+        for (var y = 0; y < Maps.mapSizeY; y++)
         {
-            for (var x = 0; x < Maps.mapSizeX - 1; x++)
-            {
-                var letter = map[x][y];
-                var tile = Instantiate(letterTiles[letter], transform);
+            for (var x = 0; x < Maps.mapSizeX; x++)
+            {    
+                var letter = map[x,y];
+                var tile = Instantiate(tilePrefab, transform);
 
                 var posX = x * tileSize;
                 var posY = y * -tileSize;

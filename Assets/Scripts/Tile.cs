@@ -20,6 +20,10 @@ public class Tile : MonoBehaviour
         _collider.enabled = false;
     }
 
+    public void SetLetter(char textLetter)
+    {
+        letter.text = textLetter.ToString();
+    }
     public void Activate()
     {
         letter.color = activatedColor;

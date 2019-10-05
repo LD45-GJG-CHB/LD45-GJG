@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using System.IO;
 
@@ -25,27 +27,25 @@ public class Maps
         reader.Close();
         return map;
     }
-  
-    public static List<List<string>> convertStringMapToNestedList(string map)
-    {
-        List<List<string>> result = new List<List<string>>();
 
-        int pos = 0;
-        for (int i = 0; i < mapSizeY - 1; i++)
-        {
-            result.Add(stringToList(map.Substring(pos, mapSizeX)));
-            pos += mapSizeX;
-        }
-        return result;
-    }
-
-    private static List<string> stringToList(string input)
+    public static string[,] StringTo2DArray(string input)
     {
-        List<string> result = new List<string>();
-        foreach (char i in input)
+        const int n = 3;
+        var split = input
+            .Select((c, i) => new { letter = c, group = i / n })
+            .GroupBy(l => l.group, l => l.letter)
+            .Select(g => string.Join("", g))
+            .ToArray();
+
+        var result = new string[mapSizeX,mapSizeY];
+        for (int yIndex = 0; yIndex < mapSizeY; yIndex++)
         {
-            result.Add(i.ToString());
+            for (int xIndex = 0; xIndex < mapSizeX; xIndex++)
+            {
+                result[xIndex, yIndex] = split[yIndex][xIndex].ToString();
+            }
         }
+        
         return result;
     }
 }

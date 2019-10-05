@@ -28,6 +28,11 @@
           <e p="PlatformController2D.cs" t="Include" />
           <e p="RayCastController.cs" t="Include" />
         </e>
+        <e p="Resources" t="Include">
+          <e p="Maps" t="Include">
+            <e p="map_0.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="ApplicationSettings.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />
@@ -38,6 +43,7 @@
           <e p="Fonts.cs" t="Include" />
           <e p="HighscoreEntry.cs" t="Include" />
           <e p="HighscoreManager.cs" t="Include" />
+          <e p="KristjanTestMap.cs" t="Include" />
           <e p="LetterTile.cs" t="Include" />
           <e p="MapLoader.cs" t="Include" />
           <e p="Maps.cs" t="Include" />
