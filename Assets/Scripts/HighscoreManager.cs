@@ -39,8 +39,8 @@ public class HighscoreManager : MonoBehaviour
     {
         GameObject entry = Instantiate(highscoreEntry, transform);
         var component = entry.GetComponent<HighscoreEntry>();
-        component._nameText.text = highscore.name;
-        component._scoreText.text = highscore.score;
+        component.nameText.text = highscore.name;
+        component.scoreText.text = highscore.score;
     }
 
     private IEnumerator GetHighscores()
