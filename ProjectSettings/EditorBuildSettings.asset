@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HighscoreListScene.unity
     guid: 7f5c53041d24b724da0543c66747cd1d
+  - enabled: 1
+    path: Assets/Scenes/Kristjan_3.unity
+    guid: 77e7bf142ec33464693a44414208117f
   m_configObjects: {}
