@@ -37,17 +37,7 @@ public class KristjanTestMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        map = Maps.convertStringMapToNestedList(Maps.maps[currentMap]);
-
-        for (var y = 0; y < Maps.mapSizeY - 1; y++)
-        {
-            for (var x = 0; x < Maps.mapSizeX - 1; x++)
-            {
-                var posX = x * tileSize;
-                var posY = y * -tileSize;
-                Instantiate(TilePrefab_, new Vector2(posX, posY), Quaternion.identity);
-            }
-        }
+     
     }
 
     // Update is called once per frame
