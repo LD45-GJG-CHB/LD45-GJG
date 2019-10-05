@@ -1,38 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class Maps
 {
     public static Dictionary<string, string> maps;
 
-    public static int mapSizeX = 3;
-    public static int mapSizeY = 2;
+    public static int mapSizeX = 40;
+    public static int mapSizeY = 20;
+
+    private static string path = "Assets/Resources/Maps/";
 
     static Maps()
     {
         maps = new Dictionary<string, string>();
-        maps.Add("map_0", Map_0);
+        maps.Add("map_0", Map_0());
     }
 
-    private static string Map_0 = "aaa" +
-        "aaa";
+    private static string Map_0()
+    {
+        StreamReader reader = new StreamReader(path + "map_0.txt");
+        string map = reader.ReadToEnd().Replace(System.Environment.NewLine, "");
+        reader.Close();
+        return map;
+    }
   
-
     public static List<List<string>> convertStringMapToNestedList(string map)
     {
-        map = map.Replace("\\s", "");
-        Debug.Log(map.Length);
         List<List<string>> result = new List<List<string>>();
-        int curX = mapSizeX;
-        int curY = 0;
+
+        int pos = 0;
         for (int i = 0; i < mapSizeY - 1; i++)
         {
-            result.Add(stringToList(map.Substring(curY, curX)));
-            curY = curX;
-            curX += mapSizeX;
+            result.Add(stringToList(map.Substring(pos, mapSizeX)));
+            pos += mapSizeX;
         }
-        Debug.Log(JsonUtility.ToJson(map));
         return result;
     }
 
@@ -43,7 +46,6 @@ public class Maps
         {
             result.Add(i.ToString());
         }
-        Debug.Log(JsonUtility.ToJson(result));
         return result;
     }
 }
