@@ -98,7 +98,6 @@ public class MapLoader : Singleton<MapLoader>
         {
             foreach(Tile t in tileList)
             {
-                Debug.Log("Destorying");
                 Destroy(t.gameObject);
             }
         }

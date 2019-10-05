@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameRunner : MonoBehaviour
+public class GameRunner : Singleton<GameRunner>
 {
 
-    public List<string> mapNames = Maps.mapNames;
-    MapLoader map = new MapLoader();
+    public static List<string> mapNames = Maps.mapNames;
+    public static int iterator = 1;
 
-    void Awake()
+    public static void LoadNextLevel()
     {
-        map.currentMap = mapNames[0];
+        if (iterator == mapNames.Count)
+        {
+            Debug.Log("The End!");
+            return;
+        }
+        MapLoader.Instance.DestroyTileMap();
+        MapLoader.Instance.currentMap = mapNames[iterator++];
+        MapLoader.Instance.LoadNextLevel();
     }
-
-    void Start()
-    {
-        
-    }
-
  
 }

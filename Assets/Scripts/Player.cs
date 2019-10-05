@@ -91,9 +91,7 @@ public class Player : Singleton<Player>
     {
         if (col.gameObject.GetComponent<Tile>().tileype == TileType.DOOR)
         {
-            MapLoader.Instance.DestroyTileMap();
-            MapLoader.Instance.currentMap = "map_1";
-            MapLoader.Instance.LoadNextLevel();
+            GameRunner.LoadNextLevel();
             Debug.Log("exit: @");
         }
     }
