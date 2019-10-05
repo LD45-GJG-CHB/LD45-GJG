@@ -19,7 +19,11 @@ public class Score : Singleton<Score>
     
     public void DecrementScore(int value = 1)
     {
-        _scoreValue -= value;
+        if (_scoreValue - value >= 0) {
+            _scoreValue -= value;
+            return;
+        }
+        _scoreValue = 0;    
     }
 
     public int GetScore()

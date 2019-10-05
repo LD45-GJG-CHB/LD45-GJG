@@ -77,6 +77,7 @@ public class Player : Singleton<Player>
             
             if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString(), out var tiles))
             {
+                Score.Instance.DecrementScore(15);   
                 tiles.ForEach(tile => tile.ToggleState());
             }
         }
