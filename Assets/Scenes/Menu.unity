@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eae2ed72ee718f4aab49e1a0537aa22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchTo: Siim
+  switchTo: Kristjan_3
 --- !u!1 &520036368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6822752248863620125, guid: 38acda82a5ca3ac40a89d9748e355390,
