@@ -6,42 +6,44 @@ public class Maps
 {
     public static Dictionary<string, string> maps;
 
-    public static int mapSizeX = 5;
-    public static int mapSizeY = 3;
+    public static int mapSizeX = 3;
+    public static int mapSizeY = 2;
 
     static Maps()
     {
         maps = new Dictionary<string, string>();
-        maps.Add("map_0", Map_0());
+        maps.Add("map_0", Map_0);
     }
 
-    private static string Map_0()
-    {
-        return 
-                
-            "aaaaa" +
-            "aaabb" +
-            "aabba"
-
-        ;
-    }
+    private static string Map_0 = "aaa" +
+        "aaa";
+  
 
     public static List<List<string>> convertStringMapToNestedList(string map)
     {
+        map = map.Replace("\\s", "");
+        Debug.Log(map.Length);
         List<List<string>> result = new List<List<string>>();
-        for (int i = 0; i < mapSizeY; i+=mapSizeY)
+        int curX = mapSizeX;
+        int curY = 0;
+        for (int i = 0; i < mapSizeY - 1; i++)
         {
-            List<string> row = new List<string>();
-            for (int j = 0; j < mapSizeX; j++)
-            {
-                row.Add(map[j].ToString());
-            }
-            Debug.Log("row:");
-            Debug.Log(row);
-            result.Add(row);
+            result.Add(stringToList(map.Substring(curY, curX)));
+            curY = curX;
+            curX += mapSizeX;
         }
-        Debug.Log("result");
-        Debug.Log(result);
+        Debug.Log(JsonUtility.ToJson(map));
+        return result;
+    }
+
+    private static List<string> stringToList(string input)
+    {
+        List<string> result = new List<string>();
+        foreach (char i in input)
+        {
+            result.Add(i.ToString());
+        }
+        Debug.Log(JsonUtility.ToJson(result));
         return result;
     }
 }
