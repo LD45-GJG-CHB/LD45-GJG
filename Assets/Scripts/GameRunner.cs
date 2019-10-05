@@ -47,9 +47,10 @@ public class GameRunner : Singleton<GameRunner>
                 Player.Instance.Velocity = Vector3.zero;
                 Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             })
-            .Append(Player.Instance._darkness.DOFade(0.0f, 0.3f))
-            .AppendInterval(0.2f)
             .AppendCallback((() => Time.timeScale = 1.0f))
+            .AppendInterval(0.2f)
+            .Append(Player.Instance._darkness.DOFade(0.0f, 0.4f))
+            .AppendInterval(0.2f)
             .Play();
     }
 
