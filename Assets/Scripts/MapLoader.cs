@@ -51,20 +51,21 @@ public class MapLoader : Singleton<MapLoader>
 
                         break;
                     }
+                    case "-":
+                        break;
 
-                    case "3":
+                    case "@":
                     {
-                        var tile = Instantiate(edgeTilePrefab, transform);
+                        var tile = Instantiate(tilePrefab, transform);
                         var posX = x * tileSize;
                         var posY = y * -tileSize;
 
                         tile.transform.position = new Vector2(posX, posY);
+                        
+                        tile.GetComponent<Tile>().tileype = TileType.DOOR;
 
                         break;
                     }
-
-                    case "-":
-                        break;
                     default:
                     {
                         var tile = Instantiate(tilePrefab, transform);

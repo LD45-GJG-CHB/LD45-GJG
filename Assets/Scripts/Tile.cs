@@ -10,8 +10,12 @@ public class Tile : MonoBehaviour
     public Color deactivatedColor = new Color(1,1,1, 0.6f);
 
     public bool IsActivated => letter.color == activatedColor;
+
+    public TileType tileype = TileType.LETTER;
     
     private BoxCollider2D _collider;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
