@@ -23,5 +23,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: e92087ebc7b647d4b8245d3e8e764653, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StrengthFilter:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Speed: 1
+    - _Strength: 1
     m_Colors: []

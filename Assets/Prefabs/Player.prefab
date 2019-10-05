@@ -156,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6111539196522068721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0034732395, y: 2.0928185, z: -9.814465}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6111539196861222820}
@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trippyShader: {fileID: 4800000, guid: 6db14081f6cd9224db4be17627b50070, type: 3}
+  trippyMat: {fileID: 2100000, guid: 0b39b97c570bd0a4881fda5a471f453b, type: 2}
 --- !u!114 &1877876160998604730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6111539196861222822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0034732395, y: -2.0928185, z: -0.18553543}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6111539195238202905}
