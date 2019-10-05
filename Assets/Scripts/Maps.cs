@@ -15,12 +15,13 @@ public class Maps
     static Maps()
     {
         maps = new Dictionary<string, string>();
-        maps.Add("map_0", Map_0());
+        maps.Add("map_0", ReadMap("map_0"));
+        maps.Add("map_1", ReadMap("map_1"));
     }
 
-    private static string Map_0()
+    private static string ReadMap(string mapName)
     {
-        StreamReader reader = new StreamReader(path + "map_0.txt");
+        StreamReader reader = new StreamReader(path + mapName + ".txt");
         string map = reader.ReadToEnd().Replace(Environment.NewLine, "");
         reader.Close();
         return map;
