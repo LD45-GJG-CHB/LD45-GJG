@@ -6,17 +6,17 @@ using UnityEngine;
 public class ScoreText : MonoBehaviour
 {
     public Score score;
-    public TextMeshProUGUI textField;
+    private TextMeshProUGUI _textField;
     
     // Start is called before the first frame update
     void Start()
     {
-        textField = gameObject.GetComponent<TextMeshProUGUI>();
+        _textField = gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        textField.text = $"Score: {score.GetScore().ToString()}";
+        _textField.text = $"Score: {score.GetScore().ToString()}";
     }
 }
