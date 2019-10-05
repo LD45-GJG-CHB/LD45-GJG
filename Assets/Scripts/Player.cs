@@ -16,6 +16,5 @@ public class Player : MonoBehaviour
     void Update()
     {
         _spriteRenderer.color = new Color(Random.Range(0, 255)/255f, Random.Range(0, 255)/255f, Random.Range(0, 255)/255f);
-        
     }
 }
