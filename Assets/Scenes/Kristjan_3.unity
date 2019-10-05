@@ -201,17 +201,17 @@ PrefabInstance:
     - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.71873
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.977196
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -43.932323
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
         type: 3}
@@ -251,6 +251,31 @@ PrefabInstance:
     - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109055972879672628, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109055972879672628, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109055972879672628, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109055972879672629, guid: f0b1b382923357245a32e1c721f35da0,

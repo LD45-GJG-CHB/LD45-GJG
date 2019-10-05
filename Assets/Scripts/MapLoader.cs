@@ -34,17 +34,17 @@ public class MapLoader : Singleton<MapLoader>
             {
                 var letter = map[x, y];
 
-                Tile tile;
+                Tile tile = null;
                 switch (letter)
                 {
                     case "1": // player pos
                         var posX = x * tileSize;
                         var posY = y * -tileSize;
-
-                        Player.Instance.transform.parent.position = new Vector3(posX, posY, 0);
-                        continue;
+                            
+                        Player.Instance.transform.position = new Vector3(posX, posY, 0);
+                        break;
                     case "-": // nothingness
-                        continue;
+                        break;
 
                     case "@": // exit / door
                         tile = CreateTileAtPosition(x, y);
@@ -68,10 +68,10 @@ public class MapLoader : Singleton<MapLoader>
 
                         break;
                 }
-
+                
                 if (tileMap.TryGetValue(letter, out var tiles))
                 {
-                    tiles.Add(tile);
+                    tiles.Add(tile);    
                 }
                 else
                 {
