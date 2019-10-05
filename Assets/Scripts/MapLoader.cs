@@ -12,14 +12,17 @@ public class MapLoader : Singleton<MapLoader>
     public GameObject exitPrefab;
     public GameObject edgeTilePrefab;
     public float tileSize = 2;
+    public Dictionary<string, List<Tile>> tileMap;
 
+    
     private string[,] map;
 
     private void Awake()
     {
+        tileMap = new Dictionary<string, List<Tile>>();
         LoadNextLevel();
     }
-
+    
     public void LoadNextLevel()
     {
         map = Maps.StringTo2DArray(Maps.maps[currentMap]);
@@ -30,56 +33,53 @@ public class MapLoader : Singleton<MapLoader>
             {
                 var letter = map[x, y];
 
+                Tile tile;
                 switch (letter)
                 {
-                    case "1":
-                    {
+                    case "1": // player pos
                         var posX = x * tileSize;
                         var posY = y * -tileSize;
 
                         Player.Instance.transform.parent.position = new Vector3(posX, posY, 0);
-                        break;
-                    }
+                        continue;
+                    case "-": // nothingness
+                        continue;
 
-                    case "2":
-                    {
-                        var tile = Instantiate(exitPrefab, transform);
-                        var posX = x * tileSize;
-                        var posY = y * -tileSize;
+                    case "@": // exit / door
+                        tile = CreateTileAtPosition(x, y);
 
-                        tile.transform.position = new Vector2(posX, posY);
-
-                        break;
-                    }
-                    case "-":
-                        break;
-
-                    case "@":
-                    {
-                        var tile = Instantiate(tilePrefab, transform);
-                        var posX = x * tileSize;
-                        var posY = y * -tileSize;
-
-                        tile.transform.position = new Vector2(posX, posY);
-                        
                         tile.GetComponent<Tile>().tileype = TileType.DOOR;
+                        tile.GetComponent<Tile>().SetLetter(letter);
 
                         break;
-                    }
-                    default:
-                    {
-                        var tile = Instantiate(tilePrefab, transform);
-
-                        var posX = x * tileSize;
-                        var posY = y * -tileSize;
-
-                        tile.transform.position = new Vector2(posX, posY);
+                    default: // default letter tile
+                        tile = CreateTileAtPosition(x, y);
 
                         tile.GetComponent<Tile>().SetLetter(letter);
                         break;
-                    }
                 }
+
+                if (tileMap.TryGetValue(letter, out var tiles))
+                {
+                    tiles.Add(tile);
+                }
+                else
+                {
+                    tileMap[letter] = new List<Tile> {tile};
+                }
+
             }
         }
+    }
+
+    private Tile CreateTileAtPosition(int x, int y)
+    {
+        var tile = Instantiate(tilePrefab, transform);
+        var posX = x * tileSize;
+        var posY = y * -tileSize;
+
+        tile.transform.position = new Vector2(posX, posY);
+
+        return tile.GetComponent<Tile>();
     }
 }

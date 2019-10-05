@@ -37,20 +37,29 @@
         <e p="Scripts" t="Include">
           <e p="ApplicationSettings.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />
+          <e p="CameraEffectManager.cs" t="Include" />
           <e p="Extensions" t="Include">
             <e p="Vector3Extensions.cs" t="Include" />
           </e>
           <e p="FontGenerator.cs" t="Include" />
           <e p="Fonts.cs" t="Include" />
+          <e p="HighScore.cs" t="Include" />
+          <e p="HighScoreAPI.cs" t="Include" />
           <e p="HighscoreEntry.cs" t="Include" />
           <e p="HighscoreManager.cs" t="Include" />
+          <e p="HighscoreNameInput.cs" t="Include" />
           <e p="LetterTile.cs" t="Include" />
           <e p="MapLoader.cs" t="Include" />
           <e p="Maps.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
+          <e p="ScoreText.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TileType.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="TrippyBalls.shader" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
