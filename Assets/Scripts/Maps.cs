@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Maps
@@ -17,33 +19,27 @@ public class Maps
 
     private static string Map_0 = "aaa" +
         "aaa";
-  
 
-    public static List<List<string>> convertStringMapToNestedList(string map)
-    {
-        map = map.Replace("\\s", "");
-        Debug.Log(map.Length);
-        List<List<string>> result = new List<List<string>>();
-        int curX = mapSizeX;
-        int curY = 0;
-        for (int i = 0; i < mapSizeY - 1; i++)
-        {
-            result.Add(stringToList(map.Substring(curY, curX)));
-            curY = curX;
-            curX += mapSizeX;
-        }
-        Debug.Log(JsonUtility.ToJson(map));
-        return result;
-    }
 
-    private static List<string> stringToList(string input)
+    public static string[,] StringTo2DArray(string input)
     {
-        List<string> result = new List<string>();
-        foreach (char i in input)
+        const int n = 3;
+        var split = input
+            .Select((c, i) => new { letter = c, group = i / n })
+            .GroupBy(l => l.group, l => l.letter)
+            .Select(g => string.Join("", g))
+            .ToArray();
+
+        var result = new string[mapSizeX,mapSizeY];
+        for (int yIndex = 0; yIndex < mapSizeY; yIndex++)
         {
-            result.Add(i.ToString());
+            for (int xIndex = 0; xIndex < mapSizeX; xIndex++)
+            {
+                result[xIndex, yIndex] = split[yIndex][xIndex].ToString();
+            }
         }
-        Debug.Log(JsonUtility.ToJson(result));
+        
         return result;
+//        var List<string> rows = input
     }
 }

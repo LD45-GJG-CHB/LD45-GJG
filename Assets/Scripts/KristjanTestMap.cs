@@ -7,7 +7,7 @@ public class KristjanTestMap : MonoBehaviour
 
     public void Awake()
     {
-        Maps.convertStringMapToNestedList(Maps.maps["map_0"]);
+        Maps.StringTo2DArray(Maps.maps["map_0"]);
     }
 
     // Start is called before the first frame update
