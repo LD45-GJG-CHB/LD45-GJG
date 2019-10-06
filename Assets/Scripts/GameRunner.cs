@@ -35,23 +35,13 @@ public class GameRunner : Singleton<GameRunner>
 
         Debug.Log("GameRunner: LoadNextLevel...");
 
-        DOTween.Sequence()
-            .SetUpdate(true)
-            .AppendCallback((() => Time.timeScale = 0.0f))
-            .Append(Player.Instance._darkness.DOFade(1.0f, 0.2f))
-            .AppendInterval(0.1f)
-            .AppendCallback(() =>
-            {
-                LevelChange();
-                isCountingScore = true;
-                StartCoroutine(LevelStartWaitTime());
-                StartCoroutine(CountDown());
-            })
-            .AppendCallback((() => Time.timeScale = 1.0f))
-            .AppendInterval(0.2f)
-            .Append(Player.Instance._darkness.DOFade(0.0f, 0.4f))
-            .AppendInterval(0.2f)
-            .Play();
+        DOTweenSequnceBetweenLevels(() =>
+        {
+            LevelChange();
+            isCountingScore = true;
+            StartCoroutine(LevelStartWaitTime());
+            StartCoroutine(CountDown());
+        });
     }
 
     void Start()
@@ -127,5 +117,34 @@ public class GameRunner : Singleton<GameRunner>
         {
             MenuDisplayer.SetVisible();
         }
+    }
+
+    public void DOTweenSequnceBetweenLevels(TweenCallback callBackFunction)
+    {
+        DOTween.Sequence()
+            .SetUpdate(true)
+            .AppendCallback((() => Time.timeScale = 0.0f))
+            .Append(Player.Instance._darkness.DOFade(1.0f, 0.2f))
+            .AppendInterval(0.1f)
+            .AppendCallback(callBackFunction)
+            .AppendCallback((() => Time.timeScale = 1.0f))
+            .AppendInterval(0.2f)
+            .Append(Player.Instance._darkness.DOFade(0.0f, 0.4f))
+            .AppendInterval(0.2f)
+            .Play();
+    }
+
+    public void PlayerOutOfBoundsReset()
+    {
+        DOTweenSequnceBetweenLevels(() =>
+        {
+            Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
+            Player.Instance.Velocity = Vector3.zero;
+            Player.Instance.Velocity.x = Player.Instance._moveSpeed;
+            Score.Instance.DecrementScore(25);
+            countDown = waitTime;
+            StartCoroutine(LevelStartWaitTime());
+            StartCoroutine(CountDown());
+        });
     }
 }

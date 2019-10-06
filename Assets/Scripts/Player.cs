@@ -81,10 +81,7 @@ public class Player : Singleton<Player>
             || gameObject.transform.position.x > MapLoader.Instance.sizeX * MapLoader.Instance.tileSize 
             || gameObject.transform.position.y < -MapLoader.Instance.sizeY * MapLoader.Instance.tileSize) 
         {
-            Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
-            Player.Instance.Velocity = Vector3.zero;
-            Player.Instance.Velocity.x = _moveSpeed;
-            Score.Instance.DecrementScore(25);
+            GameRunner.Instance.PlayerOutOfBoundsReset();
         }
     }
 
