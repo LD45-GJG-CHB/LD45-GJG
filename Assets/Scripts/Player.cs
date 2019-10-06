@@ -30,8 +30,7 @@ public class Player : Singleton<Player>
     private float _velocityXSmoothing;
 
     public Vector3 Velocity;
-
-
+    
     private SpriteRenderer _renderer;
     private bool _justTurnedAround;
 
@@ -47,6 +46,7 @@ public class Player : Singleton<Player>
     private void Start()
     {
 
+        _moveSpeed = (int) GameState.Difficulty;
         
         _renderer = GetComponent<SpriteRenderer>();
 

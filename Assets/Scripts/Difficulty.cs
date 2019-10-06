@@ -1,10 +1,7 @@
-namespace DefaultNamespace
+public enum Difficulty
 {
-    public enum Difficulty
-    {
-        EASY,
-        MEDIUM,
-        HARD,
-        PENULTIMATE_MAMBO_JAMBO,
-    }
+    EASY = 7,
+    MEDIUM = 12,
+    HARD = 17,
+    PENULTIMATE_MAMBO_JAMBO = 22,
 }
