@@ -35,7 +35,7 @@ public class Player : Singleton<Player>
     private SpriteRenderer _renderer;
     private bool _justTurnedAround;
 
-    private const string Letters = "abcdefghijklmnopqrstuvwxyz";
+    public string letters = "abcdefghijklmnopqrstuvwxyz";
 
     public Image _darkness;
 
@@ -97,7 +97,7 @@ public class Player : Singleton<Player>
 
     private void HandleTileSwitching()
     {
-        foreach (var letter in Letters)
+        foreach (var letter in letters)
         {
             if (!Input.GetKeyDown(letter.ToString())) continue;
 

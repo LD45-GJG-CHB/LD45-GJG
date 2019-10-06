@@ -50,7 +50,7 @@ public class Tile : MonoBehaviour
 
     public void Deactivate()
     {
-        if ("@#".Contains(letter.text))
+        if (!Player.Instance.letters.Contains(letter.text))
         {
             return;
         }
