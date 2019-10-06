@@ -39,6 +39,8 @@ public class Player : Singleton<Player>
 
     public Image _darkness;
 
+    public bool isWaiting = false;
+
     
 
     // Use this for initialization
@@ -73,10 +75,23 @@ public class Player : Singleton<Player>
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (gameObject.transform.position.x < 0 
+            || gameObject.transform.position.x > MapLoader.Instance.sizeX * MapLoader.Instance.tileSize 
+            || gameObject.transform.position.y < -MapLoader.Instance.sizeY * MapLoader.Instance.tileSize) 
+        {
+            Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
+        }
+    }
+
     private void HandleActions()
     {
-        HandleMovement();
-        UpdateDirectionDumb();
+        if (!isWaiting)
+        {
+            HandleMovement();
+            UpdateDirectionDumb();
+        }
         HandleTileSwitching();
     }
 
@@ -86,7 +101,7 @@ public class Player : Singleton<Player>
         {
             if (!Input.GetKeyDown(letter.ToString())) continue;
 
-            if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString(), out var tiles))
+            if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString().ToLower(), out var tiles))
             {
                 Score.Instance.DecrementScore(15);
                 tiles.ForEach(tile => tile.ToggleState());
@@ -117,7 +132,6 @@ public class Player : Singleton<Player>
         if (col.gameObject.GetComponent<Tile>().tileype == TileType.DOOR)
         {
             GameRunner.Instance.LoadNextLevel();
-            Debug.Log("exit: @");
         }
     }
 

@@ -13,15 +13,19 @@ public class MapLoader : Singleton<MapLoader>
     public GameObject edgeTilePrefab;
     public float tileSize = 2;
     public Dictionary<string, List<Tile>> tileMap;
-    private string[,] map;
+    public string[,] map;
+    public int sizeX;
+    public int sizeY;
+    public float playerStartPosX;
+    public float playerStartPosY;
     
     public void LoadNextLevel()
     {
         tileMap = new Dictionary<string, List<Tile>>();
 
         var _map = Maps.maps[currentMap];
-        int sizeX = Maps.GetColumnAmount(_map);
-        int sizeY = Maps.GetRowAmount(_map);
+        sizeX = Maps.GetColumnAmount(_map);
+        sizeY = Maps.GetRowAmount(_map);
         map = Maps.StringArrayTo2DArray(_map);
 
         for (var y = 0; y < sizeY; y++)
@@ -38,10 +42,13 @@ public class MapLoader : Singleton<MapLoader>
                         var posY = y * -tileSize;
                             
                         Player.Instance.transform.position = new Vector3(posX, posY, 0);
+                        playerStartPosX = posX;
+                        playerStartPosY = posY;
                         break;
                     case "-": // nothingness
                         break;
-
+                    case " ":
+                        break;
                     case "@": // exit / door
                         tile = CreateTileAtPosition(x, y);
 
@@ -53,31 +60,30 @@ public class MapLoader : Singleton<MapLoader>
                         var rb = tile.gameObject.AddComponent<Rigidbody2D>();
                         rb.gravityScale = 0.0f;
                         rb.isKinematic = true; 
-                        tile.GetComponent<Tile>().SetLetter(letter);
+                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
 
 
                         break;
                     default: // default letter tile
                         tile = CreateTileAtPosition(x, y);
 
-                        tile.GetComponent<Tile>().SetLetter(letter);
+                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
 
                         break;
                 }
                 
-                if (tileMap.TryGetValue(letter, out var tiles))
+                if (tileMap.TryGetValue(letter.ToLower(), out var tiles))
                 {
                     tiles.Add(tile);    
                 }
                 else
                 {
-                    tileMap[letter] = new List<Tile> {tile};
+                    tileMap[letter.ToLower()] = new List<Tile> {tile};
                 }
 
             }
         }
     }
-
 
     private Tile CreateTileAtPosition(int x, int y)
     {
@@ -92,9 +98,7 @@ public class MapLoader : Singleton<MapLoader>
 
     public void DestroyTileMap()
     {
-        if (tileMap != null)
-        {
-            tileMap.Values
+        tileMap?.Values
             .SelectMany(tm => tm).ToList()
             .ForEach(tile =>
             {
@@ -103,7 +107,6 @@ public class MapLoader : Singleton<MapLoader>
 
                 DestroyImmediate(tile.gameObject);
             });
-        }
     }
 
 }
