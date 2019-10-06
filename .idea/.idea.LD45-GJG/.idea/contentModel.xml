@@ -68,8 +68,8 @@
             <e p="MenuAction.cs" t="Include" />
             <e p="MenuDisplayer.cs" t="Include" />
             <e p="MenuEntry.cs" t="Include" />
-            <e p="MenuManager.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
+            <e p="MenuPageContent.cs" t="Include" />
             <e p="MenuPlayer.cs" t="Include" />
             <e p="QuitEntryAction.cs" t="Include" />
             <e p="SetDifficultyAction.cs" t="Include" />

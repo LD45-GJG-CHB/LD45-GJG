@@ -2,11 +2,11 @@
 
 public class SwitchPageAction : MenuAction
 {
-    public MenuPage Page;
-    public MenuManager MenuManager;
+    public MenuPageContent PageContent;
+    public MenuPage MenuPage;
 
     public override void doAction()
     {
-        MenuManager.Switch(Page);
+//        MenuPage.Switch(PageContent);
     }
 }

@@ -8,7 +8,7 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     private TextMeshProUGUI _textField;
     private bool _active;
     private MenuAction _menuAction;
-    private MenuPage _page;
+    private MenuPageContent _pagecontent;
 
     // Start is called before the first frame update
     void Start()
@@ -41,20 +41,20 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         }
     }
 
-    public void AttachPage(MenuPage page)
+    public void AttachPage(MenuPageContent pageContent)
     {
-        _page = page;
+        _pagecontent = pageContent;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         SetActive();
-        _page.ClearIndex();
+        _pagecontent.ClearIndex();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         SetInactive();
-        _page.ClearIndex();
+        _pagecontent.ClearIndex();
     }
 }

@@ -1,76 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuPage : MonoBehaviour
 {
-    private MenuEntry[] _menuEntries;
-    private int? _activeIndex;
-
-    private MenuEntry Active => (_activeIndex != null) ? _menuEntries[_activeIndex.Value] : null;
+    public MenuPageContent content;
+    private MenuPage[] _menuPages;
+    private MenuPage _active;
+    private MenuPage _parent;
+    private MenuPage _root;
 
     // Start is called before the first frame update
     void Start()
     {
-        _menuEntries = GetComponentsInChildren<MenuEntry>();
-        foreach (var menuEntry in _menuEntries)
+        _menuPages = GetComponentsInChildren<MenuPage>();
+        
+        foreach (var menuPage in _menuPages)
         {
-            menuEntry.AttachPage(this);
+            menuPage.Disable();
+            menuPage.setParent(this);
+            menuPage.setRoot(_root ? _root : this);
         }
-        _activeIndex = 0;
-        Active.SetActive();
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleActions();
-    }
-
-    void HandleActions()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            IncrementIndex();
-        } else if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            DecrementIndex();
-        } else if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Active.Select();
-        }
         
     }
 
-    public void ClearIndex()
+    public void setParent(MenuPage parent)
     {
-        _activeIndex = null;
-    }
-
-    void IncrementIndex()
-    {
-        if (_activeIndex == null)
-        {
-            _activeIndex = 0;
-        }
-        if (_activeIndex >= _menuEntries.Length - 1) return;
-        
-        Active.SetInactive();
-        _activeIndex += 1;
-        Active.SetActive();
+        _parent = parent;
     }
     
-    void DecrementIndex()
+    public void setRoot(MenuPage root)
     {
-        if (_activeIndex == null)
-        {
-            _activeIndex = 0;
-        }
-        if (_activeIndex <= 0) return;
-        
-        Active.SetInactive();
-        _activeIndex -= 1;
-        Active.SetActive();
+        _root = root;
     }
 
     public void Enable()
@@ -82,4 +46,5 @@ public class MenuPage : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    
 }

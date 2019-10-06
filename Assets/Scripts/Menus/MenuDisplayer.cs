@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MenuDisplayer : MonoBehaviour
 {
-    public MenuManager MenuManager;
+    public MenuPage MenuManager;
     public bool DefaultVisible;
     
     private void Start()
