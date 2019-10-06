@@ -42,6 +42,7 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="CameraEffectManager.cs" t="Include" />
           <e p="CountdownTimerText.cs" t="Include" />
+          <e p="Difficulty.cs" t="Include" />
           <e p="Extensions" t="Include">
             <e p="SequenceExtensions.cs" t="Include" />
             <e p="Vector3Extensions.cs" t="Include" />
@@ -68,6 +69,7 @@
             <e p="MenuPage.cs" t="Include" />
             <e p="MenuPlayer.cs" t="Include" />
             <e p="QuitEntryAction.cs" t="Include" />
+            <e p="SetDifficultyAction.cs" t="Include" />
             <e p="SwitchPageAction.cs" t="Include" />
             <e p="SwitchSceneAction.cs" t="Include" />
           </e>
