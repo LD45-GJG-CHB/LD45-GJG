@@ -328,5 +328,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 6306340014045488398}
   activatedColor: {r: 1, g: 1, b: 1, a: 1}
-  deactivatedColor: {r: 1, g: 1, b: 1, a: 0.43137255}
+  deactivatedColor: {r: 1, g: 1, b: 1, a: 0.3529412}
   tileype: 0

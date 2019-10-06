@@ -25,7 +25,7 @@ public class HighScoreText : MonoBehaviour
             _textField.text = $"Well done, <i>{lastHighscore.name}</i>. You are #{lastHighscore.place.ToString()}";
         } else if (died)
         {
-            _textField.text = $"U ded";
+            _textField.text = $"You died :(";
         }
         else
         {
