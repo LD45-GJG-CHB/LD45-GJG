@@ -41,6 +41,7 @@
           <e p="ApplicationSettings.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />
           <e p="CameraEffectManager.cs" t="Include" />
+          <e p="CountdownTimerText.cs" t="Include" />
           <e p="Extensions" t="Include">
             <e p="SequenceExtensions.cs" t="Include" />
             <e p="Vector3Extensions.cs" t="Include" />
