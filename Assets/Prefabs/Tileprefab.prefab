@@ -98,7 +98,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 2
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -328,5 +328,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 6306340014045488398}
   activatedColor: {r: 1, g: 1, b: 1, a: 1}
-  deactivatedColor: {r: 1, g: 1, b: 1, a: 0.3529412}
+  deactivatedColor: {r: 1, g: 1, b: 1, a: 0.27450982}
   tileype: 0
+  _font: {fileID: 11400000, guid: bdd85af710e094d43bec74aa6c1d7800, type: 2}
