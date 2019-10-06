@@ -2,126 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_11.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_12.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_8.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_9.txt.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Maps/map_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Maps/map_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Maps/map_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Maps/map_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Maps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Maps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuPage.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuPage.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPageContent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPageContent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/SwitchPageAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/SwitchPageAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LD45-GJG.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LD45-GJG.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_7.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_5.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_6.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_8.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="24" selection-end-line="34" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_9.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_11.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="84" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_10.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_12.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -147,85 +46,75 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sprites/Square.png.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/MapLoader.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extensions/SequenceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaitTimeCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/EdgeTilePrefab.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Vidrik Siim.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CountdownTimerText.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/WaitTimeCamera.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Siim.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/a5/74116aa5/PhysicsScene2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/45/ec9798e0/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LetterTile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/BoxController2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/66/3ccfd410/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maps.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/81/aab0b849/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileType.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/12/96bb8d2b/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fonts.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreEntry.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/HideMenuAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FontGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Maps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/MapLoader.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Fonts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/EdgeTilePrefab.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/QuitEntryAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SwitchSceneAction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6A8DC567-3A4E-4788-B5AC-1561569747AB/bb/2a1b34d0/SendMouseEvents.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Materials/Trippy.mat.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shaders/TrippyBalls.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/TextureRendering.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraEffectManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraEffectManager.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F58CDE91-96FF-4D57-AE94-5F019534AF41/bc/ec73ff25/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaitTimeCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/WaitTimeCamera.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Vidrik Siim.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/CircleController2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Siimu penultimate mambo jambo.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/PlatformController2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/c9/6e9756e2/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/QuitEntryAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighScoreAPI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C41EAD7E-3C94-4E46-94ED-1120C7D00304/82/e3e11a86/Font.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/a4/dc0e9e45/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/CircleController2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/Square.png.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/BoxController2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreEntry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/b6/0bf6d933/BoxCollider2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/6e/023e7967/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_4.txt.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extensions/SequenceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TileType.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Materials/Trippy.mat.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/TrippyBalls.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/HideMenuAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SwitchSceneAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/GameScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FontGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighScoreAPI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Siim.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SwitchPageAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SetDifficultyAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Siimu penultimate mambo jambo.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/TextureRendering.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CountdownTimerText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -247,8 +136,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/DisablePauseMenuAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuDisplayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt" />
@@ -262,6 +149,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Maps.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Maps/map_5.txt" />
         <option value="$PROJECT_DIR$/Assets/Resources/Maps/map_7.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SwitchPageAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuRoot.cs" />
       </list>
     </option>
   </component>
@@ -279,72 +170,6 @@
     <option name="height" value="517" />
   </component>
   <component name="ProjectId" id="1RkdB07849433XK7Lc0KLlAaOKX" />
-  <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-              <item name="Resources" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-              <item name="Resources" type="1045f7f1:UnityExplorerNode" />
-              <item name="Maps" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="8711f2a6:AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="e068e287:UnityExplorerRootNode" />
-              <item name="Packages" type="4e2708dd:PackagesRoot" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-        <option name="show-project-names" value="true" />
-      </pane>
-      <pane id="FileSystemExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="LD45-GJG" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="LD45-GJG" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="LD45-GJG" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea.LD45-GJG" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AssemblyExplorer" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
@@ -398,6 +223,7 @@
       <workItem from="1570251824798" duration="1621000" />
       <workItem from="1570253612696" duration="5998000" />
       <workItem from="1570297846714" duration="5502000" />
+      <workItem from="1570379951043" duration="3357000" />
     </task>
     <task id="LOCAL-00001" summary="Vana scene Siimer">
       <created>1570253768155</created>
@@ -486,41 +312,6 @@
     <option name="localTasksCounter" value="13" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6709000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12999468" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3284055" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49920085" weight="0.39915523" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.32946146" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49973363" weight="0.32946146" />
-      <window_info anchor="bottom" id="Unity" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49813533" visible="true" weight="0.38859555" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5029302" side_tool="true" weight="0.38965154" />
-      <window_info anchor="bottom" id="Messages" order="16" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Errors In Solution" order="4" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -532,12 +323,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -596,339 +381,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <marker date="1570358829858" expanded="false" signature="6:140" ph="..." />
-            <marker date="1570358829858" expanded="true" signature="189:1031" ph="{...}" />
-            <marker date="1570358829858" expanded="true" signature="358:379" ph="{...}" />
-            <marker date="1570358829858" expanded="true" signature="437:458" ph="{...}" />
-            <marker date="1570358829858" expanded="true" signature="486:1029" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CountdownTimerText.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-          <folding>
-            <marker date="1570365046251" expanded="true" signature="6:91" ph="..." />
-            <marker date="1570365046251" expanded="true" signature="140:583" ph="{...}" />
-            <marker date="1570365046251" expanded="true" signature="253:330" ph="{...}" />
-            <marker date="1570365046251" expanded="true" signature="388:581" ph="{...}" />
-            <marker date="1570365046251" expanded="true" signature="433:487" ph="{...}" />
-            <marker date="1570365046251" expanded="true" signature="492:575" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/WaitTimeCamera.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding>
-            <marker date="1570368851007" expanded="true" signature="6:97" ph="..." />
-            <marker date="1570368851007" expanded="true" signature="154:506" ph="{...}" />
-            <marker date="1570368851007" expanded="true" signature="273:294" ph="{...}" />
-            <marker date="1570368851007" expanded="true" signature="352:373" ph="{...}" />
-            <marker date="1570368851007" expanded="true" signature="422:504" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TileType.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-          <folding>
-            <marker date="1570365046267" expanded="true" signature="20:45" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Tile.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <marker date="1570365046267" expanded="false" signature="6:105" ph="..." />
-            <marker date="1570365046267" expanded="true" signature="140:1217" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="518:612" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="657:703" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="734:874" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="765:811" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="824:868" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="911:996" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="1026:1214" ph="{...}" />
-            <marker date="1570365046267" expanded="true" signature="1092:1132" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScoreText.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1570365046266" expanded="false" signature="6:91" ph="..." />
-            <marker date="1570365046266" expanded="true" signature="131:473" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="248:325" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="383:471" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Score.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <marker date="1570365046265" expanded="false" signature="6:91" ph="..." />
-            <marker date="1570365046265" expanded="true" signature="130:607" ph="{...}" />
-            <marker date="1570365046265" expanded="true" signature="208:253" ph="{...}" />
-            <marker date="1570365046265" expanded="true" signature="300:342" ph="{...}" />
-            <marker date="1570365046265" expanded="true" signature="393:538" ph="{...}" />
-            <marker date="1570365046265" expanded="true" signature="438:503" ph="{...}" />
-            <marker date="1570365046265" expanded="true" signature="565:605" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="118" column="5" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
-          <folding>
-            <marker date="1570369537818" expanded="true" signature="6:221" ph="..." />
-            <marker date="1570369537818" expanded="true" signature="304:5580" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="1173:1648" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="1714:1820" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="1765:1814" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="1852:2209" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2125:2203" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2243:2395" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2273:2358" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2435:3055" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2481:3049" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2656:3039" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="2960:3025" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="3081:3524" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="3142:3518" ph="/* GameState.IsPlayerDead = true; ... */" />
-            <marker date="1570369537818" expanded="true" signature="3566:3721" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="3646:3715" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="3761:3920" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="3852:3914" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="3949:4015" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="4055:4790" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="4218:4266" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="4340:4403" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="4826:5062" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="5005:5056" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="5097:5192" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="5135:5186" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="5228:5278" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="5316:5578" ph="{...}" />
-            <marker date="1570369537818" expanded="true" signature="5410:5536" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuDisplayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <marker date="1570365459035" expanded="true" signature="62:561" ph="{...}" />
-            <marker date="1570365459035" expanded="true" signature="162:309" ph="{...}" />
-            <marker date="1570365459035" expanded="true" signature="196:242" ph="{...}" />
-            <marker date="1570365459035" expanded="true" signature="255:303" ph="{...}" />
-            <marker date="1570365459035" expanded="true" signature="339:428" ph="{...}" />
-            <marker date="1570365459035" expanded="true" signature="464:559" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Singleton.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-          <folding>
-            <marker date="1570365046266" expanded="true" signature="20:320" ph="///     Be aware this will not prevent a non singleton constructor ... " />
-            <marker date="1570365046266" expanded="true" signature="386:2330" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="507:2328" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="525:2322" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="548:842" ph="/* if (applicationIsQuitting) { ... */" />
-            <marker date="1570365046266" expanded="true" signature="921:2263" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="1122:1461" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="1505:2031" ph="{...}" />
-            <marker date="1570365046266" expanded="true" signature="2056:2245" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-923">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <marker date="1570365046259" expanded="true" signature="6:111" ph="..." />
-            <marker date="1570365046259" expanded="true" signature="158:3287" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="554:2715" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="832:2709" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="886:2699" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="1007:2388" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="2479:2556" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="2577:2684" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="2768:3005" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="3039:3284" ph="{...}" />
-            <marker date="1570365046259" expanded="true" signature="3154:3276" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameRunner.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-820">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <marker date="1570369135985" expanded="false" signature="6:146" ph="..." />
-            <marker date="1570369135985" expanded="true" signature="195:4523" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="570:1385" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="649:1108" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="1212:1377" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="1403:1591" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="1630:1957" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="1997:2140" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2182:2324" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2377:2490" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2534:2704" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2605:2698" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2771:2991" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2798:2985" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="2889:2975" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="3033:3171" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="3198:3408" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="3250:3310" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="3353:3402" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="3485:3972" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="4014:4521" ph="{...}" />
-            <marker date="1570369135985" expanded="true" signature="4071:4513" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Maps.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <marker date="1570370619119" expanded="false" signature="6:102" ph="..." />
-            <marker date="1570370619119" expanded="true" signature="121:2677" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="296:652" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="442:646" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="567:636" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="709:1053" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="883:941" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1105:1297" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1123:1204" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1238:1291" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1350:1613" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1667:2005" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1800:1979" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="1858:1969" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="2071:2491" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="2271:2453" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="2340:2443" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="2541:2580" ph="{...}" />
-            <marker date="1570370619119" expanded="true" signature="2633:2675" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_9.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_8.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="24" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_7.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_12.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_11.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="84" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Maps/map_10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

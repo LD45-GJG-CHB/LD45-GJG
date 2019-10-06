@@ -2,7 +2,7 @@
 
 public class SwitchPageAction : MenuAction
 {
-    public MenuPageContent PageContent;
+//    public MenuPageContent PageContent;
     public MenuPage MenuPage;
 
     public override void doAction()

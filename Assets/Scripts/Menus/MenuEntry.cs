@@ -2,25 +2,31 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private TextMeshProUGUI _textField;
+    private TextMeshProUGUI _textComponent;
+    private Button _buttonComponent;
     private bool _active;
     private MenuAction _menuAction;
-    private MenuPageContent _pagecontent;
+    private MenuPage _menuPage;
+
+    public MenuPage MenuPage => _menuPage;
 
     // Start is called before the first frame update
     void Start()
     {
-        _textField = gameObject.GetComponent<TextMeshProUGUI>();
+        _textComponent = gameObject.GetComponent<TextMeshProUGUI>();
+        _buttonComponent = gameObject.GetComponent<Button>();
         _menuAction = gameObject.GetComponent<MenuAction>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _textField.fontStyle = _active ? FontStyles.Bold : FontStyles.Normal;
+        _textComponent.fontStyle = _active ? FontStyles.Bold | FontStyles.Underline : FontStyles.Normal;
     }
 
     public void SetActive()
@@ -39,22 +45,37 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         {
             _menuAction.doAction();
         }
+
+        if (_buttonComponent.onClick != null)
+        {
+            _buttonComponent.onClick.Invoke();
+        }
     }
 
-    public void AttachPage(MenuPageContent pageContent)
+    public void AttachPage(MenuPage menuPage)
     {
-        _pagecontent = pageContent;
+        _menuPage = menuPage;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         SetActive();
-        _pagecontent.ClearIndex();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         SetInactive();
-        _pagecontent.ClearIndex();
+    }
+
+    public void SwitchPage(MenuPage menuPage)
+    {
+        Debug.Log(MenuPage);
+        Debug.Log(_menuPage);
+        MenuPage.Root.Show(menuPage);
+    }
+
+    public void SwitchScene(String scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }

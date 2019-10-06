@@ -1,38 +1,51 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class MenuPage : MonoBehaviour
 {
-    public MenuPageContent content;
-    private MenuPage[] _menuPages;
-    private MenuPage _active;
-    private MenuPage _parent;
-    private MenuPage _root;
+    private MenuRoot _root;
 
+    public MenuRoot Root => _root;
+
+    private MenuEntry[] _menuEntries;
+    private int _activeIndex;
+    private MenuEntry Active => _menuEntries[_activeIndex];
+    
     // Start is called before the first frame update
     void Start()
     {
-        _menuPages = GetComponentsInChildren<MenuPage>();
-        
-        foreach (var menuPage in _menuPages)
+        _menuEntries = gameObject.GetComponentsInChildren<MenuEntry>();
+
+        foreach (var menuEntry in _menuEntries)
         {
-            menuPage.Disable();
-            menuPage.setParent(this);
-            menuPage.setRoot(_root ? _root : this);
+            menuEntry.AttachPage(this);
         }
+        SetActive(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        HandleActions();
     }
 
-    public void setParent(MenuPage parent)
+    private void HandleActions()
     {
-        _parent = parent;
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (_activeIndex >= _menuEntries.Length - 1) return;
+            SetActive(++_activeIndex);
+        } else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (_activeIndex <= 0) return;
+            SetActive(--_activeIndex);
+        } else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Active.Select();
+        }
     }
     
-    public void setRoot(MenuPage root)
+    public void setRoot(MenuRoot root)
     {
         _root = root;
     }
@@ -46,5 +59,26 @@ public class MenuPage : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-    
+
+    public void SetActive(MenuEntry menuEntry)
+    {
+        SetActive(_menuEntries.ToList().IndexOf(menuEntry));
+    }
+
+    public void SetActive(int index)
+    {
+        var i = 0;
+        foreach (var menuEntry in _menuEntries)
+        {
+            if (i == index)
+            {
+                menuEntry.SetActive();
+            }
+            else
+            {
+                menuEntry.SetInactive();
+            }
+            i++;
+        }
+    }
 }
