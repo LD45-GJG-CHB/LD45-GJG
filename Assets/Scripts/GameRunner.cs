@@ -15,9 +15,14 @@ public class GameRunner : Singleton<GameRunner>
     public MenuDisplayer MenuDisplayer;
     public static int waitTime = 3;
     public static int countDown;
+    private IEnumerator countdownCoroutine;
 
     public void LoadNextLevel()
     {
+        if (countdownCoroutine != null)
+        {
+            StopCoroutine(countdownCoroutine);
+        }
         isCountingScore = false;
         if (iterator == mapNames.Count)
         {
@@ -37,29 +42,28 @@ public class GameRunner : Singleton<GameRunner>
         DOTweenSequnceBetweenLevels(() =>
         {
             LevelChange();
-            isCountingScore = true;
+            countDown = waitTime;
             StartCoroutine(LevelStartWaitTime());
-            StartCoroutine(CountDown());
+            countdownCoroutine = CountDown();
+            StartCoroutine(countdownCoroutine);
         });
     }
 
     void Start()
     {
         Debug.Log("Gamerunner Started");
-        isCountingScore = false;
         LevelChange();
         StartCoroutine(DecrementScore());
-        StartCoroutine(CountDown());
     }
 
     private static void LevelChange()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
-        countDown = waitTime;
         MapLoader.Instance.currentMap = mapNames[iterator++];
         MapLoader.Instance.DestroyTileMap();
         MapLoader.Instance.LoadNextLevel();
         Score.Instance.IncrementScore(initialScore);
+        isCountingScore = true;
         LogLevelLoaded();
     }
 
@@ -142,6 +146,10 @@ public class GameRunner : Singleton<GameRunner>
 
     public void PlayerOutOfBoundsReset()
     {
+        if (countdownCoroutine != null)
+        {
+            StopCoroutine(countdownCoroutine);
+        }
         DOTweenSequnceBetweenLevels(() =>
         {
             Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
@@ -150,7 +158,8 @@ public class GameRunner : Singleton<GameRunner>
             Score.Instance.DecrementScore(25);
             countDown = waitTime;
             StartCoroutine(LevelStartWaitTime());
-            StartCoroutine(CountDown());
+            countdownCoroutine = CountDown();
+            StartCoroutine(countdownCoroutine);
         });
     }
 }
