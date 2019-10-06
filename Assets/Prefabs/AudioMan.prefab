@@ -46,6 +46,11 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 77e52ac2cb586e043931cef0c2b5eb7c, type: 3}
   - {fileID: 8300000, guid: b866ba85bde26a34dabddb6ef0a686bf, type: 3}
+  - {fileID: 8300000, guid: db53c5199224cce4687ff59d046fa8ec, type: 3}
+  - {fileID: 8300000, guid: a1da5baf27b8dcc42863ba80388a95e5, type: 3}
+  - {fileID: 8300000, guid: 016908506aebd3e45aed7aeec6269def, type: 3}
+  - {fileID: 8300000, guid: e881c2abdc3a123488814bc0534a85d8, type: 3}
+  - {fileID: 8300000, guid: 325381049d157a946b1d95c2e3a3b2d1, type: 3}
   maxAudios: 16
   musicVolume: 1
   soundVolume: 1

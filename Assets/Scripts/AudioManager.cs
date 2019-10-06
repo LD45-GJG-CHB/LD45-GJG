@@ -70,10 +70,11 @@ public class AudioManager : Singleton<AudioManager>
 
     public void StopAllMusic()
     {
-        if (sourcePool != null)
-            foreach (var source in sourcePool)
-                if (source.isPlaying && source.loop)
-                    source.Stop();
+        if (sourcePool == null) return;
+        
+        foreach (var source in sourcePool)
+            if (source.isPlaying && source.loop)
+                source.Stop();
     }
 
     public void PlayRandom(string[] audioName, float vol = 1f, bool isLooping = false, Vector3? position = null)
@@ -102,35 +103,27 @@ public class AudioManager : Singleton<AudioManager>
 
     }
 
-    public IEnumerator FadeToNextMusic(string nextMusicName, float time = 2.0f)
-    {
-        if (string.IsNullOrEmpty(nextMusicName)) yield break;
 
-        var startAudioVol = musicVolume;
+    public IEnumerator FadeOut(float time = 1.0f)
+    {
+        var currMusic = sourcePool.FirstOrDefault(a => a.loop);
+
+        if (currMusic == null)
+            yield break;
+        
+        
+        var startAudioVol = currMusic.volume;
 
         var timer = 0f;
 
-        while ((timer += Time.unscaledDeltaTime) < 0.5f)
+        while ((timer += Time.unscaledDeltaTime) < time)
         {
-            SetMusicVolume(Mathf.Lerp(startAudioVol, 0, timer / 0.5f));
+            currMusic.volume = Mathf.Lerp(startAudioVol, 0, timer / time);
 
             yield return null;
         }
-
-        SetMusicVolume(0);
-
-        StopAllMusic();
-
-        Play(nextMusicName, isLooping: true);
-        timer = 0f;
-
-        while ((timer += Time.unscaledDeltaTime) < 0.4f)
-        {
-            SetMusicVolume(Mathf.Lerp(0, startAudioVol, timer / 0.4f));
-            yield return null;
-        }
-
-        SetMusicVolume(startAudioVol);
+        
+        currMusic.Stop();
     }
 
 

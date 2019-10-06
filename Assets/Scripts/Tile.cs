@@ -60,7 +60,7 @@ public class Tile : MonoBehaviour
     public void ToggleState()
     {
         if (IsActivated)
-        {
+        {  
             Deactivate();
         }
         else

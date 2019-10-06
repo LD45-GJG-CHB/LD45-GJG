@@ -6,7 +6,19 @@ public class CameraEffectManager : MonoBehaviour
     public Shader trippyShader;
 
     public Material trippyMat;
-    
+
+
+    private void Awake()
+    {
+        if (GameState.Difficulty == Difficulty.PENULTIMATE_MAMBO_JAMBO)
+        {
+            AudioManager.Instance.Play("Destructor", .35f, true);
+        }
+        else
+        {
+            AudioManager.Instance.Play("Frontendd", .75f, true);
+        }
+    }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
@@ -15,8 +27,6 @@ public class CameraEffectManager : MonoBehaviour
         if (GameState.Difficulty == Difficulty.PENULTIMATE_MAMBO_JAMBO)
         {
             Graphics.Blit(src, dest, trippyMat);
-            
-            AudioManager.Instance.Play("Destructor", .35f);
         }
         else
         {

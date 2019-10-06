@@ -63,6 +63,13 @@ public class GameRunner : Singleton<GameRunner>
         Score.Instance.IncrementScore(initialScore);
         isCountingScore = true;
         LogLevelLoaded();
+
+        if (iterator == mapNames.Count / 2)
+        {
+            Instance.StartCoroutine(AudioManager.Instance.FadeOut(2.5f));
+//            AudioManager.Instance.StopAllMusic();
+            AudioManager.Instance.Play("rEX");
+        } 
     }
 
     private static void PauseActions()

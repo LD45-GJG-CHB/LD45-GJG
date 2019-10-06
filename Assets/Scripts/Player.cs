@@ -97,14 +97,23 @@ public class Player : Singleton<Player>
 
     private void HandleTileSwitching()
     {
-        foreach (var letter in letters)
+        foreach (var letter in letters.Where(letter => Input.GetKeyDown(letter.ToString())))
         {
-            if (!Input.GetKeyDown(letter.ToString())) continue;
-
             if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString().ToLower(), out var tiles))
             {
                 Score.Instance.DecrementScore(15);
+
+                if (tiles.Any(tile => tile.IsActivated))
+                {
+                    AudioManager.Instance.Play("Deactivate");
+                }
+                else if (tiles.Any(tile => !tile.IsActivated))
+                {
+                    AudioManager.Instance.Play("Activate");    
+                }
+                
                 tiles.ForEach(tile => tile.ToggleState());
+                
                 
                 if (tiles.Where(tile => tile.IsActivated)
                     .Any(tile => Vector3.Distance(transform.position, tile.transform.position) < 1.48f))
@@ -167,6 +176,7 @@ public class Player : Singleton<Player>
 
         if (Input.GetButtonDown("Jump") && _controller.Collisions.Below)
         {
+            AudioManager.Instance.Play("Jump", .3f);
             Velocity.y = _maxJumpVelocity;
         }
 
