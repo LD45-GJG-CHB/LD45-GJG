@@ -77,9 +77,9 @@ public class Player : Singleton<Player>
 
     private void FixedUpdate()
     {
-        if (gameObject.transform.position.x < 0 
+        if (gameObject.transform.position.x < -1 
             || gameObject.transform.position.x > MapLoader.Instance.sizeX * MapLoader.Instance.tileSize 
-            || gameObject.transform.position.y < -MapLoader.Instance.sizeY * MapLoader.Instance.tileSize) 
+            || gameObject.transform.position.y < -MapLoader.Instance.sizeY * MapLoader.Instance.tileSize - 10) 
         {
             GameRunner.Instance.PlayerOutOfBoundsReset();
         }
