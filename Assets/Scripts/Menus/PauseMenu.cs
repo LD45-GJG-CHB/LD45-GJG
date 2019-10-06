@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class MenuDisplayer : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
-    public MenuPage MenuManager;
     public bool DefaultVisible;
+    public GameObject Target;
     
     private void Start()
     {
@@ -20,12 +22,12 @@ public class MenuDisplayer : MonoBehaviour
     public void SetVisible()
     {
         Time.timeScale = 0f;
-        MenuManager.gameObject.SetActive(true);
+        Target.SetActive(true);
     }
     
     public void SetInvisible()
     {
         Time.timeScale = 1.0f;
-        MenuManager.gameObject.SetActive(false);   
+        Target.SetActive(false);
     }
 }

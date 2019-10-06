@@ -13,7 +13,7 @@ public class GameRunner : Singleton<GameRunner>
     public static int initialScore = 500;
     public static int scoreDecrementAmount = 10;
     public static bool isCountingScore = true;
-    public MenuDisplayer MenuDisplayer;
+    public PauseMenu PauseMenu;
     public static int waitTime = 3;
     public static float countDown;
 
@@ -110,7 +110,7 @@ public class GameRunner : Singleton<GameRunner>
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            MenuDisplayer.SetVisible();
+            PauseMenu.SetVisible();
         }
 
         if (Input.GetKeyDown(KeyCode.F3))

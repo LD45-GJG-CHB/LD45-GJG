@@ -51,13 +51,12 @@
           <e p="MapLoader.cs" t="Include" />
           <e p="Maps.cs" t="Include" />
           <e p="Menus" t="Include">
-            <e p="HideMenuAction.cs" t="Include" />
             <e p="MenuAction.cs" t="Include" />
-            <e p="MenuDisplayer.cs" t="Include" />
             <e p="MenuEntry.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
             <e p="MenuPlayer.cs" t="Include" />
             <e p="MenuRoot.cs" t="Include" />
+            <e p="PauseMenu.cs" t="Include" />
             <e p="QuitEntryAction.cs" t="Include" />
             <e p="SetDifficultyAction.cs" t="Include" />
             <e p="SwitchPageAction.cs" t="Include" />
