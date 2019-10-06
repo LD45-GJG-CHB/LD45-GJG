@@ -16,7 +16,7 @@ public class GameRunner : Singleton<GameRunner>
     public MenuDisplayer MenuDisplayer;
     public static int waitTime = 3;
     public static int countDown;
-
+  
     public void LoadNextLevel()
     {
         isCountingScore = false;

@@ -75,6 +75,16 @@ public class Player : Singleton<Player>
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (gameObject.transform.position.x < 0 
+            || gameObject.transform.position.x > MapLoader.Instance.sizeX * MapLoader.Instance.tileSize 
+            || gameObject.transform.position.y < -MapLoader.Instance.sizeY * MapLoader.Instance.tileSize) 
+        {
+            Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
+        }
+    }
+
     private void HandleActions()
     {
         if (!isWaiting)
@@ -122,7 +132,6 @@ public class Player : Singleton<Player>
         if (col.gameObject.GetComponent<Tile>().tileype == TileType.DOOR)
         {
             GameRunner.Instance.LoadNextLevel();
-            Debug.Log("exit: @");
         }
     }
 
