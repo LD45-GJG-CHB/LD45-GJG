@@ -46,8 +46,7 @@ public class GameRunner : Singleton<GameRunner>
                 LogLevelLoaded();
                 Score.Instance.IncrementScore(initialScore);
                 isCountingScore = true;
-                Player.Instance.Velocity = Vector3.zero;
-                Player.Instance.Velocity.x = Player.Instance._moveSpeed;
+                StartCoroutine(LevelStartWaitTime());
             })
             .AppendCallback((() => Time.timeScale = 1.0f))
             .AppendInterval(0.2f)
@@ -65,6 +64,26 @@ public class GameRunner : Singleton<GameRunner>
         LogLevelLoaded();
         Score.Instance.IncrementScore(initialScore);
         StartCoroutine(DecrementScore());
+        StartCoroutine(LevelStartWaitTime());
+    }
+
+    private static void PauseActions()
+    {
+        Player.Instance.isWaiting = true;
+        isCountingScore = false;
+    }
+
+    private static void UnpauseActions()
+    {
+        Player.Instance.isWaiting = false;
+        isCountingScore = true;
+    }
+
+    private static IEnumerator LevelStartWaitTime()
+    {
+        PauseActions();
+        yield return new WaitForSeconds(10);
+        UnpauseActions();
     }
 
     private static IEnumerator DecrementScore(int decrement = 10)

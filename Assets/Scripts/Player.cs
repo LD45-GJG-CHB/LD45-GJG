@@ -39,6 +39,8 @@ public class Player : Singleton<Player>
 
     public Image _darkness;
 
+    public bool isWaiting = false;
+
     
 
     // Use this for initialization
@@ -75,8 +77,11 @@ public class Player : Singleton<Player>
 
     private void HandleActions()
     {
-        HandleMovement();
-        UpdateDirectionDumb();
+        if (!isWaiting)
+        {
+            HandleMovement();
+            UpdateDirectionDumb();
+        }
         HandleTileSwitching();
     }
 
