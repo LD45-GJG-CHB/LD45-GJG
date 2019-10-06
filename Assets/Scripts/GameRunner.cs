@@ -67,7 +67,7 @@ public class GameRunner : Singleton<GameRunner>
         StartCoroutine(DecrementScore());
     }
 
-    IEnumerator DecrementScore(int decrement = 10)
+    private static IEnumerator DecrementScore(int decrement = 10)
     {
         while (true)
         {
