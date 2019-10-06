@@ -22,6 +22,6 @@ public class WaitTimeCamera : Singleton<WaitTimeCamera>
 
     public void SetCameraPriority(int priority)
     {
-        //waitTimeCamera.Priority = priority;
+        GetComponent<CinemachineVirtualCamera>().Priority = priority;
     }
 }

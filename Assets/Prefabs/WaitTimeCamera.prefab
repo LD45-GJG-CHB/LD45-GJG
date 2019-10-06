@@ -50,14 +50,14 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
-    NearClipPlane: 0.1
+    OrthographicSize: 32
+    NearClipPlane: 0.3
     FarClipPlane: 5000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -92,11 +92,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.3
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 32
+  orthographic size: 45
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d233e7a68ea76824583314782def4e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: -1
 --- !u!1 &4043707508166493105
 GameObject:
   m_ObjectHideFlags: 0
