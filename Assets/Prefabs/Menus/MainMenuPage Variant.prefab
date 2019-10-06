@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7389420086018931854, guid: 74d3a9ff2da0031499039341be09e937,
         type: 3}
       propertyPath: m_Name
-      value: MainMenuPage
+      value: MainMenuPage Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7389420086018931855, guid: 74d3a9ff2da0031499039341be09e937,
         type: 3}

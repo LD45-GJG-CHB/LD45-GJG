@@ -51,6 +51,7 @@
           <e p="MapLoader.cs" t="Include" />
           <e p="Maps.cs" t="Include" />
           <e p="Menus" t="Include">
+            <e p="BackButton.cs" t="Include" />
             <e p="MenuAction.cs" t="Include" />
             <e p="MenuEntry.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />

@@ -4,13 +4,12 @@
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/HideMenuAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/HideMenuAction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuDisplayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuDisplayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +103,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SetDifficultyAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Siimu penultimate mambo jambo.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/MenuPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/BackButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity" root0="FORCE_HIGHLIGHTING" />
@@ -151,6 +151,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/Hider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/BackButton.cs" />
       </list>
     </option>
   </component>
@@ -221,7 +222,7 @@
       <workItem from="1570251824798" duration="1621000" />
       <workItem from="1570253612696" duration="5998000" />
       <workItem from="1570297846714" duration="5502000" />
-      <workItem from="1570379951043" duration="5047000" />
+      <workItem from="1570379951043" duration="6710000" />
     </task>
     <task id="LOCAL-00001" summary="Vana scene Siimer">
       <created>1570253768155</created>
