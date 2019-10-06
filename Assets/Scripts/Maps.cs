@@ -7,21 +7,21 @@ using UnityEngine;
 public class Maps
 {
     public static List<string> mapNames;
-
-    public static Dictionary<string, string> maps;
-
-    //public static int mapSizeX = 40;
-    //public static int mapSizeY = 20;
+    public static Dictionary<string, string[]> maps;
 
     private static string path = "Assets/Resources/Maps/";
 
     static Maps()
     {
         mapNames = createOrderedMapNames();
-        maps = new Dictionary<string, string>();
+        maps = new Dictionary<string, string[]>();
         foreach (string mapName in mapNames)
         {
-            maps.Add(mapName, ReadMap(mapName));
+            string[] _map = ReadMap(mapName);
+            if (GetRowAmount(_map) > 2 || GetColumnAmount(_map) > 2)
+            {
+                maps.Add(mapName, _map);
+            }
         }
     }
 
@@ -49,32 +49,52 @@ public class Maps
         }
     }
 
-    private static string ReadMap(string mapName)
+    private static string[] ReadMap(string mapName)
     {
         StreamReader reader = new StreamReader(path + mapName);
-        string map = reader.ReadToEnd().Replace(Environment.NewLine, "");
+        string[] map = reader.ReadToEnd().Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+        map = AddPadding(map);
         reader.Close();
         return map;
     }
 
-    public static string[,] StringTo2DArray(string input)
-    { 
-        var n = 40;
-        var split = input
-            .Select((c, i) => new { letter = c, group = i / n })
-            .GroupBy(l => l.group, l => l.letter)
-            .Select(g => string.Join("", g))
-            .ToArray();
-
-        var result = new string[40,20];
-        for (var yIndex = 0; yIndex < 20; yIndex++)
+    private static string[] AddPadding(string[] map)
+    {
+        int maxSizedColumn = map.OrderByDescending(s => s.Length).First().Length;
+        for (int i = 0; i < map.Length - 1; i++)
         {
-            for (var xIndex = 0; xIndex < 40; xIndex++)
+            if (map[i].Length < maxSizedColumn)
             {
-                result[xIndex, yIndex] = split[yIndex][xIndex].ToString();
+                map[i] = map[i] + new string('-', maxSizedColumn - map[i].Length);
+            }
+        }
+        return map;
+    }
+
+    public static string[,] StringArrayTo2DArray(string[] input)
+    { 
+        int sizeX = GetColumnAmount(input);
+        int sizeY = GetRowAmount(input);
+     
+        var result = new string[sizeX, sizeY];
+        for (var yIndex = 0; yIndex < sizeY; yIndex++)
+        {
+            for (var xIndex = 0; xIndex < sizeX; xIndex++)
+            {
+                result[xIndex, yIndex] = input[yIndex][xIndex].ToString();
             }
         }
         
         return result;
+    }
+
+    public static int GetRowAmount(string[] map)
+    {
+        return map.Length;
+    }
+
+    public static int GetColumnAmount(string[] map)
+    {
+        return map[0].Length;
     }
 }

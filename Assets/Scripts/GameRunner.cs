@@ -17,7 +17,6 @@ public class GameRunner : Singleton<GameRunner>
 
     public static void LoadNextLevel()
     {
-        Debug.Log("GameRunner: LoadNextLevel...");
         isCountingScore = false;
         if (iterator == mapNames.Count)
         {
@@ -32,6 +31,8 @@ public class GameRunner : Singleton<GameRunner>
             return;
         }
 
+        Debug.Log("GameRunner: LoadNextLevel...");
+
         DOTween.Sequence()
             .SetUpdate(true)
             .AppendCallback((() => Time.timeScale = 0.0f))
@@ -42,7 +43,7 @@ public class GameRunner : Singleton<GameRunner>
                 MapLoader.Instance.currentMap = mapNames[iterator++];
                 MapLoader.Instance.DestroyTileMap();
                 MapLoader.Instance.LoadNextLevel();
-                Debug.Log("GameRunner: LoadNextLevel - Loaded!");
+                LogLevelLoaded();
                 Score.Instance.IncrementScore(initialScore);
                 isCountingScore = true;
                 Player.Instance.Velocity = Vector3.zero;
@@ -61,6 +62,7 @@ public class GameRunner : Singleton<GameRunner>
         MapLoader.Instance.currentMap = mapNames[iterator++];
         MapLoader.Instance.DestroyTileMap();
         MapLoader.Instance.LoadNextLevel();
+        LogLevelLoaded();
         Score.Instance.IncrementScore(initialScore);
         StartCoroutine(DecrementScore());
     }
@@ -75,6 +77,12 @@ public class GameRunner : Singleton<GameRunner>
                 Score.Instance.DecrementScore(decrement);
             }
         }
+    }
+
+    private static void LogLevelLoaded()
+    {
+        Debug.Log("Current Map: " + MapLoader.Instance.currentMap);
+        Debug.Log("GameRunner: LoadNextLevel - Loaded!");
     }
 
     private void Update()
