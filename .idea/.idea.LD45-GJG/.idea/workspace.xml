@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HighscoreInputScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HighscoreInputScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HighscoreListScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HighscoreListScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighScoreAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighScoreAPI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighscoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighscoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighScoreText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighScoreText.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -313,7 +305,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs</url>
-          <line>26</line>
+          <line>30</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" initialLine="27">
             <startOffsets>
               <option value="729" />

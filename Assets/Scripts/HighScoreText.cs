@@ -22,7 +22,7 @@ public class HighScoreText : MonoBehaviour
         
         if (lastHighscore != null)
         {
-            _textField.text = $"Well done, {lastHighscore.name}. You are #{lastHighscore.place.ToString()}";
+            _textField.text = $"Well done, <i>{lastHighscore.name}</i>. You are #{lastHighscore.place.ToString()}";
         } else if (died)
         {
             _textField.text = $"U ded";
