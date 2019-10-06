@@ -20,9 +20,7 @@ public class MenuPage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ApplicationSettings.IsPaused()) return;
-        
-        HandleActions();   
+        HandleActions();
     }
 
     void HandleActions()
