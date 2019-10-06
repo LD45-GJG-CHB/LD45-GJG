@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6111539196522068721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.0034732395, y: 2.0928185, z: -9.814465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6111539196861222820}
@@ -292,7 +292,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 16
+  orthographic size: 18
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -634,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6111539196861222822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0034732395, y: -2.0928185, z: -0.18553543}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6111539195238202905}
@@ -866,16 +866,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3888857309649395033, guid: 387ec0b64e8032346b812e94bcafd71c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 3888857309649395033, guid: 387ec0b64e8032346b812e94bcafd71c,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 387ec0b64e8032346b812e94bcafd71c, type: 3}
 --- !u!224 &2895579911737194318 stripped
@@ -971,11 +961,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 45094716}
     m_Modifications:
-    - target: {fileID: 7692373069589411368, guid: 83edfbe329a1663488a60afc9741fa5d,
-        type: 3}
-      propertyPath: m_Name
-      value: ScoreText
-      objectReference: {fileID: 0}
     - target: {fileID: 7692373069589411375, guid: 83edfbe329a1663488a60afc9741fa5d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1034,12 +1019,12 @@ PrefabInstance:
     - target: {fileID: 7692373069589411375, guid: 83edfbe329a1663488a60afc9741fa5d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 85.000046
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7692373069589411375, guid: 83edfbe329a1663488a60afc9741fa5d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -35
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7692373069589411375, guid: 83edfbe329a1663488a60afc9741fa5d,
         type: 3}
@@ -1081,20 +1066,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7692373069589411374, guid: 83edfbe329a1663488a60afc9741fa5d,
+    - target: {fileID: 7692373069589411368, guid: 83edfbe329a1663488a60afc9741fa5d,
         type: 3}
-      propertyPath: m_fontSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7692373069589411374, guid: 83edfbe329a1663488a60afc9741fa5d,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7692373069589411374, guid: 83edfbe329a1663488a60afc9741fa5d,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 513
+      propertyPath: m_Name
+      value: ScoreText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83edfbe329a1663488a60afc9741fa5d, type: 3}

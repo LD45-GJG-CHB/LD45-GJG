@@ -117,15 +117,16 @@ public class Player : Singleton<Player>
 
     private void Stuck()
     {
-        GameState.IsPlayerDead = true;
-
-        DOTween.Sequence()
-            .SetUpdate(true)
-            .AppendCallback(() => Time.timeScale = 0f)
-            .Append(_darkness.DOFade(1.0f, 0.3f))
-            .AppendCallback(() => Time.timeScale = 1.0f)
-            .AppendCallback(() => SceneManager.LoadScene("HighscoreListScene"))
-            .Play();
+        GameRunner.Instance.PlayerOutOfBoundsReset();
+//        GameState.IsPlayerDead = true;
+//
+//        DOTween.Sequence()
+//            .SetUpdate(true)
+//            .AppendCallback(() => Time.timeScale = 0f)
+//            .Append(_darkness.DOFade(1.0f, 0.3f))
+//            .AppendCallback(() => Time.timeScale = 1.0f)
+//            .AppendCallback(() => SceneManager.LoadScene("HighscoreListScene"))
+//            .Play();
     }
     void OnTriggerEnter2D(Collider2D col)
     {

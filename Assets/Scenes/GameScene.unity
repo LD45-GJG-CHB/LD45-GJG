@@ -479,6 +479,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6111539196522068727, guid: 3f6debfe4ff483542887b40c78d992ad,
+        type: 3}
+      propertyPath: orthographic size
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 4472144841197394816, guid: 3f6debfe4ff483542887b40c78d992ad,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -488,6 +493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111539196861222821, guid: 3f6debfe4ff483542887b40c78d992ad,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2761038982289963702, guid: 3f6debfe4ff483542887b40c78d992ad,
         type: 3}

@@ -41,7 +41,7 @@ public class Maps
     {
         try
         {
-            return Int32.Parse(mapNumber.Replace(".txt", ""));
+            return int.Parse(mapNumber.Replace(".txt", ""));
         }
         catch (FormatException e)
         {

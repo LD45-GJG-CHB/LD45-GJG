@@ -1,120 +1,100 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
- 2
-public class MapLoader : Singleton<MapLoader>
+
+public class Maps
 {
-    public string currentMap;
-
-    public GameObject tilePrefab;
-    public GameObject exitPrefab;
-    public GameObject edgeTilePrefab;
-    public float tileSize = 2;
-    public Dictionary<string, List<Tile>> tileMap;
-    public string[,] map;
-    public int sizeX;
-    public int sizeY;
-    public float playerStartPosX;
-    public float playerStartPosY;
+    public static List<string> mapNames;
+    public static Dictionary<string, string[]> maps;
+     1
+    private static string path = "Assets/Resources/Maps/";
     
-    public void LoadNextLevel()
+    static Maps()
     {
-        tileMap = new Dictionary<string, List<Tile>>();
-
-        var _map = Maps.maps[currentMap];
-        sizeX = Maps.GetColumnAmount(_map);
-        sizeY = Maps.GetRowAmount(_map);
-        map = Maps.StringArrayTo2DArray(_map);
-
-        for (var y = 0; y < sizeY; y++)
+        mapNames = createOrderedMapNames();
+        maps = new Dictionary<string, string[]>();
+        foreach (string mapName in mapNames)
         {
-            for (var x = 0; x < sizeX; x++)
+            string[] _map = ReadMap(mapName);
+            if (GetRowAmount(_map) > 2 || GetColumnAmount(_map) > 2)
             {
-                var letter = map[x, y];
-
-                Tile tile = null;
-                switch (letter)
-                {
-                    case "1": // player pos
-                        var posX = x * tileSize;
-                        var posY = y * -tileSize;
-                            
-                        Player.Instance.transform.position = new Vector3(posX, posY, 0);
-                        playerStartPosX = posX;
-                        playerStartPosY = posY;
-                        break;
-                    case "-": // nothingness
-                        break;
-                    case " ":
-                        break;
-                    case "@": // exit / door
-                        tile = CreateTileAtPosition(x, y);
-
-                        tile.GetComponent<Tile>().tileype = TileType.DOOR;
-
-                        tile.GetComponent<BoxCollider2D>().isTrigger = true;
-
-                        tile.gameObject.layer = 11;
-                        var rb = tile.gameObject.AddComponent<Rigidbody2D>();
-                        rb.gravityScale = 0.0f;
-                        rb.isKinematic = true; 
-                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
-
-
-                        break;
-                    default: // default letter tile
-                        tile = CreateTileAtPosition(x, y);
-
-                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
-
-                        break;
-                }
-                
-                if (tileMap.TryGetValue(letter.ToLower(), out var tiles))
-                {
-                    tiles.Add(tile);    
-                }
-                else
-                {
-                    tileMap[letter.ToLower()] = new List<Tile> {tile};
-                }
-
+                maps.Add(mapName, _map);
             }
         }
     }
 
-    private Tile CreateTileAtPosition(int x, int y)
+    private static List<string> createOrderedMapNames()
     {
-        var tile = Instantiate(tilePrefab, transform);
-        var posX = x * tileSize;
-        var posY = y * -tileSize;
-
-        tile.transform.position = new Vector2(posX, posY);
-
-        return tile.GetComponent<Tile>();
+        List<string> _mapNames = new List<string>();
+        FileInfo[] files = new DirectoryInfo(path).GetFiles("map_*.txt");
+        foreach (FileInfo file in files)
+        {
+            _mapNames.Add(file.Name);
+        }
+        _mapNames = _mapNames.OrderBy(o => MapNumber(o.Substring(4))).ToList();
+        return _mapNames;
     }
 
-    private void Update()
+    private static int MapNumber(string mapNumber)
     {
-        if (Input.GetKeyDown(KeyCode.F3))
+        try
         {
-            
+            return Int32.Parse(mapNumber.Replace(".txt", ""));
+        }
+        catch (FormatException e)
+        {
+            return int.MaxValue;
         }
     }
 
-    public void DestroyTileMap()
+    private static string[] ReadMap(string mapName)
     {
-        tileMap?.Values
-            .SelectMany(tm => tm).ToList()
-            .ForEach(tile =>
-            {
-                if (!tile)
-                    return;
-                                            @
-                DestroyImmediate(tile.gameObject);
-            });
+        StreamReader reader = new StreamReader(path + mapName);
+        string[] map = reader.ReadToEnd().Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+        map = AddPadding(map);
+        reader.Close();
+        return map;
     }
 
+    private static string[] AddPadding(string[] map)
+    {
+        int maxSizedColumn = map.OrderByDescending(s => s.Length).First().Length;
+        for (var i = 0; i < map.Length; i++)
+        {
+            if (map[i].Length < maxSizedColumn)
+            {
+                map[i] = map[i] + new string('-', maxSizedColumn - map[i].Length);
+            }
+        }
+        return map;
+    }
+
+    public static string[,] StringArrayTo2DArray(string[] input)
+    { 
+        int sizeX = GetColumnAmount(input);
+        int sizeY = GetRowAmount(input);
+     
+        var result = new string[sizeX, sizeY];
+        for (var yIndex = 0; yIndex < sizeY; yIndex++)
+        {
+            for (var xIndex = 0; xIndex < sizeX; xIndex++)
+            {                                                     @
+                result[xIndex, yIndex] = input[yIndex][xIndex].ToString();
+            }
+        }
+        
+        return result;
+    }
+
+    public static int GetRowAmount(string[] map)
+    {
+        return map.Length;
+    }
+
+    public static int GetColumnAmount(string[] map)
+    {
+        return map[0].Length;
+    }
 }
