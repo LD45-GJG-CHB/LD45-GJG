@@ -17,22 +17,20 @@ public class Tile : MonoBehaviour
 
     private BoxCollider2D _collider;
 
-    public TMP_FontAsset _font;
+    public TMP_FontAsset _font; // for testing n shit
 
     public string fontBasePath = "Fonts & Materials";
 
-    public static Dictionary<TextFont, string> FontPaths;
+    public static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
+    {
+        {TextFont.FiraCode, "FiraMono-Regular SDF"},
+        {TextFont.Dotty, "dotty SDF"},
+        {TextFont.Joystix, "joystix monospace SDF"},
+        {TextFont.ComicSans, "COMIC SDF"}
+    };
 
     private void Awake()
     {
-        FontPaths = new Dictionary<TextFont, string>
-        {
-            {TextFont.FiraCode, "FiraMono-Regular SDF"},
-            {TextFont.Dotty, "dotty SDF"},
-            {TextFont.Joystix, "joystix monospace SDF"},
-            {TextFont.ComicSans, "COMIC SDF"}
-        };
-
         if (FontPaths.TryGetValue(GameState.Font, out var path))
         {
             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
