@@ -22,21 +22,21 @@ public class HighscoreManager : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
+        
         if (_highscores != null && _highscores.Length > 0)
         {
-            int index = 1;
             foreach (var highscore in _highscores)
             {
-                InstantiateEntry(highscore, index++);
+                InstantiateEntry(highscore);
             }
         }
     }
 
-    private void InstantiateEntry(Highscore highscore, int index)
+    private void InstantiateEntry(Highscore highscore)
     {
         GameObject entry = Instantiate(highscoreEntry, transform);
         var component = entry.GetComponent<HighscoreEntry>();
-        component.nameText.text = $"{index.ToString()}. {highscore.name}";
+        component.nameText.text = $"{highscore.place.ToString()}. {highscore.name}";
         component.scoreText.text = highscore.score.ToString();
     }
 

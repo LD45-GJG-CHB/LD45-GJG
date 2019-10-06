@@ -27,11 +27,21 @@ public class HighscoreNameInput : MonoBehaviour
     public void saveName()
     {
         var name = nameInput.text;
-        Debug.Log($"[HighscoreNameInput] received name: {name.ToString()}");
+        GameState.playerName = name;
+        
+        Debug.Log($"[HighscoreNameInput] received name: {name}");
 
-        StartCoroutine(HighScoreAPI.Save(name, score.GetScore(), (s =>
-            {
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-            })));
-        }
+        StartCoroutine(HighScoreAPI.Save(name, score.GetScore(), s =>
+        {
+            var response = JsonUtility.FromJson<Response>(s);
+            GameState.playerLastHighscore = response.data;
+            SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
+        }));
+    }
+    
+    [System.Serializable]
+    public class Response
+    {
+        public Highscore data;
+    }
 }
