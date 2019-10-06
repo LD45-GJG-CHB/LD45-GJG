@@ -50,10 +50,10 @@ public class MapLoader : Singleton<MapLoader>
                     case " ":
                         break;
                     case "@": // exit / door
-                        CreateTileByTileType(x, y, TileType.DOOR, letter);
+                        tile = CreateTileByTileType(x, y, TileType.DOOR, letter);
                         break;
                     case "^":
-                        CreateTileByTileType(x, y, TileType.JUMPER, letter);
+                        tile = CreateTileByTileType(x, y, TileType.JUMPER, letter);
                         break;
                     default: // default letter tile
                         tile = CreateTileAtPosition(x, y);
