@@ -22,8 +22,7 @@ public class Tile : MonoBehaviour
     {
         _collider = GetComponent<BoxCollider2D>();
 
-        Activate();
-        
+        Deactivate();        
     }
     public void SetLetter(string textLetter)
     {
@@ -51,6 +50,10 @@ public class Tile : MonoBehaviour
 
     public void Deactivate()
     {
+        if ("@#".Contains(letter.text))
+        {
+            return;
+        }
         letter.color = deactivatedColor;
         _collider.enabled = false;
     }

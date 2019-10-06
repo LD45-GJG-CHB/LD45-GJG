@@ -61,7 +61,7 @@ public class Maps
     private static string[] AddPadding(string[] map)
     {
         int maxSizedColumn = map.OrderByDescending(s => s.Length).First().Length;
-        for (int i = 0; i < map.Length; i++)
+        for (var i = 0; i < map.Length; i++)
         {
             if (map[i].Length < maxSizedColumn)
             {
