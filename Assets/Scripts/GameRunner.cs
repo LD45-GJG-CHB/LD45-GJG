@@ -14,6 +14,8 @@ public class GameRunner : Singleton<GameRunner>
     public static int scoreDecrementAmount = 10;
     public static bool isCountingScore = true;
     public MenuDisplayer MenuDisplayer;
+    public static int waitTime = 3;
+    public static int countDown;
 
     public void LoadNextLevel()
     {
@@ -40,13 +42,10 @@ public class GameRunner : Singleton<GameRunner>
             .AppendInterval(0.1f)
             .AppendCallback(() =>
             {
-                MapLoader.Instance.currentMap = mapNames[iterator++];
-                MapLoader.Instance.DestroyTileMap();
-                MapLoader.Instance.LoadNextLevel();
-                LogLevelLoaded();
-                Score.Instance.IncrementScore(initialScore);
+                LevelChange();
                 isCountingScore = true;
                 StartCoroutine(LevelStartWaitTime());
+                StartCoroutine(CountDown());
             })
             .AppendCallback((() => Time.timeScale = 1.0f))
             .AppendInterval(0.2f)
@@ -58,13 +57,21 @@ public class GameRunner : Singleton<GameRunner>
     void Start()
     {
         Debug.Log("Gamerunner Started");
+        isCountingScore = false;
+        LevelChange();
+        StartCoroutine(DecrementScore());
+        StartCoroutine(LevelStartWaitTime());
+        StartCoroutine(CountDown());
+    }
+
+    private static void LevelChange()
+    {
+        countDown = waitTime;
         MapLoader.Instance.currentMap = mapNames[iterator++];
         MapLoader.Instance.DestroyTileMap();
         MapLoader.Instance.LoadNextLevel();
-        LogLevelLoaded();
         Score.Instance.IncrementScore(initialScore);
-        StartCoroutine(DecrementScore());
-        StartCoroutine(LevelStartWaitTime());
+        LogLevelLoaded();
     }
 
     private static void PauseActions()
@@ -82,8 +89,18 @@ public class GameRunner : Singleton<GameRunner>
     private static IEnumerator LevelStartWaitTime()
     {
         PauseActions();
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(waitTime);
         UnpauseActions();
+    }
+
+    private static IEnumerator CountDown()
+    {
+        var ii = countDown;
+        for (int i = 0; i < ii; i++)
+        {
+            yield return new WaitForSeconds(1);
+            countDown--;
+        }
     }
 
     private static IEnumerator DecrementScore(int decrement = 10)
