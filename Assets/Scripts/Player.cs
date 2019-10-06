@@ -6,6 +6,7 @@ using DG.Tweening.Plugins;
 using Extensions;
 using RaycastEngine2D;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -38,13 +39,13 @@ public class Player : Singleton<Player>
 
     public Image _darkness;
 
+    
+
     // Use this for initialization
     private void Start()
     {
-        var c = _darkness.color;
-        c.a = 0;
-        _darkness.color = c;
 
+        
         _renderer = GetComponent<SpriteRenderer>();
 
         _lastFacingDirection = Vector2.right;
@@ -59,8 +60,9 @@ public class Player : Singleton<Player>
         _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * _minJumpHeight);
 
         Velocity.x = _moveSpeed;
-    }
 
+
+    }
 
     // Update is called once per frame
     private void Update()
@@ -73,7 +75,6 @@ public class Player : Singleton<Player>
 
     private void HandleActions()
     {
-        HandleOnTriggerEnter();
         HandleMovement();
         UpdateDirectionDumb();
         HandleTileSwitching();
@@ -89,12 +90,9 @@ public class Player : Singleton<Player>
             {
                 Score.Instance.DecrementScore(15);
                 tiles.ForEach(tile => tile.ToggleState());
-
-                var bxCollider = GetComponent<BoxCollider2D>();
-                
                 
                 if (tiles.Where(tile => tile.IsActivated)
-                    .Any(tile => Vector3.Distance(transform.position, tile.transform.position) < 1.0f))
+                    .Any(tile => Vector3.Distance(transform.position, tile.transform.position) < 1.48f))
                 {
                     Stuck();
                 }
@@ -104,8 +102,6 @@ public class Player : Singleton<Player>
 
     private void Stuck()
     {
-        Debug.Log("WARNING. MAYBE DESTROY TOO SOON");
-
         GameState.IsPlayerDead = true;
 
         DOTween.Sequence()
@@ -113,18 +109,14 @@ public class Player : Singleton<Player>
             .AppendCallback(() => Time.timeScale = 0f)
             .Append(_darkness.DOFade(1.0f, 0.3f))
             .AppendCallback(() => Time.timeScale = 1.0f)
+            .AppendCallback(() => SceneManager.LoadScene("HighscoreListScene"))
             .Play();
     }
-
-    private void HandleOnTriggerEnter()
-    {
-    }
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.GetComponent<Tile>().tileype == TileType.DOOR)
         {
-            GameRunner.LoadNextLevel();
+            GameRunner.Instance.LoadNextLevel();
             Debug.Log("exit: @");
         }
     }
@@ -161,12 +153,7 @@ public class Player : Singleton<Player>
         if (Input.GetButtonUp("Jump") && !_controller.Collisions.Below)
             if (Velocity.y > _minJumpVelocity)
                 Velocity.y = _minJumpVelocity;
-
-//        var targetVelocityX = Mathf.Round(Velocity.x) * _moveSpeed;
-
-//        Velocity.x = Mathf.SmoothDamp(Velocity.x, targetVelocityX, ref _velocityXSmoothing,
-//            _controller.Collisions.Below ? _accelerationTimeGrounded : _accelerationTimeAirborne);
-
+        
         Velocity.y += Constants.GRAVITY * Time.deltaTime;
 
         _controller.Move(Velocity * Time.deltaTime);
