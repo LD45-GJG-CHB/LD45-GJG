@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Linq;
 using DG.Tweening;
+using DG.Tweening.Plugins;
 using Extensions;
 using RaycastEngine2D;
 using UnityEngine;
@@ -67,6 +68,11 @@ public class Player : Singleton<Player>
         if (!ApplicationSettings.IsPaused())
         {
             HandleActions();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu.Instance.gameObject.SetActive(true);
         }
     }
 
