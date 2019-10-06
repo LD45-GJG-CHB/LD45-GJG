@@ -16,12 +16,12 @@ public class CountdownTimerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameRunner.countDown == 0)
+        if (GameRunner.countDown < 0)
         {
             _textField.text = "";
         } else
         {
-            _textField.text = GameRunner.countDown.ToString();
+            _textField.text = ((int)GameRunner.countDown + 1).ToString();
         }
     }
 }

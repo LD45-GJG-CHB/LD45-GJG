@@ -15,17 +15,12 @@ public class GameRunner : Singleton<GameRunner>
     public static bool isCountingScore = true;
     public MenuDisplayer MenuDisplayer;
     public static int waitTime = 3;
-    public static int countDown;
-    private IEnumerator countdownCoroutine;
+    public static float countDown;
 
     public TextMeshProUGUI _levelText;
 
     public void LoadNextLevel()
     {
-        if (countdownCoroutine != null)
-        {
-            StopCoroutine(countdownCoroutine);
-        }
         isCountingScore = false;
         if (iterator == mapNames.Count)
         {
@@ -48,14 +43,13 @@ public class GameRunner : Singleton<GameRunner>
             LevelChange();
             countDown = waitTime;
             StartCoroutine(LevelStartWaitTime());
-            countdownCoroutine = CountDown();
-            StartCoroutine(countdownCoroutine);
         });
     }
 
     void Start()
     {
         Debug.Log("Gamerunner Started");
+        isCountingScore = false;
         LevelChange();
         StartCoroutine(DecrementScore());
     }
@@ -76,6 +70,7 @@ public class GameRunner : Singleton<GameRunner>
         WaitTimeCamera.Instance.SetCameraPriority(110);
         Player.Instance.isWaiting = true;
         isCountingScore = false;
+        countDown = waitTime;
     }
 
     private static void UnpauseActions()
@@ -90,16 +85,6 @@ public class GameRunner : Singleton<GameRunner>
         PauseActions();
         yield return new WaitForSeconds(waitTime);
         UnpauseActions();
-    }
-
-    private static IEnumerator CountDown()
-    {
-        var ii = countDown;
-        for (int i = 0; i < ii; i++)
-        {
-            yield return new WaitForSeconds(1);
-            countDown--;
-        }
     }
 
     private static IEnumerator DecrementScore(int decrement = 10)
@@ -122,6 +107,7 @@ public class GameRunner : Singleton<GameRunner>
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             MenuDisplayer.SetVisible();
@@ -130,6 +116,13 @@ public class GameRunner : Singleton<GameRunner>
         if (Input.GetKeyDown(KeyCode.F3))
         {
             LoadNextLevel();
+        }
+        if (countDown >= 0)
+        {
+            countDown -= Time.deltaTime;
+        }
+        if (countDown < 0) {
+
         }
     }
 
@@ -150,10 +143,7 @@ public class GameRunner : Singleton<GameRunner>
 
     public void PlayerOutOfBoundsReset()
     {
-        if (countdownCoroutine != null)
-        {
-            StopCoroutine(countdownCoroutine);
-        }
+        isCountingScore = false;
         DOTweenSequnceBetweenLevels(() =>
         {
             Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
@@ -161,9 +151,15 @@ public class GameRunner : Singleton<GameRunner>
             Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             Score.Instance.DecrementScore(25);
             countDown = waitTime;
+            isCountingScore = true;
             StartCoroutine(LevelStartWaitTime());
-            countdownCoroutine = CountDown();
-            StartCoroutine(countdownCoroutine);
         });
     }
+
+    private void StopCoroutines()
+    {
+        StopAllCoroutines();
+        countDown = waitTime;
+    }
+
 }
