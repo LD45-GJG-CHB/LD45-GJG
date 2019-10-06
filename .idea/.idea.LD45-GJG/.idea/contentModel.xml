@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Game Maker\.Rider2019.1\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\Game Maker\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Game Maker\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_LD45-GJG.-481326177.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Game Maker\Documents\LD45-GJG" t="IncludeRecursive">
+    <e p="C:\Users\Game Maker\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Game Maker\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_LD45-GJG.-1919406589.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Game Maker\Desktop\LD45-GJG" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Demigiant" t="Include">
@@ -34,6 +33,7 @@
             <e p="map_1.txt" t="Include" />
             <e p="map_10.txt" t="Include" />
             <e p="map_2.txt" t="Include" />
+            <e p="map_4.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -56,10 +56,14 @@
           <e p="MapLoader.cs" t="Include" />
           <e p="Maps.cs" t="Include" />
           <e p="Menus" t="Include">
+            <e p="HideMenuAction.cs" t="Include" />
             <e p="MenuAction.cs" t="Include" />
+            <e p="MenuDisplayer.cs" t="Include" />
             <e p="MenuEntry.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
+            <e p="MenuPlayer.cs" t="Include" />
+            <e p="QuitEntryAction.cs" t="Include" />
             <e p="SwitchPageAction.cs" t="Include" />
             <e p="SwitchSceneAction.cs" t="Include" />
           </e>

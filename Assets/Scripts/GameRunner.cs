@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class GameRunner : Singleton<GameRunner>
     public static int initialScore = 500;
     public static int scoreDecrementAmount = 10;
     public static bool isCountingScore = true;
+    public MenuDisplayer MenuDisplayer;
 
     public static void LoadNextLevel()
     {
@@ -75,4 +77,11 @@ public class GameRunner : Singleton<GameRunner>
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuDisplayer.SetVisible();
+        }
+    }
 }

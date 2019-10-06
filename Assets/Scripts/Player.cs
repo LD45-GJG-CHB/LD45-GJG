@@ -69,11 +69,6 @@ public class Player : Singleton<Player>
         {
             HandleActions();
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseMenu.Instance.gameObject.SetActive(true);
-        }
     }
 
     private void HandleActions()
