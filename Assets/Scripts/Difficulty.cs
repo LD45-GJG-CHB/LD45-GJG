@@ -5,6 +5,6 @@ namespace DefaultNamespace
         EASY,
         MEDIUM,
         HARD,
-        EPIC,
+        PENULTIMATE_MAMBO_JAMBO,
     }
 }

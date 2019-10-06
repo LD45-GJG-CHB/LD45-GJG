@@ -23,7 +23,6 @@ public class MenuRoot : MonoBehaviour
 
     public void Show(int index = 0)
     {
-        Debug.Log($"Index: {index}");
         var i = 0;
         foreach (var menuPage in _menuPages)
         {

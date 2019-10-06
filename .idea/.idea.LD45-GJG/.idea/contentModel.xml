@@ -67,6 +67,7 @@
           <e p="Score.cs" t="Include" />
           <e p="ScoreText.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
+          <e p="TextFont.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TileType.cs" t="Include" />
           <e p="WaitTimeCamera.cs" t="Include" />
