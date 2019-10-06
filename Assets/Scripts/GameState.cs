@@ -1,5 +1,4 @@
 using System;
-using DefaultNamespace;
 using UnityEngine;
 
 public static class GameState
@@ -7,7 +6,7 @@ public static class GameState
     public static bool IsPlayerDead;
     public static String playerName;
     public static Highscore playerLastHighscore;
-    public static Difficulty Difficulty;
+    public static Difficulty Difficulty = Difficulty.MEDIUM;
 
     public static TextFont Font;
     
