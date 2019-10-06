@@ -59,7 +59,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -468
   m_TargetDisplay: 0
 --- !u!114 &45094718
 MonoBehaviour:
@@ -584,6 +584,7 @@ MonoBehaviour:
   _moveSpeed: 12
   Velocity: {x: 0, y: 0, z: 0}
   _darkness: {fileID: 3039286516837537849}
+  isWaiting: 0
 --- !u!50 &4722643820367549748
 Rigidbody2D:
   serializedVersion: 4
