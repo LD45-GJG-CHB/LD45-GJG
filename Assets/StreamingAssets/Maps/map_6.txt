@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-
+1
 public class Maps
 {
     public static List<string> mapNames;
     public static Dictionary<string, string[]> maps;
-     1
+    
     private static string path = "Assets/Resources/Maps/";
     
     static Maps()

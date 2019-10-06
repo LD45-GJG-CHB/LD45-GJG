@@ -25,23 +25,14 @@
 x
 x
 x
-x                   <            >
+x @                 <            >
 xxxxxxxx  way right <<<<<<<>>>>>>> wrong way 
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
-                                                   lol      lol
+                                                 lol      lol
+                                                 lol      lol
+                                                 lol      lol
+                                                 lol      lol
+                                                 lol      lol
+                                                 lol      lol
+                                                 lol      lol
+                                                 lol      lol
+    
