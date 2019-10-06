@@ -10,8 +10,8 @@ public class Maps
 
     public static Dictionary<string, string> maps;
 
-    public static int mapSizeX = 40;
-    public static int mapSizeY = 20;
+    //public static int mapSizeX = 40;
+    //public static int mapSizeY = 20;
 
     private static string path = "Assets/Resources/Maps/";
 
@@ -59,17 +59,17 @@ public class Maps
 
     public static string[,] StringTo2DArray(string input)
     { 
-        var n = mapSizeX;
+        var n = 40;
         var split = input
             .Select((c, i) => new { letter = c, group = i / n })
             .GroupBy(l => l.group, l => l.letter)
             .Select(g => string.Join("", g))
             .ToArray();
 
-        var result = new string[mapSizeX,mapSizeY];
-        for (var yIndex = 0; yIndex < mapSizeY; yIndex++)
+        var result = new string[40,20];
+        for (var yIndex = 0; yIndex < 20; yIndex++)
         {
-            for (var xIndex = 0; xIndex < mapSizeX; xIndex++)
+            for (var xIndex = 0; xIndex < 40; xIndex++)
             {
                 result[xIndex, yIndex] = split[yIndex][xIndex].ToString();
             }

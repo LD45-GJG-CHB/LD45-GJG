@@ -1,49 +1,49 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MapLoader : Singleton<MapLoader>
 {
-    public string currentMap = "map_0.txt"; // Somehow edit this variable between levels
-    public string currentFont = "font_0"; // Somehow edit this variable between levels
+    public string currentMap;
 
     public GameObject tilePrefab;
     public GameObject exitPrefab;
     public GameObject edgeTilePrefab;
     public float tileSize = 2;
     public Dictionary<string, List<Tile>> tileMap;
-
-    
     private string[,] map;
 
     private void Awake()
     {
         tileMap = new Dictionary<string, List<Tile>>();
-        LoadNextLevel();
     }
     
     public void LoadNextLevel()
     {
+        tileMap = new Dictionary<string, List<Tile>>();
+
         map = Maps.StringTo2DArray(Maps.maps[currentMap]);
 
-        for (var y = 0; y < Maps.mapSizeY; y++)
+        //TODO: fix mapSizeX and mapSizeY
+        for (var y = 0; y < 20; y++)
         {
-            for (var x = 0; x < Maps.mapSizeX; x++)
+            for (var x = 0; x < 40; x++)
             {
                 var letter = map[x, y];
 
-                Tile tile;
+                Tile tile = null;
                 switch (letter)
                 {
                     case "1": // player pos
                         var posX = x * tileSize;
                         var posY = y * -tileSize;
-
-                        Player.Instance.transform.parent.position = new Vector3(posX, posY, 0);
-                        continue;
+                            
+                        Player.Instance.transform.position = new Vector3(posX, posY, 0);
+                        break;
                     case "-": // nothingness
-                        continue;
+                        break;
 
                     case "@": // exit / door
                         tile = CreateTileAtPosition(x, y);
@@ -53,7 +53,7 @@ public class MapLoader : Singleton<MapLoader>
                         tile.GetComponent<BoxCollider2D>().isTrigger = true;
 
                         tile.gameObject.layer = 11;
-                        Rigidbody2D rb = tile.gameObject.AddComponent<Rigidbody2D>() as Rigidbody2D;
+                        var rb = tile.gameObject.AddComponent<Rigidbody2D>();
                         rb.gravityScale = 0.0f;
                         rb.isKinematic = true; 
                         tile.GetComponent<Tile>().SetLetter(letter);
@@ -67,10 +67,10 @@ public class MapLoader : Singleton<MapLoader>
 
                         break;
                 }
-
+                
                 if (tileMap.TryGetValue(letter, out var tiles))
                 {
-                    tiles.Add(tile);
+                    tiles.Add(tile);    
                 }
                 else
                 {
@@ -95,13 +95,16 @@ public class MapLoader : Singleton<MapLoader>
 
     public void DestroyTileMap()
     {
-        foreach(List<Tile> tileList in tileMap.Values)
-        {
-            foreach(Tile t in tileList)
+        tileMap.Values
+            .SelectMany(tm => tm).ToList()
+            .ForEach(tile =>
             {
-                Destroy(t.gameObject);
-            }
-        }
+                if (!tile)
+                    return;
+                
+                DestroyImmediate(tile.gameObject);
+            });
+
     }
 
 }

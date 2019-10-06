@@ -8,7 +8,7 @@ public class GameRunner : Singleton<GameRunner>
 {
 
     public static List<string> mapNames = Maps.mapNames;
-    public static int iterator = 1;
+    public static int iterator = 0;
     public static int initialScore = 500;
     public static int scoreDecrementAmount = 10;
     public static bool isCountingScore = true;
@@ -20,7 +20,6 @@ public class GameRunner : Singleton<GameRunner>
         if (iterator == mapNames.Count)
         {
             Debug.Log("The End!");
-            
             DOTween.Sequence()
                 .SetUpdate(true)
                 .AppendCallback((() => Time.timeScale = 0.0f))
@@ -38,8 +37,8 @@ public class GameRunner : Singleton<GameRunner>
             .AppendInterval(0.1f)
             .AppendCallback(() =>
             {
-                MapLoader.Instance.DestroyTileMap();
                 MapLoader.Instance.currentMap = mapNames[iterator++];
+                MapLoader.Instance.DestroyTileMap();
                 MapLoader.Instance.LoadNextLevel();
                 Debug.Log("GameRunner: LoadNextLevel - Loaded!");
                 Score.Instance.IncrementScore(initialScore);
@@ -47,15 +46,19 @@ public class GameRunner : Singleton<GameRunner>
                 Player.Instance.Velocity = Vector3.zero;
                 Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             })
-            .Append(Player.Instance._darkness.DOFade(0.0f, 0.3f))
-            .AppendInterval(0.2f)
             .AppendCallback((() => Time.timeScale = 1.0f))
+            .AppendInterval(0.2f)
+            .Append(Player.Instance._darkness.DOFade(0.0f, 0.4f))
+            .AppendInterval(0.2f)
             .Play();
     }
 
     void Start()
     {
         Debug.Log("Gamerunner Started");
+        MapLoader.Instance.currentMap = mapNames[iterator++];
+        MapLoader.Instance.DestroyTileMap();
+        MapLoader.Instance.LoadNextLevel();
         Score.Instance.IncrementScore(initialScore);
         StartCoroutine(DecrementScore());
     }
