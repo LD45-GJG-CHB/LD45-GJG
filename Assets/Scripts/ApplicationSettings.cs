@@ -10,7 +10,7 @@ public class ApplicationSettings : MonoBehaviour
     private void Awake()
     {
         QualitySettings.vSyncCount = 0; // TODO : Make it possible to change vSync settings
-        Application.targetFrameRate = (int) FramerateTarget.MAX_144; // TODO : Make it so you can set this in settings
+        Application.targetFrameRate = (int) FramerateTarget.MAX_120; // TODO : Make it so you can set this in settings
     }
 
     private void Update() // hidden options

@@ -133,6 +133,11 @@ public class Player : Singleton<Player>
         if (col.gameObject.GetComponent<Tile>().tileype == TileType.DOOR)
         {
             GameRunner.Instance.LoadNextLevel();
+        } 
+        if (col.gameObject.GetComponent<Tile>().tileype == TileType.JUMPER)
+        {
+            Velocity.y = _maxJumpVelocity * 2;
+            _controller.Move(Velocity * Time.deltaTime);
         }
     }
 
