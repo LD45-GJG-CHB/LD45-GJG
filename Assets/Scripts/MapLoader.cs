@@ -50,19 +50,10 @@ public class MapLoader : Singleton<MapLoader>
                     case " ":
                         break;
                     case "@": // exit / door
-                        tile = CreateTileAtPosition(x, y);
-
-                        tile.GetComponent<Tile>().tileype = TileType.DOOR;
-
-                        tile.GetComponent<BoxCollider2D>().isTrigger = true;
-
-                        tile.gameObject.layer = 11;
-                        var rb = tile.gameObject.AddComponent<Rigidbody2D>();
-                        rb.gravityScale = 0.0f;
-                        rb.isKinematic = true; 
-                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
-
-
+                        CreateTileByTileType(x, y, TileType.DOOR, letter);
+                        break;
+                    case "^":
+                        CreateTileByTileType(x, y, TileType.JUMPER, letter);
                         break;
                     default: // default letter tile
                         tile = CreateTileAtPosition(x, y);
@@ -107,6 +98,19 @@ public class MapLoader : Singleton<MapLoader>
 
                 DestroyImmediate(tile.gameObject);
             });
+    }
+
+    private Tile CreateTileByTileType(int x, int y, TileType type, string letter)
+    {
+        Tile tile = CreateTileAtPosition(x, y);
+        tile.GetComponent<Tile>().tileype = type;
+        tile.GetComponent<BoxCollider2D>().isTrigger = true;
+        tile.gameObject.layer = 11;
+        var rb = tile.gameObject.AddComponent<Rigidbody2D>();
+        rb.gravityScale = 0.0f;
+        rb.isKinematic = true;
+        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
+        return tile;
     }
 
 }
