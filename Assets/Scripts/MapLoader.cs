@@ -14,22 +14,19 @@ public class MapLoader : Singleton<MapLoader>
     public float tileSize = 2;
     public Dictionary<string, List<Tile>> tileMap;
     private string[,] map;
-
-    private void Awake()
-    {
-        tileMap = new Dictionary<string, List<Tile>>();
-    }
     
     public void LoadNextLevel()
     {
         tileMap = new Dictionary<string, List<Tile>>();
 
-        map = Maps.StringTo2DArray(Maps.maps[currentMap]);
+        var _map = Maps.maps[currentMap];
+        int sizeX = Maps.GetColumnAmount(_map);
+        int sizeY = Maps.GetRowAmount(_map);
+        map = Maps.StringArrayTo2DArray(_map);
 
-        //TODO: fix mapSizeX and mapSizeY
-        for (var y = 0; y < 20; y++)
+        for (var y = 0; y < sizeY; y++)
         {
-            for (var x = 0; x < 40; x++)
+            for (var x = 0; x < sizeX; x++)
             {
                 var letter = map[x, y];
 
@@ -95,16 +92,18 @@ public class MapLoader : Singleton<MapLoader>
 
     public void DestroyTileMap()
     {
-        tileMap.Values
+        if (tileMap != null)
+        {
+            tileMap.Values
             .SelectMany(tm => tm).ToList()
             .ForEach(tile =>
             {
                 if (!tile)
                     return;
-                
+
                 DestroyImmediate(tile.gameObject);
             });
-
+        }
     }
 
 }
