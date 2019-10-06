@@ -33,7 +33,7 @@ public static class HighScoreAPI
         var uuid = Guid.NewGuid();
         Debug.Log($"[HighscoreManager-{uuid.ToString()}] POST {uri}");
 
-        var body = new SaveRequestBody(name, score);
+        var body = new SaveRequestBody(name.Replace("\n", " "), score);
         Debug.Log(JsonUtility.ToJson(body));
         using (var request = UnityWebRequest.Put(uri, JsonUtility.ToJson(body)))
         {
