@@ -15,7 +15,7 @@ public class GameRunner : Singleton<GameRunner>
     public static bool isCountingScore = true;
     public MenuDisplayer MenuDisplayer;
 
-    public static void LoadNextLevel()
+    public void LoadNextLevel()
     {
         isCountingScore = false;
         if (iterator == mapNames.Count)
@@ -67,7 +67,7 @@ public class GameRunner : Singleton<GameRunner>
         StartCoroutine(DecrementScore());
     }
 
-    IEnumerator DecrementScore(int decrement = 10)
+    private static IEnumerator DecrementScore(int decrement = 10)
     {
         while (true)
         {
