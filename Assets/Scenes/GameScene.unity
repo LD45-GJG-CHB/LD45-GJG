@@ -253,20 +253,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1100471784, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742754229, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1742754229, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742754229, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
-      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1742754229, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
@@ -478,36 +466,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6111539196522068727, guid: 3f6debfe4ff483542887b40c78d992ad,
-        type: 3}
-      propertyPath: orthographic size
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472144841197394816, guid: 3f6debfe4ff483542887b40c78d992ad,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -35
-      objectReference: {fileID: 0}
-    - target: {fileID: 2895579911737194318, guid: 3f6debfe4ff483542887b40c78d992ad,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -35
-      objectReference: {fileID: 0}
-    - target: {fileID: 6111539196861222821, guid: 3f6debfe4ff483542887b40c78d992ad,
-        type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2761038982289963702, guid: 3f6debfe4ff483542887b40c78d992ad,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2761038982289963702, guid: 3f6debfe4ff483542887b40c78d992ad,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f6debfe4ff483542887b40c78d992ad, type: 3}

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,8 @@ public class GameRunner : Singleton<GameRunner>
     public static int waitTime = 3;
     public static int countDown;
     private IEnumerator countdownCoroutine;
+
+    public TextMeshProUGUI _levelText;
 
     public void LoadNextLevel()
     {
@@ -41,6 +44,7 @@ public class GameRunner : Singleton<GameRunner>
 
         DOTweenSequnceBetweenLevels(() =>
         {
+            _levelText.text = $"Level {iterator + 1}";
             LevelChange();
             countDown = waitTime;
             StartCoroutine(LevelStartWaitTime());
