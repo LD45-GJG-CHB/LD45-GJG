@@ -6,31 +6,28 @@ using UnityEngine;
 
 public class MapLoader : Singleton<MapLoader>
 {
-    public string currentMap = "map_0.txt"; // Somehow edit this variable between levels
-    public string currentFont = "font_0"; // Somehow edit this variable between levels
+    public string currentMap;
 
     public GameObject tilePrefab;
     public GameObject exitPrefab;
     public GameObject edgeTilePrefab;
     public float tileSize = 2;
     public Dictionary<string, List<Tile>> tileMap;
-
-    
     private string[,] map;
 
     private void Awake()
     {
         tileMap = new Dictionary<string, List<Tile>>();
-        LoadNextLevel();
     }
     
     public void LoadNextLevel()
     {
         map = Maps.StringTo2DArray(Maps.maps[currentMap]);
 
-        for (var y = 0; y < Maps.mapSizeY; y++)
+        //TODO: fix mapSizeX and mapSizeY
+        for (var y = 0; y < 20; y++)
         {
-            for (var x = 0; x < Maps.mapSizeX; x++)
+            for (var x = 0; x < 40; x++)
             {
                 var letter = map[x, y];
 

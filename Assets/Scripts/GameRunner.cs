@@ -8,7 +8,7 @@ public class GameRunner : Singleton<GameRunner>
 {
 
     public static List<string> mapNames = Maps.mapNames;
-    public static int iterator = 1;
+    public static int iterator = 0;
     public static int initialScore = 500;
     public static int scoreDecrementAmount = 10;
     public static bool isCountingScore = true;
@@ -20,7 +20,6 @@ public class GameRunner : Singleton<GameRunner>
         if (iterator == mapNames.Count)
         {
             Debug.Log("The End!");
-            
             DOTween.Sequence()
                 .SetUpdate(true)
                 .AppendCallback((() => Time.timeScale = 0.0f))
@@ -56,6 +55,9 @@ public class GameRunner : Singleton<GameRunner>
     void Start()
     {
         Debug.Log("Gamerunner Started");
+        MapLoader.Instance.currentMap = mapNames[iterator++];
+        MapLoader.Instance.DestroyTileMap();
+        MapLoader.Instance.LoadNextLevel();
         Score.Instance.IncrementScore(initialScore);
         StartCoroutine(DecrementScore());
     }
