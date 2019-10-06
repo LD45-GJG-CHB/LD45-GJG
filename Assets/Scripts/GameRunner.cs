@@ -49,7 +49,6 @@ public class GameRunner : Singleton<GameRunner>
         isCountingScore = false;
         LevelChange();
         StartCoroutine(DecrementScore());
-        StartCoroutine(LevelStartWaitTime());
         StartCoroutine(CountDown());
     }
 
