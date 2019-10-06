@@ -9,7 +9,7 @@ public class Maps
     public static List<string> mapNames;
     public static Dictionary<string, string[]> maps;
 
-    private static string path = "Assets/Resources/Maps/";
+    private static string path = Application.streamingAssetsPath + "/Maps/";
 
     static Maps()
     {
