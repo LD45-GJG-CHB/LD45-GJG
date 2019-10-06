@@ -11,7 +11,7 @@ public class WaitTimeCamera : Singleton<WaitTimeCamera>
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
