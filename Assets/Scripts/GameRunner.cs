@@ -56,6 +56,7 @@ public class GameRunner : Singleton<GameRunner>
 
     private static void LevelChange()
     {
+        WaitTimeCamera.Instance.SetCameraPriority(-1);
         countDown = waitTime;
         MapLoader.Instance.currentMap = mapNames[iterator++];
         MapLoader.Instance.DestroyTileMap();
@@ -66,12 +67,14 @@ public class GameRunner : Singleton<GameRunner>
 
     private static void PauseActions()
     {
+        WaitTimeCamera.Instance.SetCameraPriority(110);
         Player.Instance.isWaiting = true;
         isCountingScore = false;
     }
 
     private static void UnpauseActions()
     {
+        WaitTimeCamera.Instance.SetCameraPriority(-1);
         Player.Instance.isWaiting = false;
         isCountingScore = true;
     }
