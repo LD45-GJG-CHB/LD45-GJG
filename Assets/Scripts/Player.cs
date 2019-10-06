@@ -91,7 +91,7 @@ public class Player : Singleton<Player>
         {
             if (!Input.GetKeyDown(letter.ToString())) continue;
 
-            if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString(), out var tiles))
+            if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString().ToLower(), out var tiles))
             {
                 Score.Instance.DecrementScore(15);
                 tiles.ForEach(tile => tile.ToggleState());

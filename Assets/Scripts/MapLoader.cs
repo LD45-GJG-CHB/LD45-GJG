@@ -41,7 +41,8 @@ public class MapLoader : Singleton<MapLoader>
                         break;
                     case "-": // nothingness
                         break;
-
+                    case " ":
+                        break;
                     case "@": // exit / door
                         tile = CreateTileAtPosition(x, y);
 
@@ -53,25 +54,25 @@ public class MapLoader : Singleton<MapLoader>
                         var rb = tile.gameObject.AddComponent<Rigidbody2D>();
                         rb.gravityScale = 0.0f;
                         rb.isKinematic = true; 
-                        tile.GetComponent<Tile>().SetLetter(letter);
+                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
 
 
                         break;
                     default: // default letter tile
                         tile = CreateTileAtPosition(x, y);
 
-                        tile.GetComponent<Tile>().SetLetter(letter);
+                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
 
                         break;
                 }
                 
-                if (tileMap.TryGetValue(letter, out var tiles))
+                if (tileMap.TryGetValue(letter.ToLower(), out var tiles))
                 {
                     tiles.Add(tile);    
                 }
                 else
                 {
-                    tileMap[letter] = new List<Tile> {tile};
+                    tileMap[letter.ToLower()] = new List<Tile> {tile};
                 }
 
             }
@@ -92,9 +93,7 @@ public class MapLoader : Singleton<MapLoader>
 
     public void DestroyTileMap()
     {
-        if (tileMap != null)
-        {
-            tileMap.Values
+        tileMap?.Values
             .SelectMany(tm => tm).ToList()
             .ForEach(tile =>
             {
@@ -103,7 +102,6 @@ public class MapLoader : Singleton<MapLoader>
 
                 DestroyImmediate(tile.gameObject);
             });
-        }
     }
 
 }
