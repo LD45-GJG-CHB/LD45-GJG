@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GameRunner : Singleton<GameRunner>
 {
-
     public static List<string> mapNames = Maps.mapNames;
     public static int iterator = 0;
     public static int initialScore = 500;
@@ -16,7 +15,7 @@ public class GameRunner : Singleton<GameRunner>
     public MenuDisplayer MenuDisplayer;
     public static int waitTime = 3;
     public static int countDown;
-  
+
     public void LoadNextLevel()
     {
         isCountingScore = false;
@@ -119,6 +118,11 @@ public class GameRunner : Singleton<GameRunner>
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             MenuDisplayer.SetVisible();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            LoadNextLevel();
         }
     }
 
