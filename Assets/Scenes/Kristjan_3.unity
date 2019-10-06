@@ -187,19 +187,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4043707507964366952, guid: 6cdb516c674271040b84dddd510c7500,
-        type: 3}
-      propertyPath: orthographic size
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4043707507964366952, guid: 6cdb516c674271040b84dddd510c7500,
-        type: 3}
-      propertyPath: m_OcclusionCulling
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4043707508166493107, guid: 6cdb516c674271040b84dddd510c7500, type: 3}
     - {fileID: 4043707508166493116, guid: 6cdb516c674271040b84dddd510c7500, type: 3}
+    - {fileID: 4043707508166493107, guid: 6cdb516c674271040b84dddd510c7500, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cdb516c674271040b84dddd510c7500, type: 3}
 --- !u!1 &1524174325
 GameObject:
@@ -631,7 +621,18 @@ PrefabInstance:
       propertyPath: m_IgnoreTimeScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6111539196861222822, guid: 3f6debfe4ff483542887b40c78d992ad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111539195238202906, guid: 3f6debfe4ff483542887b40c78d992ad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6111539195238202911, guid: 3f6debfe4ff483542887b40c78d992ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f6debfe4ff483542887b40c78d992ad, type: 3}
 --- !u!1001 &9096415321197124237
 PrefabInstance:
