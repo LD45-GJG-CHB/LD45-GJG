@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 40003834}
   - component: {fileID: 40003833}
   - component: {fileID: 40003837}
+  - component: {fileID: 40003838}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -231,6 +232,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8db916a0086c1d349b3bb58343500320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &40003838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40003832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c24a4dab23a5247ae142d372328614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &100143939 stripped
@@ -410,6 +423,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Page: {fileID: 100143941}
   MenuManager: {fileID: 40003837}
+--- !u!1 &525589859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525589861}
+  - component: {fileID: 525589860}
+  m_Layer: 0
+  m_Name: AudioMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &525589860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525589859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2437773d56dd38545b7a604127a397ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 77e52ac2cb586e043931cef0c2b5eb7c, type: 3}
+  maxAudios: 16
+  musicVolume: 1
+  soundVolume: 1
+--- !u!4 &525589861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525589859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &597208988
 PrefabInstance:
   m_ObjectHideFlags: 0

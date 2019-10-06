@@ -22,6 +22,8 @@ public class MapLoader : Singleton<MapLoader>
     
     public void LoadNextLevel()
     {
+        tileMap = new Dictionary<string, List<Tile>>();
+
         map = Maps.StringTo2DArray(Maps.maps[currentMap]);
 
         //TODO: fix mapSizeX and mapSizeY
