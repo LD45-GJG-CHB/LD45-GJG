@@ -5,14 +5,18 @@ using UnityEngine;
 public class MenuPage : MonoBehaviour
 {
     private MenuEntry[] _menuEntries;
-    private int _activeIndex;
+    private int? _activeIndex;
 
-    private MenuEntry Active => _menuEntries[_activeIndex];
+    private MenuEntry Active => (_activeIndex != null) ? _menuEntries[_activeIndex.Value] : null;
 
     // Start is called before the first frame update
     void Start()
     {
         _menuEntries = GetComponentsInChildren<MenuEntry>();
+        foreach (var menuEntry in _menuEntries)
+        {
+            menuEntry.AttachPage(this);
+        }
         _activeIndex = 0;
         Active.SetActive();
     }
@@ -38,8 +42,17 @@ public class MenuPage : MonoBehaviour
         
     }
 
+    public void ClearIndex()
+    {
+        _activeIndex = null;
+    }
+
     void IncrementIndex()
     {
+        if (_activeIndex == null)
+        {
+            _activeIndex = 0;
+        }
         if (_activeIndex >= _menuEntries.Length - 1) return;
         
         Active.SetInactive();
@@ -49,6 +62,10 @@ public class MenuPage : MonoBehaviour
     
     void DecrementIndex()
     {
+        if (_activeIndex == null)
+        {
+            _activeIndex = 0;
+        }
         if (_activeIndex <= 0) return;
         
         Active.SetInactive();

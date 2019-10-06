@@ -34,6 +34,7 @@
             <e p="map_10.txt" t="Include" />
             <e p="map_2.txt" t="Include" />
             <e p="map_4.txt" t="Include" />
+            <e p="map_5.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">

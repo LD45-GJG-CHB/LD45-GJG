@@ -1,12 +1,14 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class MenuEntry : MonoBehaviour
+public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private TextMeshProUGUI _textField;
     private bool _active;
     private MenuAction _menuAction;
+    private MenuPage _page;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +39,22 @@ public class MenuEntry : MonoBehaviour
         {
             _menuAction.doAction();
         }
+    }
+
+    public void AttachPage(MenuPage page)
+    {
+        _page = page;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        SetActive();
+        _page.ClearIndex();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        SetInactive();
+        _page.ClearIndex();
     }
 }
