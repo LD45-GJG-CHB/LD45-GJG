@@ -21,8 +21,14 @@ public class GameRunner : Singleton<GameRunner>
     public TextMeshProUGUI _levelText;
     public TextMeshProUGUI _skipTutorial;
 
+    private IEnumerator levelWaitStartTime;
+
     public void LoadNextLevel()
     {
+        if (levelWaitStartTime != null)
+        {
+            StopCoroutine(levelWaitStartTime);
+        }
         _skipTutorial.text = "";
         isCountingScore = false;
         if (iterator == mapNames.Count)
@@ -39,7 +45,7 @@ public class GameRunner : Singleton<GameRunner>
         }
 
         Debug.Log("GameRunner: LoadNextLevel...");
-
+        levelWaitStartTime = LevelStartWaitTime();
         DOTweenSequnceBetweenLevels(() =>
         {
             Player.Instance.Velocity.x = Player.Instance._moveSpeed;
@@ -49,7 +55,7 @@ public class GameRunner : Singleton<GameRunner>
             isCountingScore = true;
             countDown = waitTime;
             Score.Instance.IncrementScore(initialScore);
-            StartCoroutine(LevelStartWaitTime());
+            StartCoroutine(levelWaitStartTime);
         });
     }
 
