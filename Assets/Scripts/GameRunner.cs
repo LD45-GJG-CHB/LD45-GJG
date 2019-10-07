@@ -72,11 +72,11 @@ public class GameRunner : Singleton<GameRunner>
         MapLoader.Instance.LoadNextLevel();
         LogLevelLoaded();
 
-        if (iterator == mapNames.Count / 2)
+        if (iterator == (mapNames.Count / 2) + 2)
         {
             Instance.StartCoroutine(AudioManager.Instance.FadeOut(2.5f));
 //            AudioManager.Instance.StopAllMusic();
-            AudioManager.Instance.Play("rEX");
+            AudioManager.Instance.Play("rEX", isLooping:true);
         } 
     }
 

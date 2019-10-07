@@ -77,7 +77,6 @@
         </e>
         <e p="StreamingAssets" t="Include">
           <e p="Maps" t="Include">
-            <e p="map_0.txt" t="Include" />
             <e p="map_10.txt" t="Include" />
             <e p="map_11.txt" t="Include" />
             <e p="map_12.txt" t="Include" />
@@ -87,6 +86,7 @@
             <e p="map_6.txt" t="Include" />
             <e p="map_7.txt" t="Include" />
             <e p="map_8.txt" t="Include" />
+            <e p="map_tutorial.txt" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
