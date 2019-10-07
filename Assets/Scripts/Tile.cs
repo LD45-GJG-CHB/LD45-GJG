@@ -8,19 +8,17 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     public TextMeshProUGUI letter;
-    public Color activatedColor = Color.white;
-    public Color deactivatedColor = new Color(1, 1, 1, 0.5f);
 
-    public bool IsActivated => letter.color == activatedColor;
+    public bool IsActivated => letter.color == GameState.currentTheme.FontColor;
 
     public TileType tileype = TileType.LETTER;
 
-    private BoxCollider2D _collider;
-
+    public float a = .25f;
     public TMP_FontAsset _font; // for testing n shit
 
     public string fontBasePath = "Fonts & Materials";
 
+    private BoxCollider2D _collider;
     public static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
     {
         {TextFont.FiraCode, "FiraMono-Regular SDF"},
@@ -31,6 +29,8 @@ public class Tile : MonoBehaviour
 
     private void Awake()
     {
+        letter.color = GameState.currentTheme.FontColor;
+        Camera.main.backgroundColor = GameState.currentTheme.BackgroundColor;
         if (FontPaths.TryGetValue(GameState.Font, out var path))
         {
             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
@@ -72,7 +72,7 @@ public class Tile : MonoBehaviour
 
     public void Activate()
     {
-        letter.color = activatedColor;
+        letter.color = GameState.currentTheme.FontColor;
         _collider.enabled = true;
     }
 
@@ -83,7 +83,10 @@ public class Tile : MonoBehaviour
             return;
         }
 
-        letter.color = deactivatedColor;
+        var col = GameState.currentTheme.FontColor;
+        col.a = a;
+        letter.color = col;
+        
         _collider.enabled = false;
     }
 }
