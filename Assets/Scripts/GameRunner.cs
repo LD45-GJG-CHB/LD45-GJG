@@ -33,7 +33,6 @@ public class GameRunner : Singleton<GameRunner>
         isCountingScore = false;
         if (iterator == mapNames.Count)
         {
-            GameState.score = Score.Instance.GetScore();
             Debug.Log("The End!");
             DOTween.Sequence()
                 .SetUpdate(true)
