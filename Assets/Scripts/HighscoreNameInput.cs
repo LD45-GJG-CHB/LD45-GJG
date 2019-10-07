@@ -28,6 +28,7 @@ public class HighscoreNameInput : MonoBehaviour
 
     public void saveName()
     {
+        var diff = GameState.Difficulty;
         var score = GameState.score;
         GameState.score = 0;
         var gamertag = nameInput.text;
@@ -40,7 +41,7 @@ public class HighscoreNameInput : MonoBehaviour
         Debug.Log($"[HighscoreNameInput] received name: {gamertag}");
         Debug.Log($"[HighscoreNameInput] received score: {score}");
 
-        StartCoroutine(HighScoreAPI.Save(gamertag, score, s =>
+        StartCoroutine(HighScoreAPI.Save(gamertag, score, diff.ToString(), s =>
         {
             var response = JsonUtility.FromJson<Response>(s);
             GameState.playerLastHighscore = response.data;

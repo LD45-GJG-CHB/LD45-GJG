@@ -38,6 +38,7 @@ public class HighscoreManager : MonoBehaviour
         var component = entry.GetComponent<HighscoreEntry>();
         component.nameText.text = $"{highscore.place.ToString()}. {highscore.name}";
         component.scoreText.text = highscore.score.ToString();
+        component.diffText.text = string.IsNullOrWhiteSpace(highscore.difficulty) ? "-" : highscore.difficulty;
     }
 
     [System.Serializable]

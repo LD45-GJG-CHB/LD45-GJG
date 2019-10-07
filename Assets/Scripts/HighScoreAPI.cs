@@ -26,14 +26,14 @@ public static class HighScoreAPI
         }
     }
 
-    public static IEnumerator Save(string name, int score, Action<string> callback)
+    public static IEnumerator Save(string name, int score, string difficulty, Action<string> callback)
     {
         var uri = $"{HIGHSCORES_API_URI}/game/scores";
         
         var uuid = Guid.NewGuid();
         Debug.Log($"[HighscoreManager-{uuid.ToString()}] POST {uri}");
 
-        var body = new SaveRequestBody(name.Replace("\n", " "), score);
+        var body = new SaveRequestBody(name.Replace("\n", " "), score, difficulty);
         Debug.Log(JsonUtility.ToJson(body));
         using (var request = UnityWebRequest.Put(uri, JsonUtility.ToJson(body)))
         {
@@ -56,9 +56,9 @@ public static class HighScoreAPI
         public Highscore score;
 
         public SaveRequestBody() {}
-        public SaveRequestBody(String name, int scoreValue)
+        public SaveRequestBody(String name, int scoreValue, string difficulty)
         {
-            score = new Highscore(name, scoreValue);
+            score = new Highscore(name, scoreValue, difficulty);
         }
     }
 }
