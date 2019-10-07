@@ -8,6 +8,7 @@ public class Maps
 {
     public static List<string> mapNames;
     public static Dictionary<string, string[]> maps;
+    public static string tutorialMap = "map_tutorial.txt";
 
     private static string path = Application.streamingAssetsPath + "/Maps/";
 
@@ -41,6 +42,10 @@ public class Maps
     {
         try
         {
+            if (mapNumber == "tutorial.txt")
+            {
+                return int.MinValue;
+            }
             return int.Parse(mapNumber.Replace(".txt", ""));
         }
         catch (FormatException e)

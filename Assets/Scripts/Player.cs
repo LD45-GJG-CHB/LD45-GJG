@@ -143,6 +143,11 @@ public class Player : Singleton<Player>
         {
             GameRunner.Instance.LoadNextLevel();
         } 
+        if (col.gameObject.GetComponent<Tile>().tileype == TileType.TUTORIAL_DOOR)
+        {
+            GameRunner.Instance.LoadNextLevel();
+            PlayerPrefs.SetString("tutorial_finished", "1");
+        }
         if (col.gameObject.GetComponent<Tile>().tileype == TileType.JUMPER)
         {
             Velocity.y = _maxJumpVelocity * 2;
