@@ -4,15 +4,15 @@
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Panjel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Panjel.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LD45-GJG.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LD45-GJG.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,12 +76,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ApplicationSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/ThemeUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Extensions/Vector3Extensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/WaitTimeCamera.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Vidrik Siim.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/PlatformController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Themes.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/CircleController2D.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,9 +173,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SetThemeAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/ThemeUpdater.cs" />
       </list>
     </option>
   </component>
@@ -239,6 +242,7 @@
       <workItem from="1570253612696" duration="5998000" />
       <workItem from="1570297846714" duration="5502000" />
       <workItem from="1570379951043" duration="6710000" />
+      <workItem from="1570442562539" duration="3416000" />
     </task>
     <task id="LOCAL-00001" summary="Vana scene Siimer">
       <created>1570253768155</created>

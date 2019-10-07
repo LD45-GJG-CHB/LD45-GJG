@@ -46,10 +46,7 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             _menuAction.doAction();
         }
 
-        if (_buttonComponent.onClick != null)
-        {
-            _buttonComponent.onClick.Invoke();
-        }
+        _buttonComponent.onClick?.Invoke();
     }
 
     public void AttachPage(MenuPage menuPage)
@@ -80,6 +77,6 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void SetTheme(String theme)
     {
         ThemeManager.SetCurrentTheme(theme);
-        ThemeManager.UpdateFontTheme(_textComponent);
+        ThemeUpdater.Instance.UpdateTheme();
     }
 }

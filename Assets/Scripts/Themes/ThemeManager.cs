@@ -1,5 +1,7 @@
 using System;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public static class ThemeManager
 {
@@ -15,11 +17,6 @@ public static class ThemeManager
     public static void SetCurrentTheme(Theme theme)
     {
         _currentTheme = theme;
-    }
-
-    public static void UpdateFontTheme(TextMeshProUGUI textField)
-    {
-        textField.fontSharedMaterial.SetColor(ShaderUtilities.ID_FaceColor, GameState.currentTheme.FontColor);
     }
 
     public static void SetCurrentTheme(PredefinedThemes themeEnum)
