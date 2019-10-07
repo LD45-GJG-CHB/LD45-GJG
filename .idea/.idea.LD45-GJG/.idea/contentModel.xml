@@ -60,6 +60,7 @@
             <e p="PauseMenu.cs" t="Include" />
             <e p="QuitEntryAction.cs" t="Include" />
             <e p="SetDifficultyAction.cs" t="Include" />
+            <e p="StartGameAction.cs" t="Include" />
             <e p="SwitchPageAction.cs" t="Include" />
             <e p="SwitchSceneAction.cs" t="Include" />
             <e p="ThemeUpdater.cs" t="Include" />
@@ -84,20 +85,21 @@
           <e p="TrippyBalls.shader" t="Include" />
         </e>
         <e p="StreamingAssets" t="Include">
-          <e p="Maps" t="Include">
-            <e p="map_1.txt" t="Include" />
-            <e p="map_10.txt" t="Include" />
-            <e p="map_11.txt" t="Include" />
-            <e p="map_12.txt" t="Include" />
+          <e p="BonusMaps" t="Include">
+            <e p="map_0.txt" t="Include" />
             <e p="map_13.txt" t="Include" />
-            <e p="map_2.txt" t="Include" />
-            <e p="map_20.txt" t="Include" />
-            <e p="map_3.txt" t="Include" />
-            <e p="map_4.txt" t="Include" />
-            <e p="map_5.txt" t="Include" />
             <e p="map_6.txt" t="Include" />
             <e p="map_7.txt" t="Include" />
             <e p="map_8.txt" t="Include" />
+          </e>
+          <e p="Maps" t="Include">
+            <e p="map_1.txt" t="Include" />
+            <e p="map_11.txt" t="Include" />
+            <e p="map_12.txt" t="Include" />
+            <e p="map_2.txt" t="Include" />
+            <e p="map_3.txt" t="Include" />
+            <e p="map_4.txt" t="Include" />
+            <e p="map_5.txt" t="Include" />
             <e p="map_tutorial.txt" t="Include" />
           </e>
         </e>

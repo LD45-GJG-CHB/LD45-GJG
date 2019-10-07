@@ -1,7 +1,7 @@
 public enum Difficulty
 {
-    EASY = 7,
-    MEDIUM = 12,
+    EASY = 9,
+    MEDIUM = 13,
     HARD = 17,
     PENULTIMATE_MAMBO_JAMBO = 22,
 }
