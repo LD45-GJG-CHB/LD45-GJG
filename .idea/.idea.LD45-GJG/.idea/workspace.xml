@@ -4,11 +4,11 @@
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Panjel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Panjel.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/StartGameAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/SetBonusMapsAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/StartGameAction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/SetBonusMapsAction.cs.meta" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +117,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/TextureRendering.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/StartGameAction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SetBonusMapsAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Intro.unity.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CountdownTimerText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapLoader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -125,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Extensions/Vector3Extensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FontLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FontGenerator.cs" />
@@ -171,11 +170,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SetThemeAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/ThemeUpdater.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/BonusMapsAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/StartGameAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SetBonusMapsAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
       </list>
     </option>
   </component>
@@ -241,7 +241,7 @@
       <workItem from="1570253612696" duration="5998000" />
       <workItem from="1570297846714" duration="5502000" />
       <workItem from="1570379951043" duration="6710000" />
-      <workItem from="1570442562539" duration="5104000" />
+      <workItem from="1570442562539" duration="5692000" />
     </task>
     <task id="LOCAL-00001" summary="Vana scene Siimer">
       <created>1570253768155</created>

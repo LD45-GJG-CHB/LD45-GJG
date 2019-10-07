@@ -59,8 +59,8 @@
             <e p="MenuRoot.cs" t="Include" />
             <e p="PauseMenu.cs" t="Include" />
             <e p="QuitEntryAction.cs" t="Include" />
+            <e p="SetBonusMapsAction.cs" t="Include" />
             <e p="SetDifficultyAction.cs" t="Include" />
-            <e p="StartGameAction.cs" t="Include" />
             <e p="SwitchPageAction.cs" t="Include" />
             <e p="SwitchSceneAction.cs" t="Include" />
             <e p="ThemeUpdater.cs" t="Include" />

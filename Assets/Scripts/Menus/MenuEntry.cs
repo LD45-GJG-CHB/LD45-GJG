@@ -79,4 +79,9 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         ThemeManager.SetCurrentTheme(theme);
         ThemeUpdater.Instance.UpdateTheme();
     }
+
+    public void SetBonusMaps(bool bonusMaps)
+    {
+        GameState.isBonusMaps = bonusMaps;
+    }
 }
