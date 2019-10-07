@@ -402,22 +402,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216306222}
   m_CullTransparentMesh: 0
---- !u!1 &301743094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1449303546005885325, guid: 08cbfc213ae3f734581a8f5002039159,
+--- !u!114 &301743098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4613073315324766400, guid: 08cbfc213ae3f734581a8f5002039159,
     type: 3}
   m_PrefabInstance: {fileID: 5382853653905742786}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &301743096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301743094}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de40faabe9fcc741a90caadb42d893f, type: 3}
+  m_Script: {fileID: 11500000, guid: ecf99514c4600a2489c7b19b1235ada8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &385578711 stripped
@@ -2491,6 +2485,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 764210574794889028, guid: 08cbfc213ae3f734581a8f5002039159,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 301743098}
+    - target: {fileID: 764210574794889028, guid: 08cbfc213ae3f734581a8f5002039159,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 764210574794889028, guid: 08cbfc213ae3f734581a8f5002039159,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 910079293884038294, guid: 08cbfc213ae3f734581a8f5002039159,
         type: 3}

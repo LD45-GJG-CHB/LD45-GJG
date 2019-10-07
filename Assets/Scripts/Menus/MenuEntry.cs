@@ -140,4 +140,9 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         GameState.isBonusMaps = bonusMaps;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

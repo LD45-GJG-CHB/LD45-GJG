@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/BonusMaps/map_666.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/BonusMaps/map_666.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Panjel.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Panjel.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Player.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,8 +161,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/BlackTheme.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SetThemeAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
@@ -169,8 +169,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/BonusMapsAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/StartGameAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SetBonusMapsAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
         <option value="$PROJECT_DIR$/Assets/StreamingAssets/BonusMaps/map_666.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
       </list>
     </option>
   </component>
