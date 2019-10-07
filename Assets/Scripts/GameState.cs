@@ -6,10 +6,11 @@ public static class GameState
     public static bool IsPlayerDead;
     public static String playerName;
     public static Highscore playerLastHighscore;
-    public static Difficulty Difficulty = Difficulty.PENULTIMATE_MAMBO_JAMBO;
+    public static Difficulty Difficulty = Difficulty.MEDIUM;
 
     public static TextFont Font;
-    
-    public static Color BackgroundColor;
-    public static Color TextColor;
+
+//    public static Color BackgroundColor => ThemeManager.getCurrentTheme().BackgroundColor;
+//    public static Color TextColor => ThemeManager.getCurrentTheme().FontColor;
+    public static Theme currentTheme => ThemeManager.getCurrentTheme();
 }

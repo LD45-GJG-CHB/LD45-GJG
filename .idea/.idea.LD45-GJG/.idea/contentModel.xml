@@ -68,6 +68,12 @@
           <e p="ScoreText.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="TextFont.cs" t="Include" />
+          <e p="Themes" t="Include">
+            <e p="BlackTheme.cs" t="Include" />
+            <e p="Theme.cs" t="Include" />
+            <e p="ThemeManager.cs" t="Include" />
+            <e p="WhiteTheme.cs" t="Include" />
+          </e>
           <e p="Tile.cs" t="Include" />
           <e p="TileType.cs" t="Include" />
           <e p="WaitTimeCamera.cs" t="Include" />
