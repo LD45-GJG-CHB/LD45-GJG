@@ -34,17 +34,17 @@ public class HighscoreNameInput : MonoBehaviour
     {
         var score = GameState.score;
         GameState.score = 0;
-        var name = nameInput.text;
-        if (name == null || name == "")
+        var gamertag = nameInput.text;
+
+        if (string.IsNullOrWhiteSpace(gamertag) || gamertag.Length < 2)
         {
-            name = "gamer";
+            gamertag = "gamer";
         }
-        GameState.playerName = name;
-        
-        Debug.Log($"[HighscoreNameInput] received name: {name}");
+
+        Debug.Log($"[HighscoreNameInput] received name: {gamertag}");
         Debug.Log($"[HighscoreNameInput] received score: {score}");
 
-        StartCoroutine(HighScoreAPI.Save(name, score, s =>
+        StartCoroutine(HighScoreAPI.Save(gamertag, score, s =>
         {
             var response = JsonUtility.FromJson<Response>(s);
             GameState.playerLastHighscore = response.data;
