@@ -1136,7 +1136,7 @@ PrefabInstance:
     - target: {fileID: 6822752248863620125, guid: 38acda82a5ca3ac40a89d9748e355390,
         type: 3}
       propertyPath: m_Name
-      value: Exit to menu
+      value: Save and exit to menu
       objectReference: {fileID: 0}
     - target: {fileID: 6822752248863620124, guid: 38acda82a5ca3ac40a89d9748e355390,
         type: 3}
@@ -1271,7 +1271,7 @@ PrefabInstance:
     - target: {fileID: 4623149083930491604, guid: 38acda82a5ca3ac40a89d9748e355390,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Menu
+      value: HighscoreInputScene
       objectReference: {fileID: 0}
     - target: {fileID: 4623149083930491604, guid: 38acda82a5ca3ac40a89d9748e355390,
         type: 3}

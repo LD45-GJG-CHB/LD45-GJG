@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HighscoreNameInput : MonoBehaviour
 {
 
+    public TMP_InputField InputField;
     public TextMeshProUGUI nameInput;
     public String nextScene;
     public Score score;
@@ -15,13 +18,17 @@ public class HighscoreNameInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InputField.Select();
+        InputField.ActivateInputField();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            saveName();
+        }
     }
 
     public void saveName()
