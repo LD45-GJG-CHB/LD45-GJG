@@ -16,9 +16,9 @@ public class Tile : MonoBehaviour
     public float a = .25f;
     public TMP_FontAsset _font; // for testing n shit
 
+    private BoxCollider2D _collider;
     public string fontBasePath = "Fonts & Materials";
 
-    private BoxCollider2D _collider;
     public static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
     {
         {TextFont.FiraCode, "FiraMono-Regular SDF"},

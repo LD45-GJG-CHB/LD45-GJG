@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -78,6 +80,60 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         ThemeManager.SetCurrentTheme(theme);
         ThemeUpdater.Instance.UpdateTheme();
+    }
+    
+    public void SetFont(String theme)
+    {
+        var f = TextFont.FiraCode;
+        switch (theme)
+        {
+            case "comicsans":
+                f = TextFont.ComicSans;
+                break;
+            case "dotty":
+                f = TextFont.Dotty;
+                break;
+            case "joystix":
+                f = TextFont.Joystix;
+                break;
+            case "firacode":
+            default:
+                f = TextFont.FiraCode;
+                break;
+        }
+        
+        GameState.Font = f;
+        
+         string fontBasePath = "Fonts & Materials";
+
+         Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
+        {
+            {TextFont.FiraCode, "FiraMono-Regular SDF"},
+            {TextFont.Dotty, "dotty SDF"},
+            {TextFont.Joystix, "joystix monospace SDF"},
+            {TextFont.ComicSans, "COMIC SDF"}
+        };
+         
+         if (FontPaths.TryGetValue(GameState.Font, out var path))
+         {
+             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
+
+             foreach (var textMeshProUgui in (TextMeshProUGUI[]) FindObjectsOfTypeAll(typeof(TextMeshProUGUI)))
+             {
+                 textMeshProUgui.font = font;
+             }
+         }
+         else
+         {
+             Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
+         }
+         
+         ThemeUpdater.Instance.UpdateTheme();
+
+
+         
+         
+
     }
 
     public void SetBonusMaps(bool bonusMaps)

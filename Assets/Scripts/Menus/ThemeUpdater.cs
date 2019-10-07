@@ -36,7 +36,6 @@ public class ThemeUpdater : Singleton<ThemeUpdater>
     
     public void UpdateTheme()
     {
-        var x = ThemeManager.GetCurrentTheme();
         // Update player material
         PlayerMaterial.SetColor("_Color", ThemeManager.GetCurrentTheme().FontColor);
         // Update panel material
