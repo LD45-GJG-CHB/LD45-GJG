@@ -127,6 +127,9 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
          {
              Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
          }
+         
+         ThemeUpdater.Instance.UpdateTheme();
+
 
          
          
