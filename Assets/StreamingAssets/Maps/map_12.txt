@@ -13,18 +13,17 @@
         o                        o                  w               w
         o            xxxxxxxxxxxxxxxxxxxxxxxxx     w                 w
         o            x           o           x    w                   w
-        o            x           o           x   w                     w
-        oooooooooooooxoooooooooooo           x  w                       w
-                     x                       x w                         w
-                     x                       xw                           w
-                     x                       w                             w
-                     x                      wx                              w
-                     x                     w x                               w
-                     xxxxxxxxxxxxxxxxxxxxxwxxx                                w
-                                         w                                     w
-                                        w                                       w
-                                       w                                    @    w
-                                      wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-
-
-___________________________________________________________________
+        o            x           o           x   w           oooooooooooooooooooo
+        oooooooooooooxoooooooooooo           x  w           oo          w      oo
+                     x                       x w           o o           w    o o
+                     x                       xw           o  o            w  o  o
+                     x                       w           oooooooooooooooooooo   o
+                     x                      wx           o   o              o   o
+                     x                     w x           o   o              ow  o
+                     xxxxxxxxxxxxxxxxxxxxxwxxx           o   o              o w o
+                                         w               o   o              o  wo
+                                        w                o   oooooooooooooooooooo
+                                       w                 o  o        @      o  o w
+                                      wwwwwwwwwwwwwwwwwwwowowwwwwwwwwwwwwwwwowowwww
+                                                         oo                 oo
+                                                         oooooooooooooooooooo

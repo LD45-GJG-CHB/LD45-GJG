@@ -41,6 +41,7 @@ public class GameRunner : Singleton<GameRunner>
 
         DOTweenSequnceBetweenLevels(() =>
         {
+            Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             ScoreText.showText = true;
             _levelText.text = $"Level {iterator}";
             LevelChange();
@@ -72,7 +73,7 @@ public class GameRunner : Singleton<GameRunner>
         MapLoader.Instance.LoadNextLevel();
         LogLevelLoaded();
 
-        if (iterator == (mapNames.Count / 2) + 2)
+        if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && iterator == (mapNames.Count / 2) + 2)
         {
             Instance.StartCoroutine(AudioManager.Instance.FadeOut(2.5f));
 //            AudioManager.Instance.StopAllMusic();
