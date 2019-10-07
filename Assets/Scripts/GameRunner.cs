@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GameRunner : Singleton<GameRunner>
 {
-    public static List<string> mapNames = Maps.mapNames;
+    public List<string> mapNames;
     public int iterator = 0;
     public int initialScore = 500;
     public int scoreDecrementAmount = 10;
@@ -62,6 +62,7 @@ public class GameRunner : Singleton<GameRunner>
 
     void Start()
     {
+        mapNames = Maps.Instance.mapNames;
         Debug.Log("Gamerunner Started");
         isCountingScore = false;
         ScoreText.showText = false;
@@ -73,7 +74,7 @@ public class GameRunner : Singleton<GameRunner>
         StartCoroutine(DecrementScore());
     }
 
-    private static void LevelChange()
+    private void LevelChange()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
         MapLoader.Instance.currentMap = mapNames[Instance.iterator++];

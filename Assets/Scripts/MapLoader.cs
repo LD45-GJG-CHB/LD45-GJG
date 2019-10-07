@@ -23,7 +23,7 @@ public class MapLoader : Singleton<MapLoader>
     {
         tileMap = new Dictionary<string, List<Tile>>();
 
-        var _map = Maps.maps[currentMap];
+        var _map = Maps.Instance.maps[currentMap];
         sizeX = Maps.GetColumnAmount(_map);
         sizeY = Maps.GetRowAmount(_map);
         map = Maps.StringArrayTo2DArray(_map);
@@ -50,7 +50,7 @@ public class MapLoader : Singleton<MapLoader>
                     case " ":
                         break;
                     case "@": // exit / door
-                        TileType type = currentMap == Maps.tutorialMap ? TileType.TUTORIAL_DOOR : TileType.DOOR;
+                        TileType type = currentMap == Maps.Instance.tutorialMap ? TileType.TUTORIAL_DOOR : TileType.DOOR;
                         tile = CreateTileByTileType(x, y, type, letter);
                         break;
                     case "^":

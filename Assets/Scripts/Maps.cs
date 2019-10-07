@@ -4,15 +4,15 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-public class Maps
+public class Maps : Singleton<Maps>
 {
-    public static List<string> mapNames;
-    public static Dictionary<string, string[]> maps;
-    public static string tutorialMap = "map_tutorial.txt";
+    public  List<string> mapNames;
+    public  Dictionary<string, string[]> maps;
+    public  string tutorialMap = "map_tutorial.txt";
 
-    private static string path = Application.streamingAssetsPath;
+    private  string path = Application.streamingAssetsPath;
 
-    static Maps()
+    private void Awake()
     {
         mapNames = null;
         maps = null;
@@ -35,7 +35,7 @@ public class Maps
         }
     }
 
-    private static List<string> createOrderedMapNames()
+    private  List<string> createOrderedMapNames()
     {
         List<string> _mapNames = new List<string>();
         FileInfo[] files = new DirectoryInfo(path).GetFiles("map_*.txt");
@@ -63,7 +63,7 @@ public class Maps
         }
     }
 
-    private static string[] ReadMap(string mapName)
+    private  string[] ReadMap(string mapName)
     {
         StreamReader reader = new StreamReader(path + mapName);
         string[] map = reader.ReadToEnd().Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
