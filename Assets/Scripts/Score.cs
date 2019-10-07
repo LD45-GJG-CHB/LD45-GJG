@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Score : Singleton<Score>
 {
-    private int _scoreValue;
+    private static int _scoreValue;
 
     public void ResetScore(int initValue = 0)
     {
@@ -26,8 +26,5 @@ public class Score : Singleton<Score>
         _scoreValue = 0;    
     }
 
-    public int GetScore()
-    {
-        return _scoreValue;
-    }
+    public int GetScore() => _scoreValue;
 }

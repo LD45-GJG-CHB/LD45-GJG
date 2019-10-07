@@ -181,7 +181,7 @@ public class Player : Singleton<Player>
 
         if (Input.GetButtonDown("Jump") && _controller.Collisions.Below)
         {
-            AudioManager.Instance.Play("Jump", .3f);
+            AudioManager.Instance.Play("Jump", .4f);
             Velocity.y = _maxJumpVelocity;
         }
 
