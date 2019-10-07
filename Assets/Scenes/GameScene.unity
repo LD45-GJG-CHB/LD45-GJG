@@ -516,6 +516,26 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8793810280309334868, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793810280309334868, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793810280309334868, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793810280309334868, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1587679439, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
