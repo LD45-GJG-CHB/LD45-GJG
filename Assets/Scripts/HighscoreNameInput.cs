@@ -13,7 +13,6 @@ public class HighscoreNameInput : MonoBehaviour
     public TMP_InputField InputField;
     public TextMeshProUGUI nameInput;
     public String nextScene;
-    public Score score;
     
     // Start is called before the first frame update
     void Start()
@@ -33,12 +32,19 @@ public class HighscoreNameInput : MonoBehaviour
 
     public void saveName()
     {
+        var score = GameState.score;
+        GameState.score = 0;
         var name = nameInput.text;
+        if (name == null || name == "")
+        {
+            name = "gamer";
+        }
         GameState.playerName = name;
         
         Debug.Log($"[HighscoreNameInput] received name: {name}");
+        Debug.Log($"[HighscoreNameInput] received score: {score}");
 
-        StartCoroutine(HighScoreAPI.Save(name, score.GetScore(), s =>
+        StartCoroutine(HighScoreAPI.Save(name, score, s =>
         {
             var response = JsonUtility.FromJson<Response>(s);
             GameState.playerLastHighscore = response.data;
