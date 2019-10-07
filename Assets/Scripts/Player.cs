@@ -101,7 +101,7 @@ public class Player : Singleton<Player>
         {
             if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString().ToLower(), out var tiles))
             {
-                Score.Instance.DecrementScore(15);
+                Score.Instance.DecrementScore(5);
 
                 if (tiles.Any(tile => tile.IsActivated))
                 {

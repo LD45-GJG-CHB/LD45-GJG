@@ -26,10 +26,10 @@ public class ApplicationSettings : MonoBehaviour
                 enumValues.Length == currentFrameRate ? enumValues[0] : enumValues[currentFrameRate];
         }
 
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+//        if (Input.GetKeyDown(KeyCode.F2))
+//        {
+//            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+//        }
     }
 
     public static bool IsPaused() => Time.timeScale < float.Epsilon;
