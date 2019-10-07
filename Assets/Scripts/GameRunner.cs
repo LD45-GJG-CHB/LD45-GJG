@@ -48,7 +48,6 @@ public class GameRunner : Singleton<GameRunner>
             countDown = waitTime;
             Score.Instance.IncrementScore(initialScore);
             StartCoroutine(LevelStartWaitTime());
-            StartCoroutine(DecrementScore());
         });
     }
 
@@ -62,6 +61,7 @@ public class GameRunner : Singleton<GameRunner>
         if (PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1") {
             _skipTutorial.text = "Press 9 to skip tutorial.";
         }
+        StartCoroutine(DecrementScore());
     }
 
     private static void LevelChange()

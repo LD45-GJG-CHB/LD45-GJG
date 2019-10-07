@@ -1,20 +1,2 @@
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeee-------------hhh
-aaaaabbbbbcccccdddddeeee-----------@-hhh
-aaaaabbbbbcccc-------------------hhhhhhh
-aaaaabbbbbcc--------------------agghhhhh
-aaaaabbb-------------------@-ddaagghhhhh
-aaa-------------ddddeeeeefffffggggghhhhh
-aaaaabbbbb-----------------fffggggghhhhh
-a-----------ff-------------fffggggghhhhh
-a1----------f----dddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
-aaaaabbbbbcccccdddddeeeeefffffggggghhhhh
+1                         @
+hello-there-0oooooooooooooo
