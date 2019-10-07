@@ -8,6 +8,7 @@ public static class GameState
     public static Highscore playerLastHighscore;
     public static Difficulty Difficulty = Difficulty.MEDIUM;
     public static bool isBonusMaps = false;
+    public static int score = 0;
 
     public static TextFont Font;
 
