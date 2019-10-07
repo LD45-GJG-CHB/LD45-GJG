@@ -16,6 +16,7 @@ public class GameRunner : Singleton<GameRunner>
     public PauseMenu PauseMenu;
     public int waitTime = 3;
     public float countDown;
+    private bool tutorialSkipped = false;
 
     public TextMeshProUGUI _levelText;
     public TextMeshProUGUI _skipTutorial;
@@ -123,9 +124,6 @@ public class GameRunner : Singleton<GameRunner>
 
     private void Update()
     {
-
-        
-
         if (Input.GetKeyDown(KeyCode.F3))
         {
             LoadNextLevel();
@@ -134,9 +132,10 @@ public class GameRunner : Singleton<GameRunner>
         {
             countDown -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
+        if (Input.GetKeyDown(KeyCode.Alpha9) && !tutorialSkipped)
         {
-            if (PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1")
+            tutorialSkipped = true;
+            if (iterator == 1 && PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1")
             {
                 LoadNextLevel();
             }
