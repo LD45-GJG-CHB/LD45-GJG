@@ -754,6 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac95cf8f64ff2bc4d89e6d8ccc686f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputField: {fileID: 644836834}
   nameInput: {fileID: 1995879845}
   nextScene: HighscoreListScene
   score: {fileID: 1907119283}
