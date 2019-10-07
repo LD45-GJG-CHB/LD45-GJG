@@ -123,10 +123,7 @@ public class GameRunner : Singleton<GameRunner>
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            PauseMenu.SetVisible();
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.F3))
         {

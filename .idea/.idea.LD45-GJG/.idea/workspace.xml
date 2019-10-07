@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/BlackTheme.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/BlackTheme.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +76,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/RayCastController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/PlatformController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RaycastEngine2D/CircleController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sprites/Square.png.meta" root0="FORCE_HIGHLIGHTING" />
@@ -156,18 +152,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuRoot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/Hider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/BackButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Theme.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PredefinedThemes.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/BlackTheme.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/PredefinedThemes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/Theme.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/BlackTheme.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
       </list>
     </option>
   </component>

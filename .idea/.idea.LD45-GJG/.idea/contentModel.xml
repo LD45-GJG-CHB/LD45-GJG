@@ -83,10 +83,12 @@
         </e>
         <e p="StreamingAssets" t="Include">
           <e p="Maps" t="Include">
+            <e p="map_1.txt" t="Include" />
             <e p="map_10.txt" t="Include" />
             <e p="map_11.txt" t="Include" />
             <e p="map_12.txt" t="Include" />
             <e p="map_13.txt" t="Include" />
+            <e p="map_20.txt" t="Include" />
             <e p="map_4.txt" t="Include" />
             <e p="map_5.txt" t="Include" />
             <e p="map_6.txt" t="Include" />

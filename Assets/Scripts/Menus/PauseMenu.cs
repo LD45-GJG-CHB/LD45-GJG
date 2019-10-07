@@ -1,13 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 public class PauseMenu : MonoBehaviour
 {
     public bool DefaultVisible;
     public GameObject Target;
+    public bool Active => Target.activeInHierarchy;
     
-    private void Start()
+    void Start()
     {
         if (DefaultVisible)
         {
@@ -18,6 +22,21 @@ public class PauseMenu : MonoBehaviour
             SetInvisible();
         }
     }
+
+    void Update()
+    {
+        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        
+        if (Active)
+        {
+            SetInvisible();
+        }
+        else
+        {
+            SetVisible();
+        }
+    }
+
 
     public void SetVisible()
     {
