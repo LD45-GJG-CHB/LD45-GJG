@@ -2,5 +2,6 @@ public enum TileType
 {
     LETTER,
     DOOR,
-    JUMPER
+    JUMPER,
+    TUTORIAL_DOOR
 }

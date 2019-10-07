@@ -18,9 +18,11 @@ public class GameRunner : Singleton<GameRunner>
     public static float countDown;
 
     public TextMeshProUGUI _levelText;
+    public TextMeshProUGUI _skipTutorial;
 
     public void LoadNextLevel()
     {
+        _skipTutorial.text = "";
         isCountingScore = false;
         if (iterator == mapNames.Count)
         {
@@ -39,10 +41,14 @@ public class GameRunner : Singleton<GameRunner>
 
         DOTweenSequnceBetweenLevels(() =>
         {
-            _levelText.text = $"Level {iterator + 1}";
+            ScoreText.showText = true;
+            _levelText.text = $"Level {iterator}";
             LevelChange();
+            isCountingScore = true;
             countDown = waitTime;
+            Score.Instance.IncrementScore(initialScore);
             StartCoroutine(LevelStartWaitTime());
+            StartCoroutine(DecrementScore());
         });
     }
 
@@ -50,8 +56,12 @@ public class GameRunner : Singleton<GameRunner>
     {
         Debug.Log("Gamerunner Started");
         isCountingScore = false;
+        ScoreText.showText = false;
         LevelChange();
-        StartCoroutine(DecrementScore());
+        _levelText.text = "Tutorial";
+        if (PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1") {
+            _skipTutorial.text = "Press 9 to skip tutorial.";
+        }
     }
 
     private static void LevelChange()
@@ -60,8 +70,6 @@ public class GameRunner : Singleton<GameRunner>
         MapLoader.Instance.currentMap = mapNames[iterator++];
         MapLoader.Instance.DestroyTileMap();
         MapLoader.Instance.LoadNextLevel();
-        Score.Instance.IncrementScore(initialScore);
-        isCountingScore = true;
         LogLevelLoaded();
 
         if (iterator == mapNames.Count / 2)
@@ -128,8 +136,12 @@ public class GameRunner : Singleton<GameRunner>
         {
             countDown -= Time.deltaTime;
         }
-        if (countDown < 0) {
-
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            if (PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1")
+            {
+                LoadNextLevel();
+            }
         }
     }
 
@@ -161,12 +173,6 @@ public class GameRunner : Singleton<GameRunner>
             isCountingScore = true;
             StartCoroutine(LevelStartWaitTime());
         });
-    }
-
-    private void StopCoroutines()
-    {
-        StopAllCoroutines();
-        countDown = waitTime;
     }
 
 }

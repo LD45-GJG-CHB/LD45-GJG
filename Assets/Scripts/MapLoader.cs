@@ -50,7 +50,8 @@ public class MapLoader : Singleton<MapLoader>
                     case " ":
                         break;
                     case "@": // exit / door
-                        tile = CreateTileByTileType(x, y, TileType.DOOR, letter);
+                        TileType type = currentMap == Maps.tutorialMap ? TileType.TUTORIAL_DOOR : TileType.DOOR;
+                        tile = CreateTileByTileType(x, y, type, letter);
                         break;
                     case "^":
                         tile = CreateTileByTileType(x, y, TileType.JUMPER, letter);
