@@ -583,15 +583,15 @@ PrefabInstance:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2012976978006809485, guid: 74d3a9ff2da0031499039341be09e937,
-        type: 3}
-      propertyPath: m_ChildAlignment
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 526280846285940207, guid: 74d3a9ff2da0031499039341be09e937,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012976978006809485, guid: 74d3a9ff2da0031499039341be09e937,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1138671054785534721, guid: 74d3a9ff2da0031499039341be09e937,
         type: 3}
@@ -898,7 +898,7 @@ PrefabInstance:
     - target: {fileID: 6822752248863620124, guid: 38acda82a5ca3ac40a89d9748e355390,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 827.96
       objectReference: {fileID: 0}
     - target: {fileID: 6822752248863620124, guid: 38acda82a5ca3ac40a89d9748e355390,
         type: 3}
