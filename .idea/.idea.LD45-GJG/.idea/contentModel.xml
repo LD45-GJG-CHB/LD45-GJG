@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Game Maker\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Game Maker\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_LD45-GJG.-1919406589.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Game Maker\Desktop\LD45-GJG" t="IncludeRecursive">
+    <e p="C:\Users\Game Maker\.Rider2019.1\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Game Maker\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Game Maker\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_LD45-GJG.-481326177.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Game Maker\Documents\LD45-GJG" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Demigiant" t="Include">
@@ -89,7 +90,8 @@
             <e p="map_11.txt" t="Include" />
             <e p="map_12.txt" t="Include" />
             <e p="map_13.txt" t="Include" />
-            <e p="map_20.txt" t="Include" />
+            <e p="map_2.txt" t="Include" />
+            <e p="map_3.txt" t="Include" />
             <e p="map_4.txt" t="Include" />
             <e p="map_5.txt" t="Include" />
             <e p="map_6.txt" t="Include" />

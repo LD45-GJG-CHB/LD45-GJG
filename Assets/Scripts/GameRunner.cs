@@ -9,13 +9,13 @@ using UnityEngine.SceneManagement;
 public class GameRunner : Singleton<GameRunner>
 {
     public static List<string> mapNames = Maps.mapNames;
-    public static int iterator = 0;
-    public static int initialScore = 500;
-    public static int scoreDecrementAmount = 10;
-    public static bool isCountingScore = true;
+    public int iterator = 0;
+    public int initialScore = 500;
+    public int scoreDecrementAmount = 10;
+    public bool isCountingScore = true;
     public PauseMenu PauseMenu;
-    public static int waitTime = 3;
-    public static float countDown;
+    public int waitTime = 3;
+    public float countDown;
 
     public TextMeshProUGUI _levelText;
     public TextMeshProUGUI _skipTutorial;
@@ -68,12 +68,12 @@ public class GameRunner : Singleton<GameRunner>
     private static void LevelChange()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
-        MapLoader.Instance.currentMap = mapNames[iterator++];
+        MapLoader.Instance.currentMap = mapNames[Instance.iterator++];
         MapLoader.Instance.DestroyTileMap();
         MapLoader.Instance.LoadNextLevel();
         LogLevelLoaded();
 
-        if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && iterator == (mapNames.Count / 2) + 2)
+        if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && Instance.iterator == (mapNames.Count / 2) + 2)
         {
             Instance.StartCoroutine(AudioManager.Instance.FadeOut(2.5f));
 //            AudioManager.Instance.StopAllMusic();
@@ -85,21 +85,21 @@ public class GameRunner : Singleton<GameRunner>
     {
         WaitTimeCamera.Instance.SetCameraPriority(110);
         Player.Instance.isWaiting = true;
-        isCountingScore = false;
-        countDown = waitTime;
+        Instance.isCountingScore = false;
+        Instance.countDown = Instance.waitTime;
     }
 
     private static void UnpauseActions()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
         Player.Instance.isWaiting = false;
-        isCountingScore = true;
+        Instance.isCountingScore = true;
     }
 
     private static IEnumerator LevelStartWaitTime()
     {
         PauseActions();
-        yield return new WaitForSeconds(waitTime);
+        yield return new WaitForSeconds(Instance.waitTime);
         UnpauseActions();
     }
 
@@ -108,7 +108,7 @@ public class GameRunner : Singleton<GameRunner>
         while (true)
         {
             yield return new WaitForSeconds(1);
-            if (isCountingScore)
+            if (Instance.isCountingScore)
             {
                 Score.Instance.DecrementScore(decrement);
             }
