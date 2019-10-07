@@ -57,6 +57,10 @@ public class GameRunner : Singleton<GameRunner>
             countDown = waitTime;
             Score.Instance.IncrementScore(initialScore);
             StartCoroutine(levelWaitStartTime);
+            if (GameState.isBonusMaps)
+            {
+                ScoreText.showText = false;
+            }
         });
     }
 
@@ -68,10 +72,13 @@ public class GameRunner : Singleton<GameRunner>
         ScoreText.showText = false;
         LevelChange();
         _levelText.text = "Tutorial";
-        if (iterator == 1 && PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1") {
+        if (iterator == 1 && PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1" && !GameState.isBonusMaps) {
             _skipTutorial.text = "Press 9 to skip tutorial.";
         }
-        StartCoroutine(DecrementScore());
+        if (!GameState.isBonusMaps)
+        {
+            StartCoroutine(DecrementScore());
+        }
     }
 
     private void LevelChange()
