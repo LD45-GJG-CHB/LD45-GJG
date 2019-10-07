@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuEntry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
