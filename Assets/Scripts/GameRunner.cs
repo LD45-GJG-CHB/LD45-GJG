@@ -14,7 +14,7 @@ public class GameRunner : Singleton<GameRunner>
     public int scoreDecrementAmount = 10;
     public bool isCountingScore = true;
     public PauseMenu PauseMenu;
-    public int waitTime = 3;
+    public int waitTime = 6;
     public float countDown;
     private bool tutorialSkipped = false;
 

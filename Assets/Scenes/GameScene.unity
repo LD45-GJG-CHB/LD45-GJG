@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8c94577b23b0141a8d5ffe9e177f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapNames: []
+  tutorialMap: map_tutorial.txt
 --- !u!4 &517078723
 Transform:
   m_ObjectHideFlags: 0
@@ -412,6 +414,11 @@ PrefabInstance:
       propertyPath: _skipTutorial
       value: 
       objectReference: {fileID: 1640877630}
+    - target: {fileID: 9109055973612638353, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: waitTime
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2132443635, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
