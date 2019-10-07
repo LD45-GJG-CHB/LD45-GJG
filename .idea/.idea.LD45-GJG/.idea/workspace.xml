@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ed56a3-8055-408e-bc07-16a5c75dbc7a" name="Default Changelist" comment="Make text bigger">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LD45-GJG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameRunner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LD45-GJG.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LD45-GJG.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/DifficultyMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MainMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/MenuPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/OptionsMenuPage Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/FiraMono-Regular SDF.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +106,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Siim.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SwitchPageAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Tileprefab.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/SetDifficultyAction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -147,7 +155,6 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Maps/map_7.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SwitchPageAction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuPage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuRoot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Difficulty.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/Hider.cs" />
@@ -157,13 +164,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PredefinedThemes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/PredefinedThemes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/Theme.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/BlackTheme.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Themes/WhiteTheme.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameRunner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menus/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreNameInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/SetThemeAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menus/MenuEntry.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/ThemeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Themes/Panel.cs" />
       </list>
     </option>
   </component>

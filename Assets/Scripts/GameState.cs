@@ -12,5 +12,5 @@ public static class GameState
 
 //    public static Color BackgroundColor => ThemeManager.getCurrentTheme().BackgroundColor;
 //    public static Color TextColor => ThemeManager.getCurrentTheme().FontColor;
-    public static Theme currentTheme => ThemeManager.getCurrentTheme();
+    public static Theme currentTheme => ThemeManager.GetCurrentTheme();
 }

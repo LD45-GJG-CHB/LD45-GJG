@@ -69,13 +69,17 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void SwitchPage(MenuPage menuPage)
     {
-        Debug.Log(MenuPage);
-        Debug.Log(_menuPage);
         MenuPage.Root.Show(menuPage);
     }
 
     public void SwitchScene(String scene)
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
+
+    public void SetTheme(String theme)
+    {
+        ThemeManager.SetCurrentTheme(theme);
+        ThemeManager.UpdateFontTheme(_textComponent);
     }
 }

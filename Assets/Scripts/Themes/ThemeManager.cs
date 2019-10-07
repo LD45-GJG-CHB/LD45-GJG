@@ -1,3 +1,6 @@
+using System;
+using TMPro;
+
 public static class ThemeManager
 {
     public enum PredefinedThemes
@@ -6,25 +9,35 @@ public static class ThemeManager
         WHITE
     }
 
-    private static Theme _currentTheme = getTheme(PredefinedThemes.BLACK);
+    private static Theme _currentTheme = GetTheme(PredefinedThemes.BLACK);
     
     
-    public static void setCurrentTheme(Theme theme)
+    public static void SetCurrentTheme(Theme theme)
     {
         _currentTheme = theme;
     }
 
-    public static void setCurrentTheme(PredefinedThemes themeEnum)
+    public static void UpdateFontTheme(TextMeshProUGUI textField)
     {
-        _currentTheme = getTheme(themeEnum);
+        textField.fontSharedMaterial.SetColor(ShaderUtilities.ID_FaceColor, GameState.currentTheme.FontColor);
     }
 
-    public static Theme getCurrentTheme()
+    public static void SetCurrentTheme(PredefinedThemes themeEnum)
+    {
+        SetCurrentTheme(GetTheme(themeEnum));
+    }
+    
+    public static void SetCurrentTheme(String theme)
+    {
+        SetCurrentTheme(getTheme(theme));
+    }
+
+    public static Theme GetCurrentTheme()
     {
         return _currentTheme;
     }
 
-    public static Theme getTheme(PredefinedThemes themeEnum)
+    public static Theme GetTheme(PredefinedThemes themeEnum)
     {
         switch (themeEnum)
         {
@@ -34,6 +47,18 @@ public static class ThemeManager
             case PredefinedThemes.BLACK:
             default:
                 return new BlackTheme();
+        }
+    }
+
+    public static Theme getTheme(String theme)
+    {
+        switch (theme)
+        {
+            case "white": return new WhiteTheme();
+            case "black":
+            default:
+                return new BlackTheme();
+            
         }
     }
 }
