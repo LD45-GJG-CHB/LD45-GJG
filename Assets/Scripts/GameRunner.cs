@@ -59,7 +59,7 @@ public class GameRunner : Singleton<GameRunner>
         ScoreText.showText = false;
         LevelChange();
         _levelText.text = "Tutorial";
-        if (PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1") {
+        if (iterator == 1 && PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1") {
             _skipTutorial.text = "Press 9 to skip tutorial.";
         }
         StartCoroutine(DecrementScore());

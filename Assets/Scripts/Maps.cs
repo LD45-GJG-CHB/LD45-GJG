@@ -10,10 +10,19 @@ public class Maps
     public static Dictionary<string, string[]> maps;
     public static string tutorialMap = "map_tutorial.txt";
 
-    private static string path = Application.streamingAssetsPath + "/Maps/";
+    private static string path = Application.streamingAssetsPath;
 
     static Maps()
     {
+        mapNames = null;
+        maps = null;
+        if (GameState.isBonusMaps)
+        {
+            path += "/BonusMaps/";
+        } else
+        {
+            path += "/Maps/";
+        }
         mapNames = createOrderedMapNames();
         maps = new Dictionary<string, string[]>();
         foreach (string mapName in mapNames)
