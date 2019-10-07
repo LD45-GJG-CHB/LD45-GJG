@@ -1,4 +1,5 @@
 using System;
+using Themes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +9,10 @@ public static class ThemeManager
     public enum PredefinedThemes
     {
         BLACK,
-        WHITE
+        WHITE,
+        SAFFRON,
+        CITRUS,
+        OCEAN
     }
 
     private static Theme _currentTheme = GetTheme(PredefinedThemes.BLACK);
@@ -40,7 +44,13 @@ public static class ThemeManager
         {
             case PredefinedThemes.WHITE:
                 return new WhiteTheme();
-            
+
+            case PredefinedThemes.SAFFRON:
+                return new SaffronTheme();
+            case PredefinedThemes.CITRUS:
+                return new CitrusTheme();
+            case PredefinedThemes.OCEAN:
+                return new OceanTheme();
             case PredefinedThemes.BLACK:
             default:
                 return new BlackTheme();
@@ -51,6 +61,9 @@ public static class ThemeManager
     {
         switch (theme)
         {
+            case "saffron": return new SaffronTheme();
+            case "ocean": return new OceanTheme();
+            case "citrus": return new CitrusTheme();
             case "white": return new WhiteTheme();
             case "black":
             default:
