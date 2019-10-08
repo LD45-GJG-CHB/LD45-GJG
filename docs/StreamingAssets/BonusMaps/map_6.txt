@@ -1,0 +1,100 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using UnityEngine;
+1              
+public class Maps
+{                                     @
+    public static List<string> mapNames;
+    public static Dictionary<string, string[]> maps;
+    
+    private static string path = "Assets/Resources/Maps/";
+    
+    static Maps()
+    {
+        mapNames = createOrderedMapNames();
+        maps = new Dictionary<string, string[]>();
+        foreach (string mapName in mapNames)
+        {
+            string[] _map = ReadMap(mapName);
+            if (GetRowAmount(_map) > 2 || GetColumnAmount(_map) > 2)
+            {
+                maps.Add(mapName, _map);
+            }
+        }
+    }
+
+    private static List<string> createOrderedMapNames()
+    {
+        List<string> _mapNames = new List<string>();
+        FileInfo[] files = new DirectoryInfo(path).GetFiles("map_*.txt");
+        foreach (FileInfo file in files)
+        {
+            _mapNames.Add(file.Name);
+        }
+        _mapNames = _mapNames.OrderBy(o => MapNumber(o.Substring(4))).ToList();
+        return _mapNames;
+    }
+
+    private static int MapNumber(string mapNumber)
+    {
+        try
+        {
+            return Int32.Parse(mapNumber.Replace(".txt", ""));
+        }
+        catch (FormatException e)
+        {
+            return int.MaxValue;
+        }
+    }
+
+    private static string[] ReadMap(string mapName)
+    {
+        StreamReader reader = new StreamReader(path + mapName);
+        string[] map = reader.ReadToEnd().Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+        map = AddPadding(map);
+        reader.Close();
+        return map;
+    }
+
+    private static string[] AddPadding(string[] map)
+    {
+        int maxSizedColumn = map.OrderByDescending(s => s.Length).First().Length;
+        for (var i = 0; i < map.Length; i++)
+        {
+            if (map[i].Length < maxSizedColumn)
+            {
+                map[i] = map[i] + new string('-', maxSizedColumn - map[i].Length);
+            }
+        }
+        return map;
+    }
+
+    public static string[,] StringArrayTo2DArray(string[] input)
+    { 
+        int sizeX = GetColumnAmount(input);
+        int sizeY = GetRowAmount(input);
+     
+        var result = new string[sizeX, sizeY];
+        for (var yIndex = 0; yIndex < sizeY; yIndex++)
+        {
+            for (var xIndex = 0; xIndex < sizeX; xIndex++)
+            {                                                     @
+                result[xIndex, yIndex] = input[yIndex][xIndex].ToString();
+            }
+        }
+        
+        return result;
+    }
+
+    public static int GetRowAmount(string[] map)
+    {
+        return map.Length;
+    }
+
+    public static int GetColumnAmount(string[] map)
+    {
+        return map[0].Length;
+    }
+}
