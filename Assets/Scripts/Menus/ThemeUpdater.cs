@@ -19,12 +19,6 @@ public class ThemeUpdater : Singleton<ThemeUpdater>
         UpdateTheme();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdatePanelMaterialColor()
     {
     }

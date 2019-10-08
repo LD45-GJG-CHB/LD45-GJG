@@ -44,7 +44,6 @@ public static class ThemeManager
         {
             case PredefinedThemes.WHITE:
                 return new WhiteTheme();
-
             case PredefinedThemes.SAFFRON:
                 return new SaffronTheme();
             case PredefinedThemes.CITRUS:

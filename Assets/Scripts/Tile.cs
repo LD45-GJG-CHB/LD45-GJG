@@ -29,8 +29,7 @@ public class Tile : MonoBehaviour
 
     private void Awake()
     {
-        letter.color = GameState.currentTheme.FontColor;
-        Camera.main.backgroundColor = GameState.currentTheme.BackgroundColor;
+
         if (FontPaths.TryGetValue(GameState.Font, out var path))
         {
             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
@@ -40,7 +39,8 @@ public class Tile : MonoBehaviour
         {
             Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
         }
-
+        letter.color = GameState.currentTheme.FontColor;
+        Camera.main.backgroundColor = GameState.currentTheme.BackgroundColor;
 //        letter.font = _font;
     }
 

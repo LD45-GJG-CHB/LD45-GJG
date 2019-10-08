@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameRunner : Singleton<GameRunner>
 {
@@ -65,6 +67,7 @@ public class GameRunner : Singleton<GameRunner>
 
     void Start()
     {
+        SetFont();
         mapNames = Maps.Instance.mapNames;
         Debug.Log("Gamerunner Started");
         isCountingScore = false;
@@ -78,6 +81,33 @@ public class GameRunner : Singleton<GameRunner>
         {
             StartCoroutine(DecrementScore());
         }
+    }
+
+    private void SetFont()
+    {
+         string fontBasePath = "Fonts & Materials";
+
+         Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
+        {
+            {TextFont.FiraCode, "FiraMono-Regular SDF"},
+            {TextFont.Dotty, "dotty SDF"},
+            {TextFont.Joystix, "joystix monospace SDF"},
+            {TextFont.ComicSans, "COMIC SDF"}
+        };
+         
+         if (FontPaths.TryGetValue(GameState.Font, out var path))
+         {
+             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
+
+             foreach (var textMeshProUgui in (TextMeshProUGUI[]) FindObjectsOfTypeAll(typeof(TextMeshProUGUI)))
+             {
+                 textMeshProUgui.font = font;
+             }
+         }
+         else
+         {
+             Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
+         }
     }
 
     private void LevelChange()
