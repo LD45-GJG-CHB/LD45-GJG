@@ -11,13 +11,18 @@ public class MenuRoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _menuPages = gameObject.GetComponentsInChildren<MenuPage>();
+        FindObjectOfType<MenuEntry>().SetFont("firacode");
+        ThemeManager.SetCurrentTheme("black");
+        ThemeUpdater.Instance.UpdateTheme();
         
+        _menuPages = gameObject.GetComponentsInChildren<MenuPage>();
+
         foreach (var menuPage in _menuPages)
         {
             menuPage.setRoot(this);
             menuPage.Disable();
         }
+
         Show(0);
     }
 
@@ -36,6 +41,7 @@ public class MenuRoot : MonoBehaviour
             {
                 menuPage.Disable();
             }
+
             i++;
         }
     }
@@ -45,9 +51,4 @@ public class MenuRoot : MonoBehaviour
         Show(_menuPages.ToList().IndexOf(menuPage));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

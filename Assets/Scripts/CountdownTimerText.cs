@@ -7,6 +7,7 @@ public class CountdownTimerText : MonoBehaviour
 {
     private TextMeshProUGUI _textField;
 
+    private bool _countDownEnded;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,9 @@ public class CountdownTimerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameRunner.Instance.countDown < 0)
+        if (GameRunner.Instance.countDown <= 0 || MapLoader.Instance.currentMap == Maps.Instance.tutorialMap )
         {
+//            return;
             _textField.text = "";
         } else
         {

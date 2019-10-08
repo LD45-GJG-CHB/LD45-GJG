@@ -9,10 +9,4 @@ public class LetterTile : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
