@@ -31,8 +31,6 @@ public class MenuRoot : MonoBehaviour
         var i = 0;
         foreach (var menuPage in _menuPages)
         {
-            Debug.Log(menuPage);
-            Debug.Log(i);
             if (i == index)
             {
                 menuPage.Enable();
