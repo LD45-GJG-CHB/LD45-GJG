@@ -79,8 +79,8 @@ public class Player : Singleton<Player>
     {
         GameState.score = Score.Instance.GetScore();
         if (gameObject.transform.position.x < -1 
-            || gameObject.transform.position.x > MapLoader.Instance.sizeX * MapLoader.Instance.tileSize 
-            || gameObject.transform.position.y < -MapLoader.Instance.sizeY * MapLoader.Instance.tileSize - 10) 
+            || gameObject.transform.position.x > MapRenderer.Instance.sizeX * MapRenderer.Instance.tileSize 
+            || gameObject.transform.position.y < -MapRenderer.Instance.sizeY * MapRenderer.Instance.tileSize - 10) 
         {
             GameRunner.Instance.PlayerOutOfBoundsReset();
         }
@@ -100,7 +100,7 @@ public class Player : Singleton<Player>
     {
         foreach (var letter in letters.Where(letter => Input.GetKeyDown(letter.ToString())))
         {
-            if (MapLoader.Instance.tileMap.TryGetValue(letter.ToString().ToLower(), out var tiles))
+            if (MapRenderer.Instance.tileMap.TryGetValue(letter.ToString().ToLower(), out var tiles))
             {
                 Score.Instance.DecrementScore(5);
 

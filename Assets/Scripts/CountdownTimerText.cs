@@ -17,7 +17,7 @@ public class CountdownTimerText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameRunner.Instance.countDown <= 0 || MapLoader.Instance.currentMap == Maps.Instance.tutorialMap )
+        if (GameRunner.Instance.countDown <= 0 || MapRenderer.Instance.currentMap == MapLoader.Instance.TutorialMapName )
         {
 //            return;
             _textField.text = "";

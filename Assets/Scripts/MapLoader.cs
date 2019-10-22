@@ -1,117 +1,101 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
 public class MapLoader : Singleton<MapLoader>
 {
-    public string currentMap;
+    public List<string> mapNames;
+    public Dictionary<string, string> maps;
+    public string TutorialMapName = "map_tutorial.txt";
 
-    public GameObject tilePrefab;
-    public GameObject exitPrefab;
-    public GameObject edgeTilePrefab;
-    public float tileSize = 2;
-    public Dictionary<string, List<Tile>> tileMap;
-    public string[,] map;
-    public int sizeX;
-    public int sizeY;
-    public float playerStartPosX;
-    public float playerStartPosY;
-    
-    public void LoadNextLevel()
+    public string GetMap(string mapName)
     {
-        tileMap = new Dictionary<string, List<Tile>>();
+        return maps[mapName];
+    }
 
-        var _map = Maps.Instance.maps[currentMap];
-        sizeX = Maps.GetColumnAmount(_map);
-        sizeY = Maps.GetRowAmount(_map);
-        map = Maps.StringArrayTo2DArray(_map);
+    public string[,] GetMapAs2DArray(string mapName)
+    {
+        var map = AddPadding(maps[mapName].Trim().Split(new[] {Environment.NewLine}, StringSplitOptions.None));
+        return StringArrayTo2DArray(map);
+    }
 
-        for (var y = 0; y < sizeY; y++)
+    private void Awake()
+    {
+        LoadMapsFromAssets();
+    }
+
+    private void LoadMapsFromAssets()
+    {
+        var path = GetPath();
+        mapNames = GetOrderedMapNamesFromPath(path);
+        maps = new Dictionary<string, string>();
+        foreach (var mapName in mapNames)
         {
-            for (var x = 0; x < sizeX; x++)
-            {
-                var letter = map[x, y];
-
-                Tile tile = null;
-                switch (letter)
-                {
-                    case "1": // player pos
-                        var posX = x * tileSize;
-                        var posY = y * -tileSize;
-                            
-                        Player.Instance.transform.position = new Vector3(posX, posY, 0);
-                        playerStartPosX = posX;
-                        playerStartPosY = posY;
-                        break;
-                    case "-": // nothingness
-                        break;
-                    case " ":
-                        break;
-                    case "@": // exit / door
-                        TileType type = currentMap == Maps.Instance.tutorialMap ? TileType.TUTORIAL_DOOR : TileType.DOOR;
-                        tile = CreateTileByTileType(x, y, type, letter);
-                        break;
-                    case "^":
-                        tile = CreateTileByTileType(x, y, TileType.JUMPER, letter);
-                        break;
-                    default: // default letter tile
-                        tile = CreateTileAtPosition(x, y);
-
-                        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
-
-                        break;
-                }
-                
-                if (tileMap.TryGetValue(letter.ToLower(), out var tiles))
-                {
-                    tiles.Add(tile);    
-                }
-                else
-                {
-                    tileMap[letter.ToLower()] = new List<Tile> {tile};
-                }
-
-            }
+            Debug.Log(mapName);
+            maps.Add(mapName, LoadMap(path + mapName));
         }
     }
 
-    private Tile CreateTileAtPosition(int x, int y)
+    private string GetPath()
     {
-        var tile = Instantiate(tilePrefab, transform);
-        var posX = x * tileSize;
-        var posY = y * -tileSize;
-
-        tile.transform.position = new Vector2(posX, posY);
-
-        return tile.GetComponent<Tile>();
+        return Application.streamingAssetsPath + (GameState.isBonusMaps ? "/BonusMaps/" : "/Maps/");
     }
 
-    public void DestroyTileMap()
+    private List<string> GetOrderedMapNamesFromPath(string path)
     {
-        tileMap?.Values
-            .SelectMany(tm => tm).ToList()
-            .ForEach(tile =>
+        return new DirectoryInfo(path)
+            .GetFiles("map_*.txt").ToList()
+            .OrderBy(file => GetMapIndex(file.Name.Substring(4)))
+            .Select(file => file.Name).ToList();
+    }
+
+    private int GetMapIndex(string mapName)
+    {
+        try
+        {
+            return "tutorial.txt" == mapName ? int.MinValue : int.Parse(mapName.Replace(".txt", ""));
+        }
+        catch (FormatException)
+        {
+            return int.MaxValue;
+        }
+    }
+
+    private string LoadMap(string mapName)
+    {
+        return File.ReadAllText(mapName);
+    }
+
+    private string[] AddPadding(string[] map)
+    {
+        int maxSizedColumn = map.OrderByDescending(s => s.Length).First().Length;
+        for (var i = 0; i < map.Length; i++)
+        {
+            if (map[i].Length < maxSizedColumn)
             {
-                if (!tile)
-                    return;
-
-                DestroyImmediate(tile.gameObject);
-            });
+                map[i] = map[i] + new string('-', maxSizedColumn - map[i].Length);
+            }
+        }
+        return map;
     }
 
-    private Tile CreateTileByTileType(int x, int y, TileType type, string letter)
+    public string[,] StringArrayTo2DArray(string[] input)
     {
-        Tile tile = CreateTileAtPosition(x, y);
-        tile.GetComponent<Tile>().tileype = type;
-        tile.GetComponent<BoxCollider2D>().isTrigger = true;
-        tile.gameObject.layer = 11;
-        var rb = tile.gameObject.AddComponent<Rigidbody2D>();
-        rb.gravityScale = 0.0f;
-        rb.isKinematic = true;
-        tile.GetComponent<Tile>().SetLetter(letter.ToLower());
-        return tile;
+        int sizeX = input[0].Length;
+        int sizeY = input.Length;
+
+        var result = new string[sizeX, sizeY];
+        for (var yIndex = 0; yIndex < sizeY; yIndex++)
+        {
+            for (var xIndex = 0; xIndex < sizeX; xIndex++)
+            {
+                result[xIndex, yIndex] = input[yIndex][xIndex].ToString();
+            }
+        }
+
+        return result;
     }
 
 }

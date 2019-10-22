@@ -68,7 +68,7 @@ public class GameRunner : Singleton<GameRunner>
     void Start()
     {
         SetFont();
-        mapNames = Maps.Instance.mapNames;
+        mapNames = MapLoader.Instance.mapNames;
         Debug.Log("Gamerunner Started");
         isCountingScore = false;
         ScoreText.showText = false;
@@ -113,9 +113,10 @@ public class GameRunner : Singleton<GameRunner>
     private void LevelChange()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
-        MapLoader.Instance.currentMap = mapNames[Instance.iterator++];
-        MapLoader.Instance.DestroyTileMap();
-        MapLoader.Instance.LoadNextLevel();
+        MapRenderer.Instance.currentMap = mapNames[Instance.iterator++];
+        Debug.Log(MapRenderer.Instance.currentMap);
+        MapRenderer.Instance.DestroyTileMap();
+        MapRenderer.Instance.LoadNextLevel();
         LogLevelLoaded();
 
         if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && Instance.iterator == (mapNames.Count / 2) + 2)
@@ -162,7 +163,7 @@ public class GameRunner : Singleton<GameRunner>
 
     private static void LogLevelLoaded()
     {
-        Debug.Log("Current Map: " + MapLoader.Instance.currentMap);
+        Debug.Log("Current Map: " + MapRenderer.Instance.currentMap);
         Debug.Log("GameRunner: LoadNextLevel - Loaded!");
     }
 
@@ -206,7 +207,7 @@ public class GameRunner : Singleton<GameRunner>
         isCountingScore = false;
         DOTweenSequnceBetweenLevels(() =>
         {
-            Player.Instance.transform.position = new Vector3(MapLoader.Instance.playerStartPosX, MapLoader.Instance.playerStartPosY, 0);
+            Player.Instance.transform.position = new Vector3(MapRenderer.Instance.playerStartPosX, MapRenderer.Instance.playerStartPosY, 0);
             Player.Instance.Velocity = Vector3.zero;
             Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             Score.Instance.DecrementScore(25);
