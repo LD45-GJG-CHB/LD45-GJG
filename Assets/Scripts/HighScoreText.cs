@@ -17,19 +17,7 @@ public class HighScoreText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Highscore lastHighscore = GameState.playerLastHighscore;
-        bool died = GameState.IsPlayerDead;
-        
-        if (lastHighscore != null)
-        {
-            _textField.text = $"Well done, <i>{lastHighscore.name}</i>.                        You are #{lastHighscore.place.ToString()}";
-        } else if (died)
-        {
-            _textField.text = $"You died :(";
-        }
-        else
-        {
-            _textField.text = $"";
-        }
+        var lastHighscore = GameState.PlayerLastHighscore;
+        _textField.text = lastHighscore != null ? $"Well done, <i>{lastHighscore.name}</i>.                        You are #{lastHighscore.place.ToString()}" : $"";
     }
 }

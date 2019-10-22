@@ -29,8 +29,8 @@ public class HighscoreNameInput : MonoBehaviour
     public void saveName()
     {
         var diff = Enum.GetName(typeof(Difficulty), GameState.Difficulty);
-        var score = GameState.score;
-        GameState.score = 0;
+        var score = GameState.Score;
+        GameState.Score = 0;
         var gamertag = nameInput.text;
 
         if (string.IsNullOrWhiteSpace(gamertag) || gamertag.Length < 2)
@@ -44,7 +44,7 @@ public class HighscoreNameInput : MonoBehaviour
         StartCoroutine(HighScoreAPI.Save(gamertag, score, diff, s =>
         {
             var response = JsonUtility.FromJson<Response>(s);
-            GameState.playerLastHighscore = response.data;
+            GameState.PlayerLastHighscore = response.data;
             SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
         }));
     }

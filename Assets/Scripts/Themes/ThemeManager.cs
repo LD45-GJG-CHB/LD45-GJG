@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
+using Menus;
 using Themes;
 using TMPro;
 using UnityEngine;
@@ -28,9 +31,9 @@ public static class ThemeManager
         SetCurrentTheme(GetTheme(themeEnum));
     }
     
-    public static void SetCurrentTheme(String theme)
+    public static void SetCurrentTheme(string theme)
     {
-        SetCurrentTheme(getTheme(theme));
+        SetCurrentTheme(GetTheme(theme));
     }
 
     public static Theme GetCurrentTheme()
@@ -56,7 +59,7 @@ public static class ThemeManager
         }
     }
 
-    public static Theme getTheme(String theme)
+    public static Theme GetTheme(string theme)
     {
         switch (theme)
         {
@@ -69,5 +72,28 @@ public static class ThemeManager
                 return new BlackTheme();
             
         }
+    }
+
+    public static void SetFont(string fontName)
+    {
+        switch (fontName.Trim().ToLowerInvariant())
+        {
+            case "comicsans":
+                GameState.Font = TextFont.ComicSans;
+                break;
+            case "dotty":
+                GameState.Font = TextFont.Dotty;
+                break;
+            case "joystix":
+                GameState.Font = TextFont.Joystix;
+                break;
+            case "firacode":
+                GameState.Font = TextFont.FiraCode;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException($"Font not defined in script {nameof(GetType)} but is added to the screen.");
+        }
+        
+        ThemeUpdater.Instance.UpdateTheme();
     }
 }

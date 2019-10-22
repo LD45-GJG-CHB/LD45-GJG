@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
 {
     public TextMeshProUGUI letter;
 
-    public bool IsActivated => letter.color == GameState.currentTheme.FontColor;
+    public bool IsActivated => letter.color == GameState.CurrentTheme.FontColor;
 
     public TileType tileype = TileType.LETTER;
 
@@ -39,8 +39,8 @@ public class Tile : MonoBehaviour
         {
             Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
         }
-        letter.color = GameState.currentTheme.FontColor;
-        Camera.main.backgroundColor = GameState.currentTheme.BackgroundColor;
+        letter.color = GameState.CurrentTheme.FontColor;
+        Camera.main.backgroundColor = GameState.CurrentTheme.BackgroundColor;
 //        letter.font = _font;
     }
 
@@ -72,7 +72,7 @@ public class Tile : MonoBehaviour
 
     public void Activate()
     {
-        letter.color = GameState.currentTheme.FontColor;
+        letter.color = GameState.CurrentTheme.FontColor;
         _collider.enabled = true;
     }
 
@@ -83,7 +83,7 @@ public class Tile : MonoBehaviour
             return;
         }
 
-        var col = GameState.currentTheme.FontColor;
+        var col = GameState.CurrentTheme.FontColor;
         col.a = a;
         letter.color = col;
         

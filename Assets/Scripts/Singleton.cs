@@ -30,7 +30,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                 {
                     _instance = (T) FindObjectOfType(typeof(T));
 
-//                    DontDestroyOnLoad(_instance);
+//                    DontDestroyOnLoad(_instance); // TODO: Review if we need this line
                     if (FindObjectsOfType(typeof(T)).Length > 1)
                     {
                         Debug.LogError("[Singleton] Something went really wrong " +

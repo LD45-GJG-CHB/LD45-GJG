@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Menus;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -104,9 +105,9 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         
         GameState.Font = f;
         
-         string fontBasePath = "Fonts & Materials";
+         var fontBasePath = "Fonts & Materials";
 
-         Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
+         var FontPaths = new Dictionary<TextFont, string>
         {
             {TextFont.FiraCode, "FiraMono-Regular SDF"},
             {TextFont.Dotty, "dotty SDF"},

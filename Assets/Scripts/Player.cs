@@ -77,7 +77,7 @@ public class Player : Singleton<Player>
 
     private void FixedUpdate()
     {
-        GameState.score = Score.Instance.GetScore();
+        GameState.Score = Score.Instance.GetScore();
         if (gameObject.transform.position.x < -1 
             || gameObject.transform.position.x > MapRenderer.Instance.sizeX * MapRenderer.Instance.tileSize 
             || gameObject.transform.position.y < -MapRenderer.Instance.sizeY * MapRenderer.Instance.tileSize - 10) 
