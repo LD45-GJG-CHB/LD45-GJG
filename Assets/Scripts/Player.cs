@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
-using DG.Tweening;
-using DG.Tweening.Plugins;
 using Extensions;
 using RaycastEngine2D;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -14,38 +11,28 @@ public class Player : Singleton<Player>
 {
     [SerializeField] private float _accelerationTimeAirborne = .2f;
     [SerializeField] private float _accelerationTimeGrounded = .1f;
-
-    private BoxController2D _controller;
-
-    private Vector2 _lastFacingDirection;
-    private Vector3 _lastInput;
-
     [SerializeField] private float _maxJumpHeight = 4f;
     [SerializeField] private float _minJumpHeight = 1f;
     [SerializeField] private float _timeToJumpApex = .4f;
-    private float _maxJumpVelocity;
-    private float _minJumpVelocity;
-
-    public float _moveSpeed = 10;
-    private float _velocityXSmoothing;
-
-    public Vector3 Velocity;
     
+    public float _moveSpeed = 10;
+    public Vector3 Velocity;
+    public string letters = "abcdefghijklmnopqrstuvwxyz";
+    public Image _darkness;
+    public bool isWaiting = false;
+    
+    private float _velocityXSmoothing;
     private SpriteRenderer _renderer;
     private bool _justTurnedAround;
-
-    public string letters = "abcdefghijklmnopqrstuvwxyz";
-
-    public Image _darkness;
-
-    public bool isWaiting = false;
-
+    private float _maxJumpVelocity;
+    private float _minJumpVelocity;
+    private BoxController2D _controller;
+    private Vector2 _lastFacingDirection;
+    private Vector3 _lastInput;
     
-
     // Use this for initialization
     private void Start()
     {
-
         _moveSpeed = (int) GameState.Difficulty;
         
         _renderer = GetComponent<SpriteRenderer>();
@@ -62,8 +49,6 @@ public class Player : Singleton<Player>
         _minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * _minJumpHeight);
 
         Velocity.x = _moveSpeed;
-
-
     }
 
     // Update is called once per frame
@@ -128,15 +113,6 @@ public class Player : Singleton<Player>
     private void Stuck()
     {
         GameRunner.Instance.PlayerOutOfBoundsReset();
-//        GameState.IsPlayerDead = true;
-//
-//        DOTween.Sequence()
-//            .SetUpdate(true)
-//            .AppendCallback(() => Time.timeScale = 0f)
-//            .Append(_darkness.DOFade(1.0f, 0.3f))
-//            .AppendCallback(() => Time.timeScale = 1.0f)
-//            .AppendCallback(() => SceneManager.LoadScene("HighscoreListScene"))
-//            .Play();
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -196,31 +172,6 @@ public class Player : Singleton<Player>
 
         if (IsMoving())
             _lastFacingDirection = Velocity.normalized.ToVector2();
-    }
-
-
-    private void CheckCollision()
-    {
-        if (_controller.Collisions.Left ||
-            _controller.Collisions.Right ||
-            _controller.Collisions.Above ||
-            _controller.Collisions.Below)
-        {
-            UpdateDirection();
-        }
-    }
-
-    private void CheckDirection()
-    {
-        if (!_justTurnedAround)
-        {
-            UpdateDirection();
-        }
-    }
-
-    private void UpdateDirection()
-    {
-        StartCoroutine(TurnAround());
     }
 
     private IEnumerator TurnAround()

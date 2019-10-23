@@ -169,10 +169,10 @@ public class GameRunner : Singleton<GameRunner>
 
     private void Update()
     {
-//        if (Input.GetKeyDown(KeyCode.F3))
-//        {
-//            LoadNextLevel();
-//        }
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            LoadNextLevel();
+        }
         if (countDown >= 0)
         {
             countDown -= Time.deltaTime;
