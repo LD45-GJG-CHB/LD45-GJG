@@ -10,32 +10,61 @@ using UnityEngine.UI;
 
 public class GameRunner : Singleton<GameRunner>
 {
-    public List<string> mapNames;
-    public int iterator = 0;
     public int initialScore = 500;
-    public int scoreDecrementAmount = 10;
     public bool isCountingScore = true;
-    public PauseMenu PauseMenu;
-    public int waitTime = 6;
+    public int waitTime = 3;
     public float countDown;
     private bool tutorialSkipped = false;
 
-    public TextMeshProUGUI _levelText;
-    public TextMeshProUGUI _skipTutorial;
-
+    public PauseMenu PauseMenu;
+    public TextMeshProUGUI levelText;
+    public TextMeshProUGUI skipTutorial;
     private IEnumerator levelWaitStartTime;
+
+    // Loads first level
+    void Start()
+    {
+        levelText.text = "Tutorial";
+        isCountingScore = false;
+        LevelChange();
+        if (IsTutorialFinished())
+        {
+            skipTutorial.enabled = true;
+            skipTutorial.text = "Press 9 to skip tutorial.";
+        }
+        else
+        {
+            skipTutorial.enabled = false;
+        }
+
+        if (!GameState.isBonusMaps)
+        {
+            StartCoroutine(DecrementScore());
+        }
+    }
+
+    private bool IsTutorialFinished()
+    {
+        return MapRenderer.Instance.GetMapIndex() == 1
+            && PlayerPrefs.HasKey("tutorial_finished")
+            && PlayerPrefs.GetString("tutorial_finished") == "1"
+            && !GameState.isBonusMaps;
+    }
 
     public void LoadNextLevel()
     {
+        skipTutorial.enabled = false;
+        CountdownTimerText.Instance.SetEnabled(true);
+        ScoreText.Instance.SetEnabled(!GameState.isBonusMaps);
+        isCountingScore = false;
+
         if (levelWaitStartTime != null)
         {
             StopCoroutine(levelWaitStartTime);
         }
-        _skipTutorial.text = "";
-        isCountingScore = false;
-        if (iterator == mapNames.Count)
+
+        if (MapRenderer.Instance.IsLastLevel())
         {
-            Debug.Log("The End!");
             DOTween.Sequence()
                 .SetUpdate(true)
                 .AppendCallback((() => Time.timeScale = 0.0f))
@@ -46,80 +75,29 @@ public class GameRunner : Singleton<GameRunner>
             return;
         }
 
-        Debug.Log("GameRunner: LoadNextLevel...");
         levelWaitStartTime = LevelStartWaitTime();
+
         DOTweenSequnceBetweenLevels(() =>
         {
             Player.Instance.Velocity.x = Player.Instance._moveSpeed;
-            ScoreText.showText = true;
-            _levelText.text = $"Level {iterator}";
+            levelText.text = $"Level {MapRenderer.Instance.GetMapIndex()}";
             LevelChange();
             isCountingScore = true;
             countDown = waitTime;
             Score.Instance.IncrementScore(initialScore);
             StartCoroutine(levelWaitStartTime);
-            if (GameState.isBonusMaps)
-            {
-                ScoreText.showText = false;
-            }
         });
-    }
-
-    void Start()
-    {
-        SetFont();
-        mapNames = MapLoader.Instance.mapNames;
-        Debug.Log("Gamerunner Started");
-        isCountingScore = false;
-        ScoreText.showText = false;
-        LevelChange();
-        _levelText.text = "Tutorial";
-        if (iterator == 1 && PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1" && !GameState.isBonusMaps) {
-            _skipTutorial.text = "Press 9 to skip tutorial.";
-        }
-        if (!GameState.isBonusMaps)
-        {
-            StartCoroutine(DecrementScore());
-        }
-    }
-
-    private void SetFont()
-    {
-         string fontBasePath = "Fonts & Materials";
-
-         Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
-        {
-            {TextFont.FiraCode, "FiraMono-Regular SDF"},
-            {TextFont.Dotty, "dotty SDF"},
-            {TextFont.Joystix, "joystix monospace SDF"},
-            {TextFont.ComicSans, "COMIC SDF"}
-        };
-         
-         if (FontPaths.TryGetValue(GameState.Font, out var path))
-         {
-             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
-
-             foreach (var textMeshProUgui in (TextMeshProUGUI[]) FindObjectsOfTypeAll(typeof(TextMeshProUGUI)))
-             {
-                 textMeshProUgui.font = font;
-             }
-         }
-         else
-         {
-             Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
-         }
     }
 
     private void LevelChange()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
-        MapRenderer.Instance.currentMap = mapNames[Instance.iterator++];
+        MapRenderer.Instance.currentMap = MapLoader.Instance.mapNames[MapRenderer.Instance.GetMapIndex()];
         Debug.Log(MapRenderer.Instance.currentMap);
         MapRenderer.Instance.DestroyTileMap();
         MapRenderer.Instance.LoadNextLevel();
-        LogLevelLoaded();
 
-        if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && Instance.iterator == (mapNames.Count / 2) + 2)
+        if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && MapRenderer.Instance.GetMapIndex() == (MapLoader.Instance.mapNames.Count / 2) + 2)
         {
             Instance.StartCoroutine(AudioManager.Instance.FadeOut(2.5f));
 //            AudioManager.Instance.StopAllMusic();
@@ -161,13 +139,7 @@ public class GameRunner : Singleton<GameRunner>
         }
     }
 
-    private static void LogLevelLoaded()
-    {
-        Debug.Log("Current Map: " + MapRenderer.Instance.currentMap);
-        Debug.Log("GameRunner: LoadNextLevel - Loaded!");
-    }
-
-    private void Update()
+    private void FixedUpdate()
     {
 //        if (Input.GetKeyDown(KeyCode.F3))
 //        {
@@ -180,7 +152,7 @@ public class GameRunner : Singleton<GameRunner>
         if (Input.GetKeyDown(KeyCode.Alpha9) && !tutorialSkipped)
         {
             tutorialSkipped = true;
-            if (iterator == 1 && PlayerPrefs.HasKey("tutorial_finished") && PlayerPrefs.GetString("tutorial_finished") == "1")
+            if (IsTutorialFinished())
             {
                 LoadNextLevel();
             }

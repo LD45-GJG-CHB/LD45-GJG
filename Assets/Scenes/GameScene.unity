@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapNames: []
-  tutorialMap: map_tutorial.txt
+  TutorialMapName: map_tutorial.txt
 --- !u!4 &517078723
 Transform:
   m_ObjectHideFlags: 0
@@ -320,6 +320,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667657544}
   m_CullTransparentMesh: 0
+--- !u!114 &832446324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 339718109, guid: f0b1b382923357245a32e1c721f35da0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1558452445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1524174325
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +517,16 @@ PrefabInstance:
       propertyPath: waitTime
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 9109055973612638353, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 832446324}
+    - target: {fileID: 9109055973612638353, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: skipTutorial
+      value: 
+      objectReference: {fileID: 1640877630}
     - target: {fileID: 2132443635, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

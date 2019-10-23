@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScoreText : MonoBehaviour
+public class ScoreText : Singleton<ScoreText>
 {
-    private TextMeshProUGUI _textField;
-    public static bool showText = false;
-    
-    // Start is called before the first frame update
-    void Start()
+    private TextMeshProUGUI textField;
+
+    private void Awake()
     {
-        _textField = gameObject.GetComponent<TextMeshProUGUI>();
+        textField = gameObject.GetComponent<TextMeshProUGUI>();
+        textField.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (showText)
-        {
-            _textField.text = $"Score: {Score.Instance.GetScore().ToString()}";
-        }
+        textField.text = GetScoreAsString();
+    }
+
+    public void SetEnabled(bool enabled)
+    {
+        textField.enabled = enabled;
+    }
+
+    private string GetScoreAsString()
+    {
+        return $"Score: {Score.Instance.GetScore().ToString()}";
     }
 }

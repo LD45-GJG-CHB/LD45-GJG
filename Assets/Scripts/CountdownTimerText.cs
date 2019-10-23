@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CountdownTimerText : MonoBehaviour
+public class CountdownTimerText : Singleton<CountdownTimerText>
 {
-    private TextMeshProUGUI _textField;
+    private TextMeshProUGUI textField;
 
-    private bool _countDownEnded;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        _textField = gameObject.GetComponent<TextMeshProUGUI>();
+        textField = gameObject.GetComponent<TextMeshProUGUI>();
+        textField.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (GameRunner.Instance.countDown <= 0 || MapRenderer.Instance.currentMap == MapLoader.Instance.TutorialMapName )
-        {
-//            return;
-            _textField.text = "";
-        } else
-        {
-            _textField.text = ((int)GameRunner.Instance.countDown + 1).ToString();
-        }
+        textField.text = GetCountDownAsString();
+    }
+
+    public void SetEnabled(bool enabled)
+    {
+        textField.enabled = enabled;
+    }
+
+    private string GetCountDownAsString()
+    {
+        return ((int)GameRunner.Instance.countDown + 1).ToString();
     }
 }

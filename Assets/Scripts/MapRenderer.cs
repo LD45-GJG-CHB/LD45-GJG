@@ -18,11 +18,13 @@ public class MapRenderer : Singleton<MapRenderer>
     public int sizeY;
     public float playerStartPosX;
     public float playerStartPosY;
+
+    private int currentMapIndex = 0;
     
     public void LoadNextLevel()
     {
         tileMap = new Dictionary<string, List<Tile>>();
-
+        currentMapIndex++;
         map = MapLoader.Instance.GetMapAs2DArray(currentMap); 
         sizeX = map.GetLength(0);
         sizeY = map.GetLength(1);
@@ -74,6 +76,16 @@ public class MapRenderer : Singleton<MapRenderer>
 
             }
         }
+    }
+
+    public int GetMapIndex()
+    {
+        return currentMapIndex;
+    }
+
+    public bool IsLastLevel()
+    {
+        return currentMapIndex == MapLoader.Instance.mapNames.Count - 1;
     }
 
     private Tile CreateTileAtPosition(int x, int y)
