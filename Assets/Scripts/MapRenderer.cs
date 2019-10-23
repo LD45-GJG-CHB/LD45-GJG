@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class MapRenderer : Singleton<MapRenderer>
 {
-    public string currentMap;
-
     public GameObject tilePrefab;
     public float tileSize = 2;
     public Dictionary<string, List<Tile>> tileMap;
@@ -17,13 +15,13 @@ public class MapRenderer : Singleton<MapRenderer>
     public float playerStartPosX;
     public float playerStartPosY;
 
-    private int currentMapIndex = 0;
+    private int _nextMapIndex = 0;
     
-    public void LoadNextLevel()
+    public void LoadNextLevel(string mapName)
     {
         tileMap = new Dictionary<string, List<Tile>>();
-        currentMapIndex++;
-        map = MapLoader.Instance.GetMapAs2DArray(currentMap); 
+        map = MapLoader.Instance.GetMapAs2DArray(mapName); 
+        _nextMapIndex++;
         sizeX = map.GetLength(0);
         sizeY = map.GetLength(1);
 
@@ -49,7 +47,7 @@ public class MapRenderer : Singleton<MapRenderer>
                     case " ":
                         break;
                     case "@": // exit / door
-                        TileType type = currentMap == MapLoader.Instance.TutorialMapName ? TileType.TUTORIAL_DOOR : TileType.DOOR;
+                        TileType type = IsTutorial() ? TileType.TUTORIAL_DOOR : TileType.DOOR;
                         tile = CreateTileByTileType(x, y, type, letter);
                         break;
                     case "^":
@@ -78,12 +76,17 @@ public class MapRenderer : Singleton<MapRenderer>
 
     public int GetMapIndex()
     {
-        return currentMapIndex;
+        return _nextMapIndex;
     }
 
+    public bool IsTutorial()
+    {
+        return _nextMapIndex == 0 || _nextMapIndex == 1;
+    }
+    
     public bool IsLastLevel()
     {
-        return currentMapIndex == MapLoader.Instance.mapNames.Count - 1;
+        return _nextMapIndex == MapLoader.Instance.mapNames.Count - 1;
     }
 
     private Tile CreateTileAtPosition(int x, int y)

@@ -412,27 +412,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 240084592, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_text
-      value: 
+      value: Press 9 to skip tutorial.
       objectReference: {fileID: 0}
     - target: {fileID: 240084592, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 240084592, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 240084592, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 240084592, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 240084592, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9109055973612638352, guid: f0b1b382923357245a32e1c721f35da0,
         type: 3}
@@ -527,6 +527,11 @@ PrefabInstance:
       propertyPath: skipTutorial
       value: 
       objectReference: {fileID: 1640877630}
+    - target: {fileID: 9109055973612638353, guid: f0b1b382923357245a32e1c721f35da0,
+        type: 3}
+      propertyPath: _levelText
+      value: 
+      objectReference: {fileID: 832446324}
     - target: {fileID: 2132443635, guid: f0b1b382923357245a32e1c721f35da0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

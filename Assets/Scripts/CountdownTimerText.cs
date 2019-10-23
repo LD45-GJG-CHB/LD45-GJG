@@ -5,26 +5,22 @@ using UnityEngine;
 
 public class CountdownTimerText : Singleton<CountdownTimerText>
 {
-    private TextMeshProUGUI textField;
+    private TextMeshProUGUI _textField;
 
     private void Awake()
     {
-        textField = gameObject.GetComponent<TextMeshProUGUI>();
-        textField.enabled = false;
+        _textField = gameObject.GetComponent<TextMeshProUGUI>();
+        _textField.enabled = false;
     }
 
     void FixedUpdate()
     {
-        textField.text = GetCountDownAsString();
+        _textField.text = GameRunner.Instance.GetCountDownAsString();
     }
 
     public void SetEnabled(bool enabled)
     {
-        textField.enabled = enabled;
+        _textField.enabled = enabled;
     }
-
-    private string GetCountDownAsString()
-    {
-        return ((int)GameRunner.Instance.countDown + 1).ToString();
-    }
+    
 }

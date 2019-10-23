@@ -8,7 +8,7 @@ public class MapLoader : Singleton<MapLoader>
 {
     public List<string> mapNames;
     public Dictionary<string, string> maps;
-    public string TutorialMapName = "map_tutorial.txt";
+    public string tutorialMapName = "map_tutorial.txt";
 
     public string GetMap(string mapName)
     {

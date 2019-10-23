@@ -10,57 +10,58 @@ using UnityEngine.UI;
 
 public class GameRunner : Singleton<GameRunner>
 {
-    public int initialScore = 500;
-    public bool isCountingScore = true;
-    public int waitTime = 3;
-    public float countDown;
-    private bool tutorialSkipped = false;
+    private const int InitialScore = 500;
+    private const int WaitTime = 3;
 
+    private bool _isCountingScore;
+    private bool _tutorialSkipped;
+    private float _countDownTime;
+
+    private IEnumerator _levelWaitStartTime;
+    
     public PauseMenu PauseMenu;
-    public TextMeshProUGUI levelText;
-    public TextMeshProUGUI skipTutorial;
-    private IEnumerator levelWaitStartTime;
+    public TextMeshProUGUI levelText; //text value is set in unity
+    public TextMeshProUGUI skipTutorial; //text value is set in unity
 
     // Loads first level
-    void Start()
+    private void Start()
     {
-        levelText.text = "Tutorial";
-        isCountingScore = false;
-        LevelChange();
-        if (IsTutorialFinished())
-        {
-            skipTutorial.enabled = true;
-            skipTutorial.text = "Press 9 to skip tutorial.";
-        }
-        else
-        {
-            skipTutorial.enabled = false;
-        }
-
-        if (!GameState.isBonusMaps)
-        {
-            StartCoroutine(DecrementScore());
-        }
+        skipTutorial.enabled = IsTutorialFinished();
+        LoadMap(GetNextMapName());
     }
-
-    private bool IsTutorialFinished()
+    
+    private void FixedUpdate()
     {
-        return MapRenderer.Instance.GetMapIndex() == 1
-            && PlayerPrefs.HasKey("tutorial_finished")
-            && PlayerPrefs.GetString("tutorial_finished") == "1"
-            && !GameState.isBonusMaps;
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            LoadNextLevel();
+        }
+        if (_countDownTime >= 0)
+        {
+            _countDownTime -= Time.deltaTime;
+        }
+        if (!_tutorialSkipped && Input.GetKeyDown(KeyCode.Alpha9) && IsTutorialFinished())
+        {
+            _tutorialSkipped = true;
+            LoadNextLevel();
+        }
     }
 
     public void LoadNextLevel()
     {
         skipTutorial.enabled = false;
-        CountdownTimerText.Instance.SetEnabled(true);
+        CountdownTimerText.Instance.SetEnabled(false);
         ScoreText.Instance.SetEnabled(!GameState.isBonusMaps);
-        isCountingScore = false;
-
-        if (levelWaitStartTime != null)
+        _isCountingScore = false;
+        
+        if (!GameState.isBonusMaps)
         {
-            StopCoroutine(levelWaitStartTime);
+            StartCoroutine(DecrementScore());
+        }
+        
+        if (_levelWaitStartTime != null)
+        {
+            StopCoroutine(_levelWaitStartTime);
         }
 
         if (MapRenderer.Instance.IsLastLevel())
@@ -75,27 +76,31 @@ public class GameRunner : Singleton<GameRunner>
             return;
         }
 
-        levelWaitStartTime = LevelStartWaitTime();
+        _levelWaitStartTime = LevelStartWaitTime();
 
         DOTweenSequnceBetweenLevels(() =>
         {
             Player.Instance.Velocity.x = Player.Instance._moveSpeed;
+            CountdownTimerText.Instance.SetEnabled(true);
             levelText.text = $"Level {MapRenderer.Instance.GetMapIndex()}";
-            LevelChange();
-            isCountingScore = true;
-            countDown = waitTime;
-            Score.Instance.IncrementScore(initialScore);
-            StartCoroutine(levelWaitStartTime);
+            LoadMap(GetNextMapName());
+            _isCountingScore = true;
+            _countDownTime = WaitTime;
+            Score.Instance.IncrementScore(InitialScore);
+            StartCoroutine(_levelWaitStartTime);
         });
     }
 
-    private void LevelChange()
+    private string GetNextMapName()
+    {
+        return MapLoader.Instance.mapNames[MapRenderer.Instance.GetMapIndex()];
+    }
+
+    private void LoadMap(string mapName)
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
-        MapRenderer.Instance.currentMap = MapLoader.Instance.mapNames[MapRenderer.Instance.GetMapIndex()];
-        Debug.Log(MapRenderer.Instance.currentMap);
         MapRenderer.Instance.DestroyTileMap();
-        MapRenderer.Instance.LoadNextLevel();
+        MapRenderer.Instance.LoadNextLevel(mapName);
 
         if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && MapRenderer.Instance.GetMapIndex() == (MapLoader.Instance.mapNames.Count / 2) + 2)
         {
@@ -105,57 +110,37 @@ public class GameRunner : Singleton<GameRunner>
         } 
     }
 
-    private static void PauseActions()
+    private void PauseActions()
     {
         WaitTimeCamera.Instance.SetCameraPriority(110);
         Player.Instance.isWaiting = true;
-        Instance.isCountingScore = false;
-        Instance.countDown = Instance.waitTime;
+        _isCountingScore = false;
+        _countDownTime = WaitTime;
     }
 
-    private static void UnpauseActions()
+    private void UnpauseActions()
     {
         WaitTimeCamera.Instance.SetCameraPriority(-1);
         Player.Instance.isWaiting = false;
-        Instance.isCountingScore = true;
+        _isCountingScore = true;
         CountdownTimerText.Instance.SetEnabled(false);
     }
 
-    private static IEnumerator LevelStartWaitTime()
+    private IEnumerator LevelStartWaitTime()
     {
         PauseActions();
-        yield return new WaitForSeconds(Instance.waitTime);
+        yield return new WaitForSeconds(WaitTime);
         UnpauseActions();
     }
 
-    private static IEnumerator DecrementScore(int decrement = 10)
+    private IEnumerator DecrementScore(int decrement = 10)
     {
         while (true)
         {
             yield return new WaitForSeconds(1);
-            if (Instance.isCountingScore)
+            if (_isCountingScore)
             {
                 Score.Instance.DecrementScore(decrement);
-            }
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.F3))
-        {
-            LoadNextLevel();
-        }
-        if (countDown >= 0)
-        {
-            countDown -= Time.deltaTime;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha9) && !tutorialSkipped)
-        {
-            tutorialSkipped = true;
-            if (IsTutorialFinished())
-            {
-                LoadNextLevel();
             }
         }
     }
@@ -177,17 +162,31 @@ public class GameRunner : Singleton<GameRunner>
 
     public void PlayerOutOfBoundsReset()
     {
-        isCountingScore = false;
+        _isCountingScore = false;
         DOTweenSequnceBetweenLevels(() =>
         {
             Player.Instance.transform.position = new Vector3(MapRenderer.Instance.playerStartPosX, MapRenderer.Instance.playerStartPosY, 0);
             Player.Instance.Velocity = Vector3.zero;
             Player.Instance.Velocity.x = Player.Instance._moveSpeed;
             Score.Instance.DecrementScore(25);
-            countDown = waitTime;
-            isCountingScore = true;
+            CountdownTimerText.Instance.SetEnabled(true);
+            _countDownTime = WaitTime;
+            _isCountingScore = true;
             StartCoroutine(LevelStartWaitTime());
         });
+    }
+    
+    private bool IsTutorialFinished()
+    {
+        return !GameState.isBonusMaps
+               && MapRenderer.Instance.IsTutorial()
+               && PlayerPrefs.HasKey("tutorial_finished")
+               && PlayerPrefs.GetString("tutorial_finished") == "1";
+    }
+    
+    public string GetCountDownAsString()
+    {
+        return ((int) _countDownTime + 1).ToString();
     }
 
 }
