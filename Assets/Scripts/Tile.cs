@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public TextMeshProUGUI letter;
+    public TextMeshPro letter;
 
     public bool IsActivated => letter.color == GameState.CurrentTheme.FontColor;
 
