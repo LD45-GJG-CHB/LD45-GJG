@@ -9,8 +9,6 @@ public class MapRenderer : Singleton<MapRenderer>
     public string currentMap;
 
     public GameObject tilePrefab;
-    public GameObject exitPrefab;
-    public GameObject edgeTilePrefab;
     public float tileSize = 2;
     public Dictionary<string, List<Tile>> tileMap;
     public string[,] map;
@@ -102,7 +100,7 @@ public class MapRenderer : Singleton<MapRenderer>
 
     private Tile CreateTileByTileType(int x, int y, TileType type, string letter)
     {
-        Tile tile = CreateTileAtPosition(x, y);
+        var tile = CreateTileAtPosition(x, y);
         tile.GetComponent<Tile>().tileype = type;
         tile.GetComponent<BoxCollider2D>().isTrigger = true;
         tile.gameObject.layer = 11;
