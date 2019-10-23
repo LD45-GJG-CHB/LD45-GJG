@@ -118,6 +118,7 @@ public class GameRunner : Singleton<GameRunner>
         WaitTimeCamera.Instance.SetCameraPriority(-1);
         Player.Instance.isWaiting = false;
         Instance.isCountingScore = true;
+        CountdownTimerText.Instance.SetEnabled(false);
     }
 
     private static IEnumerator LevelStartWaitTime()
