@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Menus;
+using Themes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -79,8 +79,8 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void SetTheme(String theme)
     {
-        ThemeManager.SetCurrentTheme(theme);
-        ThemeUpdater.Instance.UpdateTheme();
+//        ThemeManager.SetCurrentTheme(theme);
+//        ThemeUpdater.Instance.UpdateTheme();
     }
     
     public void SetFont(String theme)
@@ -107,7 +107,7 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         
          var fontBasePath = "Fonts & Materials";
 
-         var FontPaths = new Dictionary<TextFont, string>
+         var fontPaths = new Dictionary<TextFont, string>
         {
             {TextFont.FiraCode, "FiraMono-Regular SDF"},
             {TextFont.Dotty, "dotty SDF"},
@@ -115,7 +115,7 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             {TextFont.ComicSans, "COMIC SDF"}
         };
          
-         if (FontPaths.TryGetValue(GameState.Font, out var path))
+         if (fontPaths.TryGetValue(GameState.Font, out var path))
          {
              var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
 
@@ -129,12 +129,7 @@ public class MenuEntry : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
              Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
          }
          
-         ThemeUpdater.Instance.UpdateTheme();
-
-
-         
-         
-
+         ThemeManager.Instance.UpdateTheme();
     }
 
     public void SetBonusMaps(bool bonusMaps)

@@ -1,4 +1,5 @@
 using System;
+using Themes;
 using UnityEngine;
 
 public static class GameState
@@ -9,5 +10,5 @@ public static class GameState
     public static bool isBonusMaps = false;
     public static int Score = 0;
     public static TextFont Font = TextFont.FiraCode;
-    public static Theme CurrentTheme => ThemeManager.GetCurrentTheme();
+    public static Theme CurrentTheme => ThemeManager.Instance.CurrentTheme;
 }

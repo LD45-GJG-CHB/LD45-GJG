@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Themes;
 using TMPro;
 using UnityEngine;
 
@@ -9,17 +10,14 @@ public class Tile : MonoBehaviour
 {
     public TextMeshPro letter;
 
-    public bool IsActivated => letter.color == GameState.CurrentTheme.FontColor;
+    public bool IsActivated => letter.color == GameState.CurrentTheme.fontColor;
 
     public TileType tileype = TileType.LETTER;
-
-    public float a = .25f;
-    public TMP_FontAsset _font; // for testing n shit
-
+    
     private BoxCollider2D _collider;
     public string fontBasePath = "Fonts & Materials";
 
-    public static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
+    private static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
     {
         {TextFont.FiraCode, "FiraMono-Regular SDF"},
         {TextFont.Dotty, "dotty SDF"},
@@ -29,7 +27,6 @@ public class Tile : MonoBehaviour
 
     private void Awake()
     {
-
         if (FontPaths.TryGetValue(GameState.Font, out var path))
         {
             var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
@@ -39,9 +36,8 @@ public class Tile : MonoBehaviour
         {
             Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
         }
-        letter.color = GameState.CurrentTheme.FontColor;
-        Camera.main.backgroundColor = GameState.CurrentTheme.BackgroundColor;
-//        letter.font = _font;
+        letter.color = GameState.CurrentTheme.fontColor;
+        Camera.main.backgroundColor = GameState.CurrentTheme.backgroundColor;
     }
 
     // Start is called before the first frame update
@@ -72,7 +68,7 @@ public class Tile : MonoBehaviour
 
     public void Activate()
     {
-        letter.color = GameState.CurrentTheme.FontColor;
+        letter.color = GameState.CurrentTheme.fontColor;
         _collider.enabled = true;
     }
 
@@ -83,8 +79,8 @@ public class Tile : MonoBehaviour
             return;
         }
 
-        var col = GameState.CurrentTheme.FontColor;
-        col.a = a;
+        var col = GameState.CurrentTheme.fontColor;
+        col.a = GameState.CurrentTheme.inactiveFontAlpha;
         letter.color = col;
         
         _collider.enabled = false;

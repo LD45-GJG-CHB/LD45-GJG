@@ -1,20 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof (Image))]
-public class Panel : MonoBehaviour
+namespace Themes
 {
-    // Update is called once per frame
-    private void Start()
-    {
-    }
-
-    void Update()
-    {
-//        UpdateColor();
-    }
-
-    void UpdateColor()
+    [RequireComponent(typeof (Image))]
+    public class Panel : MonoBehaviour
     {
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Menus;
+using Themes;
 using UnityEngine;
 
 public class MenuRoot : MonoBehaviour
@@ -13,8 +13,8 @@ public class MenuRoot : MonoBehaviour
     void Start()
     {
         FindObjectOfType<MenuEntry>().SetFont("firacode");
-        ThemeManager.SetCurrentTheme("black");
-        ThemeUpdater.Instance.UpdateTheme();
+        ThemeManager.Instance.SetCurrentTheme("black");
+        ThemeManager.Instance.UpdateTheme();
         
         _menuPages = gameObject.GetComponentsInChildren<MenuPage>();
 

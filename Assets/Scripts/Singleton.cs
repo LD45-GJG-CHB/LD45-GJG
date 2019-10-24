@@ -9,7 +9,7 @@
 /// </summary>
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-    public static T _instance;
+    private static T _instance;
 
     private static readonly object _lock = new object();
     
@@ -17,45 +17,33 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            /*	if (applicationIsQuitting) {
-                    Debug.LogWarning("[Singleton] Instance '"+ typeof(T) +
-                        "' already destroyed on application quit." +
-                        " Won't create again - returning null.");
-                    return null;
-                }*/
-
             lock (_lock)
             {
+                if (_instance != null) return _instance;
+                _instance = (T) FindObjectOfType(typeof(T));
+
+                if (FindObjectsOfType(typeof(T)).Length > 1)
+                {
+                    Debug.LogError("[Singleton] Something went really wrong " +
+                                   " - there should never be more than 1 singleton!" +
+                                   " Reopening the scene might fix it.");
+                    return _instance;
+                }
+
                 if (_instance == null)
                 {
-                    _instance = (T) FindObjectOfType(typeof(T));
-
-//                    DontDestroyOnLoad(_instance); // TODO: Review if we need this line
-                    if (FindObjectsOfType(typeof(T)).Length > 1)
-                    {
-                        Debug.LogError("[Singleton] Something went really wrong " +
-                                       " - there should never be more than 1 singleton!" +
-                                       " Reopening the scene might fix it.");
-                        return _instance;
-                    }
-
-                    if (_instance == null)
-                    {
-                        var singleton = new GameObject();
-                        _instance = singleton.AddComponent<T>();
-                        singleton.name = "(singleton) " + typeof(T);
-
-//                        DontDestroyOnLoad(singleton);
-
-                        Debug.Log("[Singleton] An instance of " + typeof(T) +
-                                  " is needed in the scene, so '" + singleton +
-                                  "' was created with DontDestroyOnLoad.");
-                    }
-                    else
-                    {
-                        Debug.Log("[Singleton] Using instance already created: " +
-                                  _instance.gameObject.name);
-                    }
+                    var singleton = new GameObject();
+                    _instance = singleton.AddComponent<T>();
+                    singleton.name = "(singleton) " + typeof(T);
+                    
+                    Debug.Log("[Singleton] An instance of " + typeof(T) +
+                              " is needed in the scene, so '" + singleton +
+                              "' was created with DontDestroyOnLoad.");
+                }
+                else
+                {
+                    Debug.Log("[Singleton] Using instance already created: " +
+                              _instance.gameObject.name);
                 }
 
                 return _instance;

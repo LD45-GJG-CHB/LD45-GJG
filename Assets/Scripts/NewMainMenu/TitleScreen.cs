@@ -1,6 +1,5 @@
-﻿using System;
-using Menus;
-using NewMainMenu.Base;
+﻿using NewMainMenu.Base;
+using Themes;
 using UnityEditor;
 
 namespace NewMainMenu
@@ -15,8 +14,8 @@ namespace NewMainMenu
 
         private static void SetDefaultLook()
         {
-            ThemeManager.SetCurrentTheme("black");
-            ThemeUpdater.Instance.UpdateTheme();
+            ThemeManager.Instance.SetCurrentTheme(ThemeType.MATRIX);
+            ThemeManager.Instance.UpdateTheme();
         }
 
         public void OnStartPressed()
