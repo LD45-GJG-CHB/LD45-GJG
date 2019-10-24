@@ -30,7 +30,7 @@ public class GameRunner : Singleton<GameRunner>
         LoadMap(GetNextMapName());
     }
     
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F3))
         {
