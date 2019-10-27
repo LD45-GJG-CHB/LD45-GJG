@@ -11,10 +11,11 @@ namespace NewMainMenu
     {
         [SerializeField] private GameObject listItemPrefab;
         [SerializeField] private GameObject itemList;
-        
-        private void Start()
+
+        protected override void Awake()
         {
             FillThemeList();
+            base.Awake();
         }
 
         private void FillThemeList()

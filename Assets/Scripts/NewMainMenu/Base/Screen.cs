@@ -1,6 +1,4 @@
-﻿using NewMainMenu;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 namespace NewMainMenu.Base
 {

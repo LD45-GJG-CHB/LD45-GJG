@@ -53,10 +53,11 @@ namespace NewMainMenu.Base
 				var previousCanvas = _screens.Peek().GetComponent<Canvas>();
 				topCanvas.sortingOrder = previousCanvas.sortingOrder + 1;
 			}
-
+			
 			_screens.Push(instance);
 		}
-
+		
+		
 		private T GetPrefab<T>() where T : Screen
 		{
 			// Get prefab dynamically, based on public fields set from Unity
