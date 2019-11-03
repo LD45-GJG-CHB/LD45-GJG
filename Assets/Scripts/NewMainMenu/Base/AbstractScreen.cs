@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using TMPro;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,15 +12,23 @@ namespace NewMainMenu.Base
 
         public static void Hide() => Close();
 
+        protected override void Awake()
+        {
+            base.Awake();
+            AddMenuItemComponents();
+        }
+
+        private void Update()
+        {
+            if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                SelectFirstSelectableInChildren(Instance.gameObject);
+            }
+        }
+
         private void OnEnable()
         {
-            SetButtonStyles();
             SelectFirstSelectableInChildren(Instance.gameObject);
-        }
-        
-        private void OnDisable()
-        {
-            RemoveButtonEventTriggers();
         }
 
         private static void SelectFirstSelectableInChildren(GameObject screen)
@@ -34,68 +40,27 @@ namespace NewMainMenu.Base
             firstSelectable.OnSelect(null);
         }
 
-        private static void RemoveButtonEventTriggers()
+        protected override void OnDestroy()
         {
-            Instance.GetComponentsInChildren<Button>(true)
-                .ToList()
-                .ForEach(button => Destroy(button.gameObject.GetComponent<EventTrigger>()));
+            RemoveMenuItemComponents();
+            base.OnDestroy();
         }
-        
-        private void AddButtonEventTriggers(GameObject go)
-        {
-            var eventTrigger = go.gameObject.AddComponent<EventTrigger>();
-            var onSelectEntry = new EventTrigger.Entry
-            {
-                eventID = EventTriggerType.Select,
-                callback = new EventTrigger.TriggerEvent()
-            };
-            onSelectEntry.callback.AddListener(ButtonSelectedCallback);
-            eventTrigger.triggers.Add(onSelectEntry);
 
-            var onDeselectEntry = new EventTrigger.Entry
-            {
-                eventID = EventTriggerType.Deselect,
-                callback = new EventTrigger.TriggerEvent()
-            };
-            onDeselectEntry.callback.AddListener(ButtonDeselectedCallback);
-            eventTrigger.triggers.Add(onDeselectEntry);
-        }
-        
-        private void SetButtonStyles()
+        private static void AddMenuItemComponents()
         {
             // TODO: Disallow having 2 objects selected at the same time via mouse/keyboard selection
             Instance.GetComponentsInChildren<Button>()
                 .Select(button => button.gameObject)
                 .ToList()
-                .ForEach(go =>
-                {
-                    SetButtonColors(go);
-                    AddButtonEventTriggers(go);
-                });
+                .ForEach(go => go.AddComponent<MenuItem>());
         }
 
-        private static void SetButtonColors(GameObject go)
+        private static void RemoveMenuItemComponents()
         {
-            var button = go.GetComponent<Button>();
-
-            var colors = button.colors;
-            colors.selectedColor = Color.gray;
-            colors.highlightedColor = Color.gray;
-            colors.pressedColor = Color.gray;
-
-            button.colors = colors;
+            Instance.GetComponentsInChildren<MenuItem>()
+                .ToList()
+                .ForEach(Destroy);
         }
-
-        private static void ButtonSelectedCallback(BaseEventData eventData)
-        {
-            eventData.selectedObject.GetComponent<TextMeshProUGUI>().fontStyle =
-                FontStyles.Bold | FontStyles.Underline;
-        }
-
-        private static void ButtonDeselectedCallback(BaseEventData eventData)
-        {
-            eventData.selectedObject.GetComponent<TextMeshProUGUI>().fontStyle =
-                FontStyles.Normal;
-        }
+        
     }
 }
