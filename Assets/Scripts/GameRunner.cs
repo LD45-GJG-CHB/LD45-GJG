@@ -26,6 +26,7 @@ public class GameRunner : Singleton<GameRunner>
     // Loads first level
     private void Start()
     {
+        Camera.main.backgroundColor = GameState.CurrentTheme.backgroundColor;
         skipTutorial.enabled = IsTutorialFinished();
         LoadMap(GetNextMapName());
     }

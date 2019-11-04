@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Themes
 {
+    // TODO: This font stuff should have nothing to do with themes D:
     public class ThemeManager : Singleton<ThemeManager>
     {
         [SerializeField] private TextMeshProUGUI text;
@@ -16,28 +17,45 @@ namespace Themes
         private static readonly int Color = Shader.PropertyToID("_Color");
         private static readonly string ThemesFolder = Path.Combine("DataObjects", "Themes");
 
+
+        private const string FontBasePath = "Fonts & Materials";
+
+        private static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
+        {
+            {TextFont.FiraCode, "FiraMono-Regular SDF"},
+            {TextFont.Dotty, "dotty SDF"},
+            {TextFont.Joystix, "joystix monospace SDF"},
+            {TextFont.ComicSans, "COMIC SDF"}
+        };
+
+
         private List<Theme> _themes;
-        
+        private List<TMP_FontAsset> _fonts;
+
         private Theme _currentTheme;
 
         public Theme CurrentTheme
         {
             get =>
-                _currentTheme 
-                    ? _currentTheme 
+                _currentTheme
+                    ? _currentTheme
                     : GetTheme(ThemeType.BLACK);
-            
+
             private set => _currentTheme = value;
         }
 
         private void Awake()
         {
             _themes = LoadThemes();
+            _fonts = LoadFonts();
             DontDestroyOnLoad(Instance);
         }
 
         private static List<Theme> LoadThemes()
             => Resources.LoadAll<Theme>(ThemesFolder).ToList();
+
+        private static List<TMP_FontAsset> LoadFonts()
+            => Resources.LoadAll<TMP_FontAsset>(FontBasePath).ToList();
 
         public void UpdateTheme()
         {
@@ -51,31 +69,17 @@ namespace Themes
             text.fontSharedMaterial.SetColor(ShaderUtilities.ID_FaceColor, CurrentTheme.fontColor);
         }
 
-        private static void UpdateFont()
+        private void UpdateFont()
         {
-            const string fontBasePath = "Fonts & Materials";
+            var font = GetFont(GameState.Font);
 
-            var fontPaths = new Dictionary<TextFont, string>
+            if (!font)
+                return;
+            
+            var texts = (TextMeshProUGUI[]) Resources.FindObjectsOfTypeAll(typeof(TextMeshProUGUI));
+            foreach (var textMeshProUgui in texts)
             {
-                {TextFont.FiraCode, "FiraMono-Regular SDF"},
-                {TextFont.Dotty, "dotty SDF"},
-                {TextFont.Joystix, "joystix monospace SDF"},
-                {TextFont.ComicSans, "COMIC SDF"}
-            };
-
-            if (fontPaths.TryGetValue(GameState.Font, out var path))
-            {
-                var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
-
-                var texts = (TextMeshProUGUI[]) Resources.FindObjectsOfTypeAll(typeof(TextMeshProUGUI));
-                foreach (var textMeshProUgui in texts)
-                {
-                    textMeshProUgui.font = font;
-                }
-            }
-            else
-            {
-                Debug.LogError($"Font {GameState.Font} not defined");
+                textMeshProUgui.font = font;
             }
         }
 
@@ -89,12 +93,32 @@ namespace Themes
                 _themes
                     .FirstOrDefault(theme => theme.themeType == type);
 
-        public IEnumerable<Theme> GetAllThemes() 
+        public IEnumerable<Theme> GetAllThemes()
             => new List<Theme>(_themes);
+
+        public IEnumerable<TMP_FontAsset> GetAllFonts()
+            => new List<TMP_FontAsset>(_fonts);
+
+        public TMP_FontAsset GetFont(string fontName)
+            =>
+                _fonts
+                    .FirstOrDefault(font => font.name.Equals(fontName, StringComparison.InvariantCultureIgnoreCase));
+
+        public TMP_FontAsset GetFont(TextFont type)
+        {
+            if (FontPaths.TryGetValue(type, out var fontFullName))
+            {
+                return _fonts
+                    .FirstOrDefault(font =>
+                        font.name.Equals(fontFullName, StringComparison.InvariantCultureIgnoreCase));
+            }
+
+            throw new ArgumentNullException(nameof(type), "Font not defined in font map");
+        }
 
         public void SetCurrentTheme(string newTheme)
             => CurrentTheme = GetTheme(newTheme);
-        
+
         public void SetCurrentTheme(ThemeType type)
             => CurrentTheme = GetTheme(type);
 
@@ -115,11 +139,11 @@ namespace Themes
                     GameState.Font = TextFont.FiraCode;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException($"Font not defined in script {nameof(GetType)} but is added to the screen.");
+                    throw new ArgumentOutOfRangeException(
+                        $"Font not defined in script {nameof(GetType)} but is added to the screen.");
             }
-        
+
             UpdateTheme();
         }
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using NewMainMenu.Base;
 using Themes;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 namespace NewMainMenu
 {
@@ -30,6 +31,11 @@ namespace NewMainMenu
             GameState.isBonusMaps = true;
         }
 
+        public void OnMapEditorPressed()
+        {
+            SceneManager.LoadScene("MapEditor");
+        }
+        
         public void OnOptionsPressed()
         {
             OptionsScreen.Show();

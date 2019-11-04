@@ -15,29 +15,13 @@ public class Tile : MonoBehaviour
     public TileType tileype = TileType.LETTER;
     
     private BoxCollider2D _collider;
-    public string fontBasePath = "Fonts & Materials";
-
-    private static readonly Dictionary<TextFont, string> FontPaths = new Dictionary<TextFont, string>
-    {
-        {TextFont.FiraCode, "FiraMono-Regular SDF"},
-        {TextFont.Dotty, "dotty SDF"},
-        {TextFont.Joystix, "joystix monospace SDF"},
-        {TextFont.ComicSans, "COMIC SDF"}
-    };
 
     private void Awake()
     {
-        if (FontPaths.TryGetValue(GameState.Font, out var path))
-        {
-            var font = Resources.Load<TMP_FontAsset>(Path.Combine(fontBasePath, path));
-            letter.font = font;
-        }
-        else
-        {
-            Debug.LogError($"Font {GameState.Font} not defined in Tile.cs");
-        }
+        var font = ThemeManager.Instance.GetFont(GameState.Font);
+
+        letter.font = font;
         letter.color = GameState.CurrentTheme.fontColor;
-        Camera.main.backgroundColor = GameState.CurrentTheme.backgroundColor;
     }
 
     // Start is called before the first frame update

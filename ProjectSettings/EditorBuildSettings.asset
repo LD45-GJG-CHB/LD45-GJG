@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HighscoreInputScene.unity
     guid: aecb8f46f58ce7d4fbee9d48772fb490
+  - enabled: 1
+    path: Assets/Scenes/MapEditor.unity
+    guid: 3fe2d72dee4e78046a26e10aa92bd0fd
   m_configObjects: {}
