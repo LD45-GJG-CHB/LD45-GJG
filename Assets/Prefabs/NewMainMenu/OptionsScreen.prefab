@@ -966,5 +966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bf77a128663c40abb4026fc51d9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyWhenClosed: 1
+  destroyWhenClosed: 0
   disableScreensUnderneath: 1
+  lastSelected: {fileID: 0}

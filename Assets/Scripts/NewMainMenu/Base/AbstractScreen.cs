@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -20,24 +22,33 @@ namespace NewMainMenu.Base
 
         private void Update()
         {
-            if (EventSystem.current.currentSelectedGameObject == null)
+            if (EventSystem.current.currentSelectedGameObject == null && lastSelected != null)
             {
-                SelectFirstSelectableInChildren(Instance.gameObject);
+                SelectLast();
             }
         }
 
         private void OnEnable()
         {
-            SelectFirstSelectableInChildren(Instance.gameObject);
+            if (lastSelected)
+            {
+                SelectLast();
+            }
+            else
+            {
+                SelectFirstSelectableInChildren(Instance.gameObject);
+            }
         }
 
-        private static void SelectFirstSelectableInChildren(GameObject screen)
+        private void SelectFirstSelectableInChildren(GameObject screen)
         {
             var firstSelectable = screen.GetComponentInChildren<Selectable>();
             // Select the button
             firstSelectable.Select();
             // Highlight the button
             firstSelectable.OnSelect(null);
+            // Save reference
+            lastSelected = firstSelectable;
         }
 
         protected override void OnDestroy()
@@ -62,5 +73,11 @@ namespace NewMainMenu.Base
                 .ForEach(Destroy);
         }
         
+        private void SelectLast()
+        {
+            lastSelected.Select();
+            lastSelected.OnSelect(null);
+            lastSelected.GetComponent<MenuItem>().OnSelect(null);
+        }
     }
 }

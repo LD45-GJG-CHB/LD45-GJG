@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace NewMainMenu.Base
 {
@@ -49,5 +50,7 @@ namespace NewMainMenu.Base
 
         public bool disableScreensUnderneath = true;
         public abstract void OnBackPressed();
+        
+        public Selectable lastSelected;
     }
 }
