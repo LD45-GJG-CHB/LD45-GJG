@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour
 
     private void Awake()
     {
-        var font = ThemeManager.Instance.GetFont(GameState.Font);
+        var font = GameState.Font.GetMatchingFontAsset();
 
         letter.font = font;
         letter.color = GameState.CurrentTheme.fontColor;
@@ -29,6 +29,7 @@ public class Tile : MonoBehaviour
     {
         _collider = GetComponent<BoxCollider2D>();
 
+        // default tile state is deactivated
         Deactivate();
     }
 
