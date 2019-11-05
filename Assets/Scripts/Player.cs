@@ -33,7 +33,7 @@ public class Player : Singleton<Player>
     // Use this for initialization
     private void Start()
     {
-        _moveSpeed = (int) GameState.Difficulty;
+        _moveSpeed = GameState.CurrentDifficulty.moveSpeed;
         
         _renderer = GetComponent<SpriteRenderer>();
 

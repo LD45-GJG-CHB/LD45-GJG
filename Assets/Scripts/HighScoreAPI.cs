@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public static class HighScoreAPI
+public static class HighScoreApi
 {
-    private static readonly String HIGHSCORES_API_URI = "http://167.99.142.75";
+    private static readonly string HIGHSCORES_API_URI = "http://167.99.142.75";
 
     public static IEnumerator GetTopList(Action<string> callback)
     {
@@ -50,13 +50,13 @@ public static class HighScoreAPI
     }
 
 
-    [System.Serializable]
+    [Serializable]
     private class SaveRequestBody
     {
         public Highscore score;
 
         public SaveRequestBody() {}
-        public SaveRequestBody(String name, int scoreValue, string difficulty)
+        public SaveRequestBody(string name, int scoreValue, string difficulty)
         {
             score = new Highscore(name, scoreValue, difficulty);
         }

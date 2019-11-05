@@ -10,7 +10,7 @@ public class CameraEffectManager : MonoBehaviour
 
     private void Awake()
     {
-        if (GameState.Difficulty == Difficulty.PENULTIMATE_MAMBO_JAMBO)
+        if (GameState.CurrentDifficulty.difficultyLevel == DifficultyLevel.PENULTIMATE_MAMBO_JAMBO)
         {
             AudioManager.Instance.Play("Destructor", .35f, true);
         }
@@ -24,7 +24,7 @@ public class CameraEffectManager : MonoBehaviour
     {
         var rt = RenderTexture.GetTemporary(src.width, src.height, 0, src.format);
  
-        if (GameState.Difficulty == Difficulty.PENULTIMATE_MAMBO_JAMBO)
+        if (GameState.CurrentDifficulty.difficultyLevel == DifficultyLevel.PENULTIMATE_MAMBO_JAMBO)
         {
             Graphics.Blit(src, dest, trippyMat);
         }

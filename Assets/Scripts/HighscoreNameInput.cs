@@ -22,13 +22,13 @@ public class HighscoreNameInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            saveName();
+            SaveName();
         }
     }
 
-    public void saveName()
+    public void SaveName()
     {
-        var diff = Enum.GetName(typeof(Difficulty), GameState.Difficulty);
+        var diff = GameState.CurrentDifficulty.difficultyName;
         var score = GameState.Score;
         GameState.Score = 0;
         var gamertag = nameInput.text;
@@ -41,7 +41,7 @@ public class HighscoreNameInput : MonoBehaviour
         Debug.Log($"[HighscoreNameInput] received name: {gamertag}");
         Debug.Log($"[HighscoreNameInput] received score: {score}");
 
-        StartCoroutine(HighScoreAPI.Save(gamertag, score, diff, s =>
+        StartCoroutine(HighScoreApi.Save(gamertag, score, diff, s =>
         {
             var response = JsonUtility.FromJson<Response>(s);
             GameState.PlayerLastHighscore = response.data;
@@ -49,7 +49,7 @@ public class HighscoreNameInput : MonoBehaviour
         }));
     }
     
-    [System.Serializable]
+    [Serializable]
     public class Response
     {
         public Highscore data;

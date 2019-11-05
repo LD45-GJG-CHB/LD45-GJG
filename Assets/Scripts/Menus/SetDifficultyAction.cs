@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SetDifficultyAction : MenuAction
 {
-    public Difficulty Difficulty;
+    public DifficultyLevel difficultyLevel;
     
     public override void doAction()
     {
-        GameState.Difficulty = Difficulty;
+        GameState.CurrentDifficulty = difficultyLevel.GetMatchingDifficulty();
     }
 }

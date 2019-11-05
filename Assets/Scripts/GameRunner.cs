@@ -103,10 +103,9 @@ public class GameRunner : Singleton<GameRunner>
         MapRenderer.Instance.DestroyTileMap();
         MapRenderer.Instance.LoadNextLevel(mapName);
 
-        if (GameState.Difficulty != Difficulty.PENULTIMATE_MAMBO_JAMBO && MapRenderer.Instance.GetMapIndex() == (MapLoader.Instance.mapNames.Count / 2) + 2)
+        if (GameState.CurrentDifficulty.difficultyLevel != DifficultyLevel.PENULTIMATE_MAMBO_JAMBO && MapRenderer.Instance.GetMapIndex() == (MapLoader.Instance.mapNames.Count / 2) + 2)
         {
             Instance.StartCoroutine(AudioManager.Instance.FadeOut(2.5f));
-//            AudioManager.Instance.StopAllMusic();
             AudioManager.Instance.Play("rEX", isLooping:true);
         } 
     }

@@ -1,32 +1,43 @@
 ﻿using System;
+using System.Linq;
 using NewMainMenu.Base;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace NewMainMenu
 {
     public class DifficultySelectionScreen : AbstractScreen<DifficultySelectionScreen>
     {
-        public void OnDifficultySelected(string difficulty) 
-        {
-            switch (difficulty.Trim().ToLowerInvariant())
-            {
-                case "easy":
-                    GameState.Difficulty = Difficulty.EASY;
-                    break;
-                case "medium":
-                    GameState.Difficulty = Difficulty.MEDIUM;
-                    break;
-                case "hard":
-                    GameState.Difficulty = Difficulty.HARD;
-                    break;
-                case "penultimate":
-                    GameState.Difficulty = Difficulty.PENULTIMATE_MAMBO_JAMBO;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException($"Difficulty not defined in script {nameof(DifficultySelectionScreen)} but is added to the screen.");
-            }
+        [SerializeField] private GameObject listItemPrefab;
+        [SerializeField] private GameObject itemList;
 
+        protected override void Awake()
+        {
+            FillDifficultyList();
+            base.Awake();
+        }
+
+        private void FillDifficultyList()
+        {
+            var difficulties =
+                DifficultyManager.GetAllDifficulties()
+                    .ToList()
+                    .OrderByDescending(diff => diff.moveSpeed);
+
+            foreach (var diff in difficulties)
+            {
+                var go = Instantiate(listItemPrefab, itemList.transform);
+                go.GetComponent<TextMeshProUGUI>().SetText(diff.difficultyName);
+                go.GetComponent<Button>().onClick.AddListener(() => OnDifficultySelected(diff));
+                go.transform.SetAsFirstSibling();
+            }
+        }
+
+        public static void OnDifficultySelected(Difficulty difficulty)
+        {
+            GameState.CurrentDifficulty = difficulty;
             SceneManager.LoadScene("GameScene");
         }
     }

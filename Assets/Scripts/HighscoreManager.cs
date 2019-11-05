@@ -8,7 +8,7 @@ public class HighscoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(HighScoreAPI.GetTopList((responseText) =>
+        StartCoroutine(HighScoreApi.GetTopList((responseText) =>
         {
             var response = JsonUtility.FromJson<HighscoreManager.Response>(responseText);
             _highscores = response.data;
